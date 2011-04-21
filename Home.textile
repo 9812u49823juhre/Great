@@ -1,2 +1,5 @@
-Public TODO
-* Need a new lyrics provider because LyricsMode is too spammy with their pop-ups. Related repository: https://github.com/duckduckgo/lyrics
+h3. Public TODO
+
+These are things that we could use some help with, which we are happy to open source.
+
+* *New lyrics provider* Our current 0-click lyrics are from LyricsMode, but their site is too spammy (too many pop-ups). We choose them because they were comprehensive, so a replacement would likely need to scrape a few places. The current scraper and processor are in this repository: https://github.com/duckduckgo/lyrics Also see this forum thread: http://duck.co/#topic/28469000000511127 
