@@ -22,10 +22,4 @@ Contact us at https://duckduckgo.com/feedback.html
 
 * *Setting collections.* Exploring groups of settings that make sense (as a group). Then we can surface these as "themes."
 
-
-There are also some things that can't be fully open source because we aren't allowed to syndicate certain APIs, but we nevertheless need help with (and could be partially open source).
-
-* *Mobile clients*
-** Windows
-** PalmOS
-** BlackBerry
+* *API libaries.* More libraries (in your favorite language) to use our 0-click API: https://duckduckgo.com/api.html
