@@ -1,2 +1,2 @@
 Public TODO
-* Need a new lyrics provider because LyricsMode is too spammy with their pop-ups.
+* Need a new lyrics provider because LyricsMode is too spammy with their pop-ups. Related repository: https://github.com/duckduckgo/lyrics
