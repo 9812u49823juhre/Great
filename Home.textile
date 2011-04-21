@@ -11,3 +11,11 @@ These are things that we could use some help with, which we are happy to open so
 ** **Macupdate**
 ** **Iusethis**
 ** **alternative-to** (API might be better)
+
+* *Holiday logos.* We'd love more logos for various holidays. Repository source files: https://github.com/duckduckgo/logos. Past logos are here: https://duckduckgo.com/logos.html. To make this really easy, make the logo the right size (with the words) so we can use it as a drop-in replacement.
+
+* *WolframAlpha regex improvements.* Finding more things to surface via WolframAlpha. Repository: https://github.com/duckduckgo/walpha that is a snapshot of https://duckduckgo.com/walpha.html
+
+* *Dark theme.* People really want a dark theme.
+
+* *Setting collections.* Exploring groups of settings that make sense (as a group). Then we can surface these as "themes."
