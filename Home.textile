@@ -2,4 +2,12 @@ h3. Public TODO
 
 These are things that we could use some help with, which we are happy to open source.
 
-* *New lyrics provider* Our current 0-click lyrics are from LyricsMode, but their site is too spammy (too many pop-ups). We choose them because they were comprehensive, so a replacement would likely need to scrape a few places. The current scraper and processor are in this repository: https://github.com/duckduckgo/lyrics Also see this forum thread: http://duck.co/#topic/28469000000511127 
+* *New lyrics providers.* Our current 0-click lyrics are from LyricsMode, but their site is too spammy (too many pop-ups). We choose them because they were comprehensive, so a replacement would likely need to scrape a few places. The current scraper and processor are in this repository: https://github.com/duckduckgo/lyrics Also see this forum thread: http://duck.co/#topic/28469000000511127 
+
+* *Wikipedia lists.* We currently don't do anything with Wikipedia articles of the form **List of x**. Ideally we would turn them into category pages like https://duckduckgo.com/?q=the+simpsons+characters but we would need some generalized code to parse out the list members.
+
+* *0-click scrapers.*
+** **ISO codes* 
+** **Macupdate**
+** **Iusethis**
+** **alternative-to** (API might be better)
