@@ -1,6 +1,8 @@
 h3. Public TODO
 
-These are things that we could use some help with, which we are happy to open source.
+These are some things that we could use some help with, which we are happy to open source. If you are interested in something in particular, that will probably work too -- just let us know.
+
+Contact us at https://duckduckgo.com/feedback.html
 
 * *New lyrics providers.* Our current 0-click lyrics are from LyricsMode, but their site is too spammy (too many pop-ups). We choose them because they were comprehensive, so a replacement would likely need to scrape a few places. The current scraper and processor are in this repository: https://github.com/duckduckgo/lyrics Also see this forum thread: http://duck.co/#topic/28469000000511127 
 
@@ -19,3 +21,11 @@ These are things that we could use some help with, which we are happy to open so
 * *Dark theme.* People really want a dark theme.
 
 * *Setting collections.* Exploring groups of settings that make sense (as a group). Then we can surface these as "themes."
+
+
+There are also some things that can't be fully open source because we aren't allowed to syndicate certain APIs, but we nevertheless need help with (and could be partially open source).
+
+* *Mobile clients*
+** Windows
+** PalmOS
+** BlackBerry
