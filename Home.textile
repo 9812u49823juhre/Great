@@ -1,6 +1,6 @@
 h3. Public TODO
 
-These are some things that we could use some help with, which we are happy to open source. If you are interested in something in particular, that will probably work too -- just let us know.
+These are some things that we could use some help with, which we are happy to open source. If you want to contribute but are interested in something else, whatever you are interested in will probably work too -- just let us know.
 
 Contact us at https://duckduckgo.com/feedback.html
 
