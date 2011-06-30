@@ -19,8 +19,8 @@ This category of 0-click involves getting the data (through scraping or from a d
 Here are some data/sites we would like to see.
 ** More programming documentation/reference - see our current list on the "tech goodies page":http://duckduckgo.com/tech.html (right column).
 ** ISO codes 
-** Macupdate.com
-** Iusethis.com
+** "Macupdate.com":http://macupdate.com
+** "Iusethis.com":http://iusethis.com
 ** New lyrics providers, given LyricsMode has too many pop-ups and requires JS to view.
 
 * *Using external APIs.* For 0-click that changes a lot, e.g. weather, or which requires a lot of on-the-fly processing, e.g. WolframAlpha, we use external APIs and integrate them into search results in real-time. Working on this component involves writing some JS that we would call at the appropriate time. What you would do is receive the object from the external API, massage it to extract the parts useful for 0-click, and then call an internal function to display it. 
@@ -29,9 +29,19 @@ There are a ton of good APIs out there that we'd like to integrate, including th
 ** "TMDb":http://api.themoviedb.org/2.1 - so we can show better movie info, like trailers.
 ** "SoundCloud":http://developers.soundcloud.com/ - so we can let people hear music
 ** "alternativeTo":http://alternativeto.net/api - so we can display cool related topics for software
+** pronunciation, possibly via "Forvo":http://www.forvo.com/
+** Bitcoin conversion, possibly via [[http://bitcoincharts.com/about/markets-api/]] or [[https://mtgox.com/code/data/ticker.php]]
+** Latest "xkcd":http://xkcd.com
+** "Qype":http://www.qype.co.uk/developers/api - like our "Yelp stuff":http://duckduckgo.com/?q=black+lab+bistro but for UK & Europe.
+** Part numbers, possibly via "Octopart":http://octopart.com/api/overview
+** "Khan academy":https://sites.google.com/a/khanacademy.org/forge/for-developers/technical/api
 
 * *Goodies.* For some 0-click we don't use any source but ourselves :). These range from "cheat sheets":http://duckduckgo.com/?q=html+chars to "tools":http://duckduckgo.com/?q=pw to "info":http://duckduckgo.com/?q=%23564. Cheat sheets can be an external HTML file we call via an iFrame but the processing goodies are written in Perl since they get inserted into our core processing engine. Often there are existing Perl modules that will do things, which are ripe for Goodies. There are lots of Goodie ideas out there including the following.
 ** em to px converter 
+** spelling corrector. We have spelling now but this would be more an explicit attempt to think of alternatives.
+** rhyming dictionary.
+** throw dice.
+** three way choice, expanding on our "two way now":http://duckduckgo.com/?q=yes+or+no.
 
 * *When to call 0-click.* For each piece of 0-click info, we have to know when to call it. For the static (data dumps) we have a system that does this pretty well. For the dynamic (APIs and goodies) we have a number of schemes to determine when they get called depending on the situation, e.g. "pieces of regexp":https://duckduckgo.com/walpha.html, hashes or more complicated one-off query processing. This area can always be improved, usually by expanding its scope for a particular source such that we get more 0-click coverage without many false positives.
 ** A major example here is finding more of WolframAlpha we can use, and there is a lot more!
