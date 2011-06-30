@@ -1,21 +1,26 @@
 h3. Help code DuckDuckGo
 
-A lot of people ask if they can help code DuckDuckGo? Yes! But how?  This document attempts to answer that question.
+A lot of people ask if they can help code DuckDuckGo? Yes, yes, a thousand times yes! 
+
+But how?  This document attempts to answer that question.
 
 First, know that we have way more to do than we can handle internally. So any help is greatly appreciated. Chances are anything you do will quickly go live and so it is pretty easy to have a real impact on the search engine.
 
 Most of DuckDuckGo is closed source, but a growing portion is "open":http://github.com/duckduckgo. We don't think it is right to ask volunteers to contribute to closed source, so what we propose here will also be open. However, if you want to work on the closed portion, there is opportunity for that as well.
 
-You can contact us at "open@duckduckgo.com":mailto:open@duckduckgo.com
+You can contact us at "open@duckduckgo.com":mailto:open@duckduckgo.com. _Please make contact before you get started so that we can ensure the shortest past to it going live._
 
-The main area we could use help with is *Zero-click Info.* That's the stuff that appears above the traditional links and provides instant answers, topic summaries, etc. Basically, we want more of it and want what we have to be better!
+The main area we could use help with is *Zero-click Info.* That's the stuff that appears above the traditional links and provides instant answers, topic summaries, etc. Basically, we want more of it and we want what we have to be much better!
 
 You may have a particular niche type of search you like to do, e.g. electronics parts, and you may have great ideas for the right 0-click source and information we should be displaying for that niche. If so, that's awesome. If you'd like to work on that, we'd love to support you in that effort.
 
 Otherwise, we have a list of our own of things we know would make good improvements and are instant projects to work on. These fall into three categories based on what is involved.
 
-* *Getting data dumps.* A lot of our zero-click info comes from essentially static data dumps, usually achieved through Web scraping (but could also originate from another data dump from the underlying provider). For example, our "programming documentation":http://duckduckgo.com/?q=perl+split mainly comes from Web scraping done by "@boyter":http://twitter.com/boyter. Two open examples are the "launchpad scraper":https://github.com/duckduckgo/Launchpad made by "@crazedpsyc":http://twitter.com/crazedpsyc and the "lyricsmode scraper":https://github.com/duckduckgo/lyrics made by "@dhruvbird". 
-This category of 0-click involves getting the data (through scraping or from a dump) and then putting it in a form we can use. You could really do it in any language. Most of our stuff internally is in Perl, and the above examples are in Python.
+* *Getting data dumps.* A lot of our zero-click info comes from essentially static data dumps, usually achieved through Web crawling (but could also originate from another data dump from the underlying provider). For example, our "programming documentation":http://duckduckgo.com/?q=perl+split mainly comes from crawling done by "@boyter":http://twitter.com/boyter. Two open examples are "launchpad":https://github.com/duckduckgo/Launchpad made by "@crazedpsyc":http://twitter.com/crazedpsyc and "lyricsmode":https://github.com/duckduckgo/lyrics made by "@dhruvbird". 
+-
+This category of 0-click involves getting the data (through crawling or from a dump) and then putting it in a form we can use. You could really do it in any language. Most of our stuff internally is in Perl, and the above examples are in Python.
+-
+We should note that this is a win-win for the data provider since we only show a small snippet and then link back to them at the very top of the results. However, it is often a good idea to OK it with the provider ahead of time. That is also useful because sometimes they will provide you with data dumps. Otherwise, make sure you crawl at a very slow rate amd/or use open sources.
 Here are some data/sites we would like to see.
 ** More programming documentation/reference - see our current list on the "tech goodies page":http://duckduckgo.com/tech.html (right column).
 ** ISO codes 
@@ -27,7 +32,9 @@ Here are some data/sites we would like to see.
 
 
 * *Using external APIs.* For 0-click that changes a lot, e.g. weather, or which requires a lot of on-the-fly processing, e.g. WolframAlpha, we use external APIs and integrate them into search results in real-time. Working on this component involves writing some JS that we would call at the appropriate time. What you would do is receive the object from the external API, massage it to extract the parts useful for 0-click, and then call an internal function to display it. 
-There are both standard functions to call for standard display and then there are cases where the JS creates the HTML on the fly and it gets inserted into the right div. 
+-
+We are working on an open example, but in the mean time, if this interests you just ask and we will show you how to do it. There are both standard functions to call for standard display and then there are cases where the JS creates the HTML on the fly and it gets inserted into the right div. 
+-
 There are a ton of good APIs out there that we'd like to integrate, including the following.
 ** "TMDb":http://api.themoviedb.org/2.1 - so we can show better movie info, like trailers.
 ** "SoundCloud":http://developers.soundcloud.com/ - so we can let people hear music
@@ -40,7 +47,7 @@ There are a ton of good APIs out there that we'd like to integrate, including th
 ** "Khan academy":https://sites.google.com/a/khanacademy.org/forge/for-developers/technical/api
 ** "Infochimps":http://www.infochimps.com/apis (for data * searches)
 
-* *Goodies.* For some 0-click we don't use any source but ourselves :). These range from "cheat sheets":http://duckduckgo.com/?q=html+chars to "tools":http://duckduckgo.com/?q=pw to "info":http://duckduckgo.com/?q=%23564. Cheat sheets can be an external HTML file we call via an iFrame but the processing goodies are written in Perl since they get inserted into our core processing engine. Often there are existing Perl modules that will do things, which are ripe for Goodies. There are lots of Goodie ideas out there including the following.
+* *Goodies.* For some 0-click we don't use any source but ourselves :). These range from "cheat sheets":http://duckduckgo.com/?q=html+chars to "tools":http://duckduckgo.com/?q=pw to "info":http://duckduckgo.com/?q=%23564. Cheat sheets can be an external HTML file we call via an iFrame but the processing goodies are written in Perl since they get inserted into our core processing engine. Often there are existing Perl modules that will do things, which are ripe for Goodies. There are lots of Goodie ideas out there, including the following.
 ** em to px converter 
 ** spelling corrector. We have spelling now but this would be more an explicit attempt to think of alternatives.
 ** rhyming dictionary.
@@ -61,3 +68,5 @@ There are a ton of good APIs out there that we'd like to integrate, including th
 ** API helper libaries. More libraries (in your favorite language) to use our "0-click API":http://api.duckduckgo.com/
 ** Themes. We're working on a dark theme, but could use other ideas. Ultimately, we'd like to have a theme collection.
 ** Grouping settings. We have "a lot of settings":http://duckduckgo.com/settings.html, which is great, but they can get overwhelming. We have a thought to offer collections of these so you could get the widescreen or minimal or whatever version and it would change a bunch at once. Determining good sets of collections would be very useful.
+
+Thank you for getting this far in this (admittedly long) document! If you're interested, please contact us at "open@duckduckgo.com":mailto:open@duckduckgo.com. If you're unsure of what to make of the above, we can try to help steer you into something that fits your skill set and/or interests.
