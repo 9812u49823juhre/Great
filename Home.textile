@@ -8,7 +8,7 @@ First, know that we have way more to do than we can handle internally. So any he
 
 Most of DuckDuckGo is closed source, but a growing portion is "open":http://github.com/duckduckgo. We don't think it is right to ask volunteers to contribute to closed source, so what we propose here will also be open. However, if you want to work on the closed portion, there is opportunity for that as well.
 
-You can contact us at "open@duckduckgo.com":mailto:open@duckduckgo.com. _Please make contact before you get started so that we can ensure the shortest past to it going live._
+You can contact us at "open@duckduckgo.com":mailto:open@duckduckgo.com. _Please make contact before you get started so that we can ensure the shortest path to it going live._
 
 The main area we could use help with is *Zero-click Info.* That's the stuff that appears above the traditional links and provides instant answers, topic summaries, etc. Basically, we want more of it and we want what we have to be much better!
 
