@@ -12,11 +12,13 @@ In any case, if after reading this doc you are at all interested, please contact
 
 The main area we could use help with is *Zero-click Info.* That's the stuff that appears above the traditional links and provides instant answers, topic summaries, etc. Basically, we want more of it and we want what we have to be much better!
 
-You may have a particular niche type of search you like to do, e.g. electronics parts, and you may have great ideas for the right 0-click source and information we should be displaying for that niche. If so, that's awesome. If you'd like to work on that, we'd love to support you in that effort.
+You may have a particular niche type of search you like to do, e.g. electronics parts or program documentation, and you may have great ideas for the right 0-click source and information we should be displaying for that niche. If so, that's awesome. Work on that! We'd love to support you in that effort.
 
-Otherwise, we have a list of our own of things we know would make good improvements and are instant projects to work on. These fall into three categories based on what is involved.
+Otherwise, we have a list of our own of things we know would make good improvements and are instant projects to work on. These fall into the categories listed below.
 
-* *Getting data dumps.* A lot of our zero-click info comes from essentially static data dumps, usually achieved through Web crawling (but could also originate from another data dump from the underlying provider). For example, our "programming documentation":http://duckduckgo.com/?q=perl+split mainly comes from crawling done by "@boyter":http://twitter.com/boyter. Two open examples are "launchpad":https://github.com/duckduckgo/Launchpad made by "@crazedpsyc":http://twitter.com/crazedpsyc and "lyricsmode":https://github.com/duckduckgo/lyrics made by "@dhruvbird". 
+* *Fat head.* "Repository":https://github.com/duckduckgo/zeroclickinfo-fathead
+-
+A lot of our zero-click info comes from essentially static data dumps, usually achieved through Web crawling (but could also originate from another data dump from the underlying provider). For example, our "programming documentation":http://duckduckgo.com/?q=perl+split mainly comes from crawling done by "@boyter":http://twitter.com/boyter. Two open examples are "launchpad":https://github.com/duckduckgo/Launchpad made by "@crazedpsyc":http://twitter.com/crazedpsyc and "lyricsmode":https://github.com/duckduckgo/lyrics made by "@dhruvbird". 
 -
 This category of 0-click involves getting the data (through crawling or from a dump) and then putting it in a form we can use. You could really do it in any language. Most of our stuff internally is in Perl, and the above examples are in Python.
 -
