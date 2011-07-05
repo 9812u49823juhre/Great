@@ -60,6 +60,7 @@ There are a ton of good APIs out there that we'd like to integrate, including th
 ** GUID generator
 ** Javascript character codes
 ** More "easter eggs":https://duckduckgo.com/?q=answer+to+the+ultimate+question+of+life+the+universe+and+everything
+** Parsing crontab formats and explaining how they get called in a human readable manner :)
 
 * *When to call 0-click.* For each piece of 0-click info, we have to know when to call it. For the static (data dumps) we have a system that does this pretty well. For the dynamic (APIs and goodies) we have a number of schemes to determine when they get called depending on the situation, e.g. "pieces of regexp":https://duckduckgo.com/walpha.html, hashes or more complicated one-off query processing. This area can always be improved, usually by expanding its scope for a particular source such that we get more 0-click coverage without many false positives.
 ** A major example here is finding more of WolframAlpha we can use, and there is a lot more!
