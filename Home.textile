@@ -1,14 +1,14 @@
 h3. Help code DuckDuckGo
 
-A lot of people ask if they can help code DuckDuckGo? Yes, yes, a thousand times yes! 
+A lot of people ask if they can help code up DuckDuckGo? Yes, yes, a thousand times yes! 
 
 But how?  This document attempts to answer that question.
 
 First, know that we have way more to do than we can handle internally. So any help is greatly appreciated. Chances are anything you do will quickly go live and so it is pretty easy to have a real impact on the search engine.
 
-Most of DuckDuckGo is closed source, but a growing portion is "open":http://github.com/duckduckgo. We don't think it is right to ask volunteers to contribute to closed source, so what we propose here will also be open. However, if you want to work on the closed portion, there is opportunity for that as well.
+Most of DuckDuckGo is closed source, but a growing portion is "open":http://github.com/duckduckgo. We don't think it is right to ask volunteers to contribute to closed source, so what we propose here will also be open. However, if you want to work on the closed portion, there is opportunity for that as well. It's just a bit more complicated.
 
-You can contact us at "open@duckduckgo.com":mailto:open@duckduckgo.com. _Please make contact before you get started so that we can ensure the shortest path to it going live._
+In any case, if after reading this doc you are at all interested, please contact us at "open@duckduckgo.com":mailto:open@duckduckgo.com. _And please, please make contact before you get started so that we can ensure the shortest path to having what you do go live._
 
 The main area we could use help with is *Zero-click Info.* That's the stuff that appears above the traditional links and provides instant answers, topic summaries, etc. Basically, we want more of it and we want what we have to be much better!
 
