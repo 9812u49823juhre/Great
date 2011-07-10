@@ -34,6 +34,7 @@ Here are some data/sites we would like to see.
 ** New lyrics providers, given LyricsMode has too many pop-ups and requires JS to view.
 ** "Know Your Meme":http://knowyourmeme.com
 ** "TCP/UDP port #s":https://secure.wikimedia.org/wikipedia/en/wiki/List_of_TCP_and_UDP_port_numbers
+** "Gamespot.com":http://gamespot.com
 
 * *Spice (external APIs).* "Repository":https://github.com/duckduckgo/zeroclickinfo-spice
 -
