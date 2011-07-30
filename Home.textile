@@ -82,8 +82,10 @@ Feel free to edit this page and add to the above list if you have other source i
 * *When to call 0-click.* For each piece of 0-click info, we have to know when to call it. For the static (data dumps) we have a system that does this pretty well. For the dynamic (APIs and goodies) we have a number of schemes to determine when they get called depending on the situation, e.g. "pieces of regexp":https://duckduckgo.com/walpha.html, hashes or more complicated one-off query processing. This area can always be improved, usually by expanding its scope for a particular source such that we get more 0-click coverage without many false positives.
 ** A major example here is finding more of WolframAlpha we can use, and there is a lot more!
 
-* *Other open stuff.* In addition to the 0-click stuff, there are other things that are open that might spark your interest.
-** Logos. We'd love "more logos":http://duckduckgo.com/logos.html for various holidays. We have "a repository":https://github.com/duckduckgo/logos that contains base source files. To make this really easy, just make the logo "the right size":http://duckduckgo.com/nduck.v104.png (with the words - 200x132) so we can use them as a drop-in replacement.
+h3. Other Open Stuff
+
+In addition to the 0-click stuff, there are other things that are open that might spark your interest.
+** Logos. We'd love "more logos":http://duckduckgo.com/logos.html for various holidays. We have "a repository":https://github.com/duckduckgo/logos that contains base source files. To make this really easy, just make the logo "the right size":http://duckduckgo.com/nduck.v104.png (with the words - 200x132) so we can use them as a drop-in replacement. There is also a "forum":https://duck.co/#Forum/duckduckgo-graphics dedicated to this purpose.
 ** Mobile logos. None of the above logos are "formatted for mobile":http://duckduckgo.com/nduck.v105.mobile.png. It is a repetitive task, but if you'd like to make some mobile versions of the "existing specialty logos":http://duckduckgo.com/logos.html that would be awesome and next time we put them up we can use both versions.
 ** API helper libaries. More libraries (in your favorite language) to use our "0-click API":http://api.duckduckgo.com/
 ** Themes. We're working on a dark theme, but could use other ideas. Ultimately, we'd like to have a theme collection.
