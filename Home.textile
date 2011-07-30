@@ -1,4 +1,4 @@
-h2. How to help develop DuckDuckGo
+h2. How-to help develop DuckDuckGo
 
 A lot of people ask if they can help develop up DuckDuckGo? Yes, yes, a thousand times yes! 
 
