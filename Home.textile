@@ -37,10 +37,10 @@ Here are some data/sites we would like to see.
 ** "Know Your Meme":http://knowyourmeme.com
 ** "TCP/UDP port #s":https://secure.wikimedia.org/wikipedia/en/wiki/List_of_TCP_and_UDP_port_numbers
 ** "Gamespot.com":http://gamespot.com
--
+**Spice (external APIs): "Repository":https://github.com/duckduckgo/zeroclickinfo-spice
+
 Feel free to edit this page and add to the above list if you have other source ideas or if you start working on one.
 
-* *Spice (external APIs).* "Repository":https://github.com/duckduckgo/zeroclickinfo-spice
 
 For 0-click that changes a lot, e.g. weather, or which requires a lot of on-the-fly processing, e.g. WolframAlpha, we use external APIs and integrate them into search results in real-time. Working on this component involves writing some JS that we would call at the appropriate time. What you would do is receive the object from the external API, massage it to extract the parts useful for 0-click, and then call an internal function to display it. 
 
