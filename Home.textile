@@ -76,6 +76,8 @@ Feel free to edit this page and add to the above list if you have other source i
 ** More "easter eggs":https://duckduckgo.com/?q=answer+to+the+ultimate+question+of+life+the+universe+and+everything
 ** Parsing crontab formats and explaining how they get called in a human readable manner :)
 ** A cheat sheet for all the goodies!
+** Joke/Sad/Funny -- random joke
+** Fun -- random fun thing (flash game?)
 -
 Feel free to edit this page and add to the above list if you have other source ideas or if you start working on one.
 
