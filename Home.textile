@@ -37,6 +37,8 @@ Here are some data/sites we would like to see.
 ** "Know Your Meme":http://knowyourmeme.com
 ** "TCP/UDP port #s":https://secure.wikimedia.org/wikipedia/en/wiki/List_of_TCP_and_UDP_port_numbers
 ** "Gamespot.com":http://gamespot.com
+** "Plone":http://plone.org/ (python projects)
+** "PyPI":http://pypi.python.org/pypi (python packages)
 
 
 * *Spice (external APIs):* "Repository":https://github.com/duckduckgo/zeroclickinfo-spice
