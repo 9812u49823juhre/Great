@@ -63,6 +63,7 @@ There are a ton of good APIs out there that we'd like to integrate, including th
 ** "Infochimps":http://www.infochimps.com/apis (for data * searches)
 ** Twitter for latest tweets and bio info, e.g. when someone types in @yegg
 ** Translator
+** News API
 
 Feel free to edit this page and add to the above list if you have other source ideas or if you start working on one.
 
