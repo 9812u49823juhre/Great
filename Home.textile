@@ -74,10 +74,10 @@ For some 0-click we don't use any source but ourselves :). These range from "che
 ** em to px converter 
 ** spelling corrector. We have spelling now but this would be more an explicit attempt to think of alternatives.
 ** rhyming dictionary.
-** BEING WORKED ON: throw dice.
-** BEING WORKED ON: three way choice, expanding on our "two way now":http://duckduckgo.com/?q=yes+or+no.
+** SUBMITTED (warthurton): throw dice.
+** SUBMITTED (warthurton): three way choice, expanding on our "two way now":http://duckduckgo.com/?q=yes+or+no.
 ** Improve "lorem ipsum":http://duckduckgo.com/?q=lorem+ipsum goodie so that it shows different text each time
-** Public DNS servers.
+** BEING WORKED ON (warthurton): Public DNS servers.
 ** Poker hands/probabilities
 ** "LIVE":http://duckduckgo.com/?q=guid : GUID generator
 ** Javascript character codes
