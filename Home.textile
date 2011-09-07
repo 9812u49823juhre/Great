@@ -42,6 +42,7 @@ Here are some data/sites we would like to see.
 ** Intl phone numbers, see "this thread":https://duck.co/topic/other-0-click-infos
 ** Bible verses, see "this thread":https://duck.co/topic/other-0-click-infos
 ** Abbreviations, see "this thread":https://duck.co/topic/suggestion-0-click-info-for-abbreviation
+** Javascript keycodes.
 
 * *Spice (external APIs):* "Repository":https://github.com/duckduckgo/zeroclickinfo-spice
 
