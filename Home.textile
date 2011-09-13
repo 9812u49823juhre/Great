@@ -43,6 +43,7 @@ Here are some data/sites we would like to see.
 ** Bible verses, see "this thread":https://duck.co/topic/other-0-click-infos
 ** Abbreviations, see "this thread":https://duck.co/topic/suggestion-0-click-info-for-abbreviation
 ** Javascript keycodes.
+** HTTP status codes
 
 * *Spice (external APIs):* "Repository":https://github.com/duckduckgo/zeroclickinfo-spice
 
