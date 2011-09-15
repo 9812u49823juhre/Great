@@ -68,6 +68,7 @@ There are a ton of good APIs out there that we'd like to integrate, including th
 ** Twitter for latest tweets and bio info, e.g. when someone types in @yegg
 ** Translator
 ** News API
+** From "this thread":https://duck.co/topic/other-0-ckick-info-idea-train-departure "DDG should check for train departure"
 
 Feel free to edit this page and add to the above list if you have other source ideas or if you start working on one.
 
