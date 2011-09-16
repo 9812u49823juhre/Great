@@ -47,6 +47,7 @@ Here are some data/sites we would like to see.
  * Abbreviations, see [this thread](https://duck.co/topic/suggestion-0-click-info-for-abbreviation)
  * Javascript keycodes.
  * [BoardGameGeek](http://boardgamegeek.com/) (being worked on, permission granted for crawler)
+ * Mime types.
 
 ### Spice (external APIs) https://github.com/duckduckgo/zeroclickinfo-spice
 
