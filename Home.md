@@ -118,7 +118,7 @@ In addition to the 0-click stuff, there are other things that are open that migh
  * API helper libaries. More libraries (in your favorite language) to use our [0-click API](http://api.duckduckgo.com/)
  * Themes. We're working on a dark theme, but could use other ideas. Ultimately, we'd like to have a theme collection.
  * Grouping settings. We have [a lot of settings](http://duckduckgo.com/settings.html), which is great, but they can get overwhelming. We have a thought to offer collections of these so you could get the widescreen or minimal or whatever version and it would change a bunch at once. Determining good sets of collections would be very useful.
- * We are also developing a [community platform](http://github.com/duckduckgo/community-platform), more information about helping there you get in [this thread](http://https://duck.co/topic/duckduckgo-community-and-42).
+ * We are also developing a [community platform](http://github.com/duckduckgo/community-platform), more information about helping there you get in [this thread](https://duck.co/topic/duckduckgo-community-and-42).
 
 ## Closed stuff
 
