@@ -14,7 +14,7 @@ In any case, if after reading this doc you are at all interested, please contact
 
 ## Zero-click Info
 
-The main area where we could use help is our *Zero-click Info.* That's the stuff that appears above the traditional links and provides instant answers, topic summaries, etc. Basically, we want more of it and we want what we have to be much better!
+The main area where we could use help is our **Zero-click Info.** That's the stuff that appears above the traditional links and provides instant answers, topic summaries, etc. Basically, we want more of it and we want what we have to be much better!
 
 You may have a particular niche type of search you like to do, e.g. electronics parts or program documentation, and you may have great ideas for the right 0-click source and information we should be displaying for that niche. If so, that's awesome. Work on that! We'd love to support you in that effort.
 
@@ -58,54 +58,54 @@ To get started in this category, check out the [Readme](https://github.com/duckd
 
 There are a ton of good APIs out there that we'd like to integrate, including the following.
 
- * "TMDb":http://api.themoviedb.org/2.1 - so we can show better movie info, like trailers.
- * BEING WORKED ON: "SoundCloud":http://developers.soundcloud.com/ - so we can let people hear music
- * "alternativeTo":http://alternativeto.net/api - so we can display cool related topics for software
- * BEING WORKED ON: pronunciation, possibly via "Forvo":http://www.forvo.com/
- * BEING WORKED ON: Bitcoin conversion, possibly via [[http://bitcoincharts.com/about/markets-api/]] or [[https://mtgox.com/code/data/ticker.php]]
- * "LIVE":http://duckduckgo.com/?q=xkcd Latest XKCD comic
- * "Qype":http://www.qype.co.uk/developers/api - like our "Yelp stuff":http://duckduckgo.com/?q=black+lab+bistro but for UK & Europe.
- * Part numbers, possibly via "Octopart":http://octopart.com/api/overview
- * BEING WORKED ON by @dhruvbird: "Khan academy":https://sites.google.com/a/khanacademy.org/forge/for-developers/technical/api
- * "Infochimps":http://www.infochimps.com/apis (for data * searches)
+ * [TMDb](http://api.themoviedb.org/2.1) - so we can show better movie info, like trailers.
+ * BEING WORKED ON: [SoundCloud](http://developers.soundcloud.com/) - so we can let people hear music
+ * [alternativeTo](http://alternativeto.net/api) - so we can display cool related topics for software
+ * BEING WORKED ON: pronunciation, possibly via [Forvo](http://www.forvo.com/)
+ * BEING WORKED ON: Bitcoin conversion, possibly via http://bitcoincharts.com/about/markets-api/ or https://mtgox.com/code/data/ticker.php
+ * [LIVE](http://duckduckgo.com/?q=xkcd) Latest XKCD comic
+ * Qype: http://www.qype.co.uk/developers/api - like our Yelp stuff: http://duckduckgo.com/?q=black+lab+bistro but for UK & Europe.
+ * Part numbers, possibly via Octopart http://octopart.com/api/overview
+ * BEING WORKED ON by @dhruvbird: Khan academy https://sites.google.com/a/khanacademy.org/forge/for-developers/technical/api
+ * Infochimps http://www.infochimps.com/apis (for data * searches)
  * Twitter for latest tweets and bio info, e.g. when someone types in @yegg
  * Translator
  * News API
- * From "this thread":https://duck.co/topic/other-0-ckick-info-idea-train-departure "DDG should check for train departure"
+ * From [this thread](https://duck.co/topic/other-0-ckick-info-idea-train-departure) "DDG should check for train departure"
 
 Feel free to edit this page and add to the above list if you have other source ideas or if you start working on one.
 
 
-### *Goodies.* "Repository":https://github.com/duckduckgo/zeroclickinfo-goodies
+### Goodies https://github.com/duckduckgo/zeroclickinfo-goodies
 
-For some 0-click we don't use any source but ourselves :). These range from "cheat sheets":http://duckduckgo.com/?q=html+chars to "tools":http://duckduckgo.com/?q=pw to "info":http://duckduckgo.com/?q=%23564. Cheat sheets can be an external HTML file we call via an iFrame but the processing goodies are written in Perl since they get inserted into our core processing engine. Often there are existing Perl modules that will do things, which are ripe for Goodies. There are lots of Goodie ideas out there, including the following.
+For some 0-click we don't use any source but ourselves :). These range from [cheat sheets](http://duckduckgo.com/?q=html+chars) to [tools](http://duckduckgo.com/?q=pw) to [info](http://duckduckgo.com/?q=%23564). Cheat sheets can be an external HTML file we call via an iFrame but the processing goodies are written in Perl since they get inserted into our core processing engine. Often there are existing Perl modules that will do things, which are ripe for Goodies. There are lots of Goodie ideas out there, including the following.
 
  * em to px converter 
  * spelling corrector. We have spelling now but this would be more an explicit attempt to think of alternatives.
  * rhyming dictionary.
  * SUBMITTED (warthurton): throw dice.
- * SUBMITTED (warthurton): three way choice, expanding on our "two way now":http://duckduckgo.com/?q=yes+or+no.
- * Improve "lorem ipsum":http://duckduckgo.com/?q=lorem+ipsum goodie so that it shows different text each time
- * "LIVE":http://duckduckgo.com/?q=public+dns (warthurton): Public DNS servers.
+ * SUBMITTED (warthurton): three way choice, expanding on our two way now http://duckduckgo.com/?q=yes+or+no.
+ * Improve "lorem ipsum" http://duckduckgo.com/?q=lorem+ipsum goodie so that it shows different text each time
+ * [LIVE](http://duckduckgo.com/?q=public+dns) (warthurton): Public DNS servers.
  * Poker hands/probabilities
- * "LIVE":http://duckduckgo.com/?q=guid : GUID generator
+ * [LIVE](http://duckduckgo.com/?q=guid) : GUID generator
  * Javascript character codes
- * More "easter eggs":https://duckduckgo.com/?q=answer+to+the+ultimate+question+of+life+the+universe+and+everything
+ * More [easter eggs](https://duckduckgo.com/?q=answer+to+the+ultimate+question+of+life+the+universe+and+everything)
  * Parsing crontab formats and explaining how they get called in a human readable manner :)
  * A cheat sheet for all the goodies!
  * Joke/Sad/Funny -- random joke
  * Fun -- random fun thing (flash game?)
  * Suicide hotline #s.
- * From "this thread":https://duck.co/topic/is-it-christmas-zero-click-info "This would kind of be a fun one. A zero-click box sourced from isitchristmas.com would be hilarious. What say you all?"
- * From "this thread":https://duck.co/topic/zero-click-info-idea-reverse-dns Reverse DNS
+ * From [this thread](https://duck.co/topic/is-it-christmas-zero-click-info) "This would kind of be a fun one. A zero-click box sourced from isitchristmas.com would be hilarious. What say you all?"
+ * From [this thread](https://duck.co/topic/zero-click-info-idea-reverse-dns) Reverse DNS
 
-To get started in this category, check out the "Readme":https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/README.md in the "Goodies Repository":https://github.com/duckduckgo/zeroclickinfo-goodies. It explains how to organize your project, and then you can do a pull request and ultimately become a collaborator.
+To get started in this category, check out the [Readme](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/README.md) in the [Goodies Repository](https://github.com/duckduckgo/zeroclickinfo-goodies). It explains how to organize your project, and then you can do a pull request and ultimately become a collaborator.
 
 Feel free to edit this page and add to the above list if you have other source ideas or if you start working on one.
 
-### *When to call 0-click.*
+### When to call 0-click
 
-For each piece of 0-click info, we have to know when to call it. For the static (data dumps) we have a system that does this pretty well. For the dynamic (APIs and goodies) we have a number of schemes to determine when they get called depending on the situation, e.g. "pieces of regexp":https://duckduckgo.com/walpha.html, hashes or more complicated one-off query processing. This area can always be improved, usually by expanding its scope for a particular source such that we get more 0-click coverage without many false positives.
+For each piece of 0-click info, we have to know when to call it. For the static (data dumps) we have a system that does this pretty well. For the dynamic (APIs and goodies) we have a number of schemes to determine when they get called depending on the situation, e.g. [pieces of regexp](https://duckduckgo.com/walpha.html), hashes or more complicated one-off query processing. This area can always be improved, usually by expanding its scope for a particular source such that we get more 0-click coverage without many false positives.
 
  * A major example here is finding more of WolframAlpha we can use, and there is a lot more!
 
@@ -113,11 +113,11 @@ For each piece of 0-click info, we have to know when to call it. For the static 
 
 In addition to the 0-click stuff, there are other things that are open that might spark your interest.
 
- * Logos. We'd love "more logos":http://duckduckgo.com/logos.html for various holidays. We have "a repository":https://github.com/duckduckgo/logos that contains base source files. To make this really easy, just make the logo "the right size":http://duckduckgo.com/nduck.v104.png (with the words - 200x132) so we can use them as a drop-in replacement. There is also a "forum":https://duck.co/#Forum/duckduckgo-graphics dedicated to this purpose.
- * Mobile logos. None of the above logos are "formatted for mobile":http://duckduckgo.com/nduck.v105.mobile.png. It is a repetitive task, but if you'd like to make some mobile versions of the "existing specialty logos":http://duckduckgo.com/logos.html that would be awesome and next time we put them up we can use both versions.
- * API helper libaries. More libraries (in your favorite language) to use our "0-click API":http://api.duckduckgo.com/
+ * Logos. We'd love [more logos](http://duckduckgo.com/logos.html) for various holidays. We have [a repository](https://github.com/duckduckgo/logos) that contains base source files. To make this really easy, just make the logo [the right size](http://duckduckgo.com/nduck.v104.png) (with the words - 200x132) so we can use them as a drop-in replacement. There is also a [forum](https://duck.co/#Forum/duckduckgo-graphics) dedicated to this purpose.
+ * Mobile logos. None of the above logos are [formatted for mobile](http://duckduckgo.com/nduck.v105.mobile.png). It is a repetitive task, but if you'd like to make some mobile versions of the [existing specialty logos](http://duckduckgo.com/logos.html) that would be awesome and next time we put them up we can use both versions.
+ * API helper libaries. More libraries (in your favorite language) to use our [0-click API](http://api.duckduckgo.com/)
  * Themes. We're working on a dark theme, but could use other ideas. Ultimately, we'd like to have a theme collection.
- * Grouping settings. We have "a lot of settings":http://duckduckgo.com/settings.html, which is great, but they can get overwhelming. We have a thought to offer collections of these so you could get the widescreen or minimal or whatever version and it would change a bunch at once. Determining good sets of collections would be very useful.
+ * Grouping settings. We have [a lot of settings](http://duckduckgo.com/settings.html), which is great, but they can get overwhelming. We have a thought to offer collections of these so you could get the widescreen or minimal or whatever version and it would change a bunch at once. Determining good sets of collections would be very useful.
 
 ## Closed stuff
 
@@ -125,6 +125,6 @@ As mentioned at the top, there is also an opportunity to work on some closed sou
 
 ## Contact
 
-Thank you for getting this far in this (admittedly long) document! If you're interested, please contact us at "open@duckduckgo.com":mailto:open@duckduckgo.com. If you're unsure of what to make of the above, we can try to help steer you into something that fits your skill set and/or interests.
+Thank you for getting this far in this (admittedly long) document! If you're interested, please contact us at open@duckduckgo.com. If you're unsure of what to make of the above, we can try to help steer you into something that fits your skill set and/or interests.
 
 Also note that this document is very work-in-progress. So if you have any ideas for suggestions on how to improve it, please let us know.
