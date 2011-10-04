@@ -70,10 +70,11 @@ There are a ton of good APIs out there that we'd like to integrate, including th
  * Part numbers, possibly via Octopart http://octopart.com/api/overview
  * BEING WORKED ON by @dhruvbird: Khan academy https://sites.google.com/a/khanacademy.org/forge/for-developers/technical/api
  * Infochimps http://www.infochimps.com/apis (for data * searches)
- * Twitter for latest tweets and bio info, e.g. when someone types in @yegg
+ * BEING WORKED ON Twitter for latest tweets and bio info, e.g. when someone types in @yegg
  * Translator
  * News API
  * From [this thread](https://duck.co/topic/other-0-ckick-info-idea-train-departure) "DDG should check for train departure"
+ * Is it down, using an API from one of the is it down web sites.
 
 Feel free to edit this page and add to the above list if you have other source ideas or if you start working on one.
 
