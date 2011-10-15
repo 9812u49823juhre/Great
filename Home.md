@@ -35,7 +35,7 @@ Here are some data/sites we would like to see.
  * More programming documentation/reference - see our current list on the [tech goodies page](http://duckduckgo.com/tech.html) (right column).
  * ISO codes 
  * [Macupdate.com](http://macupdate.com)
- * [Iusethis.com](http://iusethis.com)
+ * BEING WORKED ON [Iusethis.com](http://iusethis.com)
  * New lyrics providers, given LyricsMode has too many pop-ups and requires JS to view.
  * [Know Your Meme](http://knowyourmeme.com)
  * [TCP/UDP port #s](https://secure.wikimedia.org/wikipedia/en/wiki/List_of_TCP_and_UDP_port_numbers)
@@ -94,7 +94,7 @@ For some 0-click we don't use any source but ourselves :). These range from [che
  * [LIVE](http://duckduckgo.com/?q=guid) : GUID generator
  * Javascript character codes
  * More [easter eggs](https://duckduckgo.com/?q=answer+to+the+ultimate+question+of+life+the+universe+and+everything)
- * Parsing crontab formats and explaining how they get called in a human readable manner :)
+ * BEING WORKED ON Parsing crontab formats and explaining how they get called in a human readable manner :)
  * A cheat sheet for all the goodies!
  * Joke/Sad/Funny -- random joke
  * Fun -- random fun thing (flash game?)
