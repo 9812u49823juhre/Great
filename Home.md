@@ -101,7 +101,7 @@ For some 0-click we don't use any source but ourselves :). These range from [che
  * Suicide hotline #s.
  * From [this thread](https://duck.co/topic/is-it-christmas-zero-click-info) "This would kind of be a fun one. A zero-click box sourced from isitchristmas.com would be hilarious. What say you all?"
  * From [this thread](https://duck.co/topic/zero-click-info-idea-reverse-dns) Reverse DNS
- * Passphrase, e.g. passphrase 4 words => Metro Justice Carrot Running -- perhaps using Diceware in some way?
+ * BEING WORKED ON: Passphrase, e.g. passphrase 4 words => Metro Justice Carrot Running -- perhaps using Diceware in some way?
 
 To get started in this category, check out the [Readme](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/README.md) in the [Goodies Repository](https://github.com/duckduckgo/zeroclickinfo-goodies). It explains how to organize your project, and then you can do a pull request and ultimately become a collaborator.
 
