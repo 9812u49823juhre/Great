@@ -32,7 +32,7 @@ To get started in this category, check out the [Readme](https://github.com/duckd
 
 Here are some data/sites we would like to see.
 
- * More programming documentation/reference - see our current list on the [tech goodies page](http://duckduckgo.com/tech.html) (right column).
+ * More programming documentation/reference - see our current list on the [tech goodies page](http://duckduckgo.com/tech.html) (right column). Ideas are: gtk
  * ISO codes 
  * [Macupdate.com](http://macupdate.com)
  * BEING WORKED ON [Iusethis.com](http://iusethis.com)
