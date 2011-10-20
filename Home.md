@@ -103,6 +103,7 @@ For some 0-click we don't use any source but ourselves :). These range from [che
  * From [this thread](https://duck.co/topic/zero-click-info-idea-reverse-dns) Reverse DNS
  * BEING WORKED ON: Passphrase, e.g. passphrase 4 words => Metro Justice Carrot Running -- perhaps using Diceware in some way?
 * It would be cool if typing something like "flash version" in DDG would return to me what flash player version I'm currently running. Similar to returning my IP address when "what is my ip" is typed.
+* It would be cool for designers to have a golden ratio calculator . So you type something like "golden ratio 1 : ?" and get 1.618033988749 or "golden ratio ? : 900" and get 556.2305898749.
 
 To get started in this category, check out the [Readme](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/README.md) in the [Goodies Repository](https://github.com/duckduckgo/zeroclickinfo-goodies). It explains how to organize your project, and then you can do a pull request and ultimately become a collaborator.
 
