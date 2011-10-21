@@ -24,6 +24,8 @@ There are lots of Goodie ideas out there, including the following. Feel free to 
  * From [this thread](https://duck.co/topic/zero-click-info-idea-reverse-dns) Reverse DNS
 way?
  * It would be cool if typing something like "flash version" in DDG would return to me what flash player version I'm currently running. Similar to returning my IP address when "what is my ip" is typed.
+ * capitalize x (including accent chars)
+ * accents e -> accented chars with that base char
 
 ### Being Worked on
  * BEING WORKED ON Suicide hotline #s.
