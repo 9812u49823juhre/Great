@@ -1,8 +1,6 @@
 # How-to help develop DuckDuckGo
 
-A lot of people ask if they can help develop DuckDuckGo? Yes, yes, a thousand times yes! 
-
-But how, exactly?  This working document attempts to answer that question.
+A lot of people ask if they can help develop DuckDuckGo? Yes, yes, a thousand times yes! But how, exactly?  This working document attempts to answer that question.
 
 First, know that we have way more to do than we can handle internally. So any help is greatly appreciated. Chances are anything you do will eventually go live and so it is pretty easy to have a real impact on the search engine. It also relatively easy to influence the parts you personally care about, e.g. define instant answers for the types of queries you find yourself doing.
 
