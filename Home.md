@@ -6,7 +6,7 @@ A lot of people ask if they can help develop DuckDuckGo? Yes, yes, a thousand ti
 
 First, know that we have way more to do than we can handle internally. So any help is greatly appreciated. Chances are anything you do will eventually go live and so it is pretty easy to have a real impact on the search engine. It also relatively easy to influence the parts you personally care about, e.g. define instant answers for the types of queries you find yourself doing.
 
-Much of DuckDuckGo is closed source, but a growing portion is [open](http://github.com/duckduckgo). We don't think it is right to ask volunteers to contribute to closed source, so what we propose here will also be open. However, if you want to work on the closed portion, there is plenty of opportunity do that as well (more on that at the bottom).
+Much of DuckDuckGo is closed source, but a growing portion is [open](http://github.com/duckduckgo). We don't think it is right to ask volunteers to contribute to closed source, so what we propose here will also be open.
 
 In any case, you can reach us at open@duckduckgo.com. We're happy to answer your questions, or help you figure out something useful to work on. We would like to ensure the shortest path to making what you want to develop go live.
 
