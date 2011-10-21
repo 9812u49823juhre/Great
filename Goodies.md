@@ -5,9 +5,9 @@ For some 0-click we don't use any source but ourselves :). These range from [che
  * [LIVE](http://duckduckgo.com/?q=binary+that) ([hunterlang](https://github.com/hunterlang)): binary ([code](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/binary/goodie.pl))
  * [LIVE](http://duckduckgo.com/?q=public+dns) ([warthurton](https://github.com/warthurton)): Public DNS servers ([code](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/public_dns))
  * [LIVE](http://duckduckgo.com/?q=guid) ([warthurton](https://github.com/warthurton)): GUID generator ([code](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/guid/goodie.pl))
- * SUBMITTED ([warthurton](https://github.com/warthurton)): throw dice.
- * SUBMITTED ([warthurton](https://github.com/warthurton)): three way choice, expanding on our two way now http://duckduckgo.com/?q=yes+or+no.
- * BEING WORKED ON: Passphrase, e.g. passphrase 4 words => Metro Justice Carrot Running -- perhaps using Diceware in some 
+ * [LIVE](http://duckduckgo.com/?q=throw+dice) ([warthurton](https://github.com/warthurton)): throw dice ([code](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/dice/goodie.pl)).
+ * [LIVE](http://duckduckgo.com/?q=red+or+green+or+blue) ([warthurton](https://github.com/warthurton)): three way choice ([code](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/abc/goodie.pl)).
+ * [LIVE](http://duckduckgo.com/?q=passphrase+4) (hungerlang): Passphrase ([code](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/passphrase/)).
  * BEING WORKED ON Suicide hotline #s.
  * BEING WORKED ON Parsing crontab formats and explaining how they get called in a human readable manner :)
  * BEING WORKED ON It would be cool for designers to have a golden ratio calculator . So you type something like "golden ratio 1 : ?" and get 1.618033988749 or "golden ratio ? : 900" and get 556.2305898749.
