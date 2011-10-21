@@ -20,9 +20,9 @@ You may have a particular niche type of search you like to do, e.g. electronics 
 
 Otherwise, we have a list of our own of things we know would make good improvements and are instant projects to work on. These fall into the categories listed below.
 
-### [Fathead](https://github.com/duckduckgo/duckduckgo/wiki/Goodies)
+### [Fathead](https://github.com/duckduckgo/duckduckgo/wiki/Fathead)
 
-### [Spice](https://github.com/duckduckgo/duckduckgo/wiki/Goodies)
+### [Spice](https://github.com/duckduckgo/duckduckgo/wiki/Spice)
 
 ### [Goodies](https://github.com/duckduckgo/duckduckgo/wiki/Goodies)
 
