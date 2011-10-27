@@ -22,12 +22,12 @@ Feel free to edit this page and add to the above list if you have other source i
 
 ### Being Worked on
  * BEING WORKED ON by @dhruvbird: Khan academy https://sites.google.com/a/khanacademy.org/forge/for-developers/technical/api
- * BEING WORKED ON Twitter for latest tweets and bio info, e.g. when someone types in @yegg
  * BEING WORKED ON: pronunciation, possibly via [Forvo](http://www.forvo.com/)
  * BEING WORKED ON: Bitcoin conversion, possibly via http://bitcoincharts.com/about/markets-api/ or 
 
 ### LIVE
  * [LIVE](http://duckduckgo.com/?q=xkcd) ([sdball](https://github.com/sdball)): Latest XKCD comic ([code](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/xkcd))
+ * [LIVE](http://duckduckgo.com/?q=%40duckduckgo) ([elektronikLexikon](https://github.com/elektronikLexikon)): Twitter for latest tweets and bio info, e.g. when someone types in @yegg ([code](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/twitter))
 
 ### Getting started
 
