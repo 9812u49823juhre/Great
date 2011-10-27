@@ -12,8 +12,8 @@ Here are some data/sites we would like to see.
 
  * More programming documentation/reference - see our current list on the [tech goodies page](http://duckduckgo.com/tech.html) (right column). Ideas are: gtk
  * ISO codes 
- * [Macupdate.com](http://macupdate.com)
- * BEING WORKED ON [Iusethis.com](http://iusethis.com)
+ * BEING WORKED ON: [Macupdate.com](http://macupdate.com)
+ * BEING WORKED ON: [Iusethis.com](http://iusethis.com)
  * New lyrics providers, given LyricsMode has too many pop-ups and requires JS to view.
  * [Know Your Meme](http://knowyourmeme.com)
  * [TCP/UDP port #s](https://secure.wikimedia.org/wikipedia/en/wiki/List_of_TCP_and_UDP_port_numbers)
