@@ -8,7 +8,7 @@ First, know that we have way more to do than we can handle internally. So any he
 
 Much of DuckDuckGo is closed source, but a growing portion is [open](http://github.com/duckduckgo). We don't think it is right to ask volunteers to contribute to closed source, so what we propose here will also be open.
 
-In any case, you can reach us at open@duckduckgo.com. We're happy to answer your questions, or help you figure out something useful to work on. We would like to ensure the shortest path to making what you want to develop go live.
+In any case, you can reach us at open@duckduckgo.com. We're happy to answer your questions, or help you figure out something useful to work on. We would like to ensure the shortest path to making what you want to develop go live. We'd also love feedback on how to improve our open-source documentation, organization and integration processes.
 
 
 ### Zero-click Info
@@ -19,11 +19,14 @@ You may have a particular niche type of search you like to do, e.g. electronics 
 
 Otherwise, we are maintaining a list of requests that we know would make good improvements and are instant projects to work on. These fall into the categories listed below.
 
-* **[Fathead](https://github.com/duckduckgo/duckduckgo/wiki/Fathead)**
+* **[Goodies](https://github.com/duckduckgo/duckduckgo/wiki/Goodies)** - standalone Perl snippets (i.e. no external requests) that take a set of queries and turn them into an instant answer, e.g. md5 hashes, rolling a die, etc.
 
-* **[Spice](https://github.com/duckduckgo/duckduckgo/wiki/Spice)**
+* **[Spice](https://github.com/duckduckgo/duckduckgo/wiki/Spice)** - JavaScript processing on external JSON APIs, e.g. grab the latest XKCD comic, bitcoin prices, etc.
 
-* **[Goodies](https://github.com/duckduckgo/duckduckgo/wiki/Goodies)**
+* **[Fathead](https://github.com/duckduckgo/duckduckgo/wiki/Fathead)**  - standalone data files of information about a particular source, e.g. C++ references.
+
+
+
 
 
 ### Other open stuff
