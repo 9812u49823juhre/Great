@@ -29,6 +29,7 @@ Feel free to edit this page and add to the above list if you have other source i
 ### LIVE
  * [LIVE](http://duckduckgo.com/?q=xkcd) ([sdball](https://github.com/sdball)): Latest XKCD comic ([code](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/xkcd))
  * [LIVE](http://duckduckgo.com/?q=%40duckduckgo) ([elektronikLexikon](https://github.com/elektronikLexikon)): Twitter for latest tweets and bio info, e.g. when someone types in @yegg ([code](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/twitter))
+ * [LIVE](http://duckduckgo.com/?q=flash+version) ([eet_fuk](https://github.com/eet_fuk)): Flash version ([code](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/flash_version))
 
 ### Getting started
 
