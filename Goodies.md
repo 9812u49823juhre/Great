@@ -38,7 +38,7 @@ way?
  * [LIVE](http://duckduckgo.com/?q=guid) ([warthurton](https://github.com/warthurton)): GUID generator ([code](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/guid/goodie.pl))
  * [LIVE](http://duckduckgo.com/?q=throw+dice) ([warthurton](https://github.com/warthurton)): throw dice ([code](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/dice/goodie.pl)).
  * [LIVE](http://duckduckgo.com/?q=red+or+green+or+blue) ([warthurton](https://github.com/warthurton)): three way choice ([code](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/abc/goodie.pl)).
- * [LIVE](http://duckduckgo.com/?q=passphrase+4) (hungerlang): Passphrase ([code](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/passphrase/)).
+ * [LIVE](http://duckduckgo.com/?q=passphrase+4) ([hunterlang](https://github.com/hunterlang)): Passphrase ([code](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/passphrase/)).
 
 
 ### Getting started
