@@ -17,6 +17,7 @@ https://mtgox.com/code/data/ticker.php
  * Translator
  * From [this thread](https://duck.co/topic/other-0-ckick-info-idea-train-departure) "DDG should check for train departure"
  * Is it down, using an API from one of the is it down web sites.
+ * Improve [WolframAlpha regex](http://weinbergalpha.com/) to allow for things like how far is the Sun from Jupiter or how big is Jupiter.
 
 Feel free to edit this page and add to the above list if you have other source ideas or if you start working on one.
 
