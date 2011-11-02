@@ -9,7 +9,6 @@ There are a ton of good APIs out there that we'd like to integrate, including th
 ### Requests
  * [TMDb](http://api.themoviedb.org/2.1) - so we can show better movie info, like trailers.
  * [alternativeTo](http://alternativeto.net/api) - so we can display cool related topics for software
-https://mtgox.com/code/data/ticker.php
  * Like [XKCD](http://duckduckgo.com/?q=xkcd) but for sinfest and SMBC (Saturday Morning Breakfast Cereal) and the doghouse diaries.
  * Qype: http://www.qype.co.uk/developers/api - like our Yelp stuff: http://duckduckgo.com/?q=black+lab+bistro but for UK & Europe.
  * Part numbers, possibly via Octopart http://octopart.com/api/overview
@@ -27,7 +26,7 @@ Feel free to edit this page and add to the above list if you have other source i
 ### Being Worked on
  * BEING WORKED ON by @dhruvbird: Khan academy https://sites.google.com/a/khanacademy.org/forge/for-developers/technical/api
  * BEING WORKED ON: pronunciation, possibly via [Forvo](http://www.forvo.com/)
- * BEING WORKED ON: Bitcoin conversion, possibly via http://bitcoincharts.com/about/markets-api/ or 
+ * BEING WORKED ON: Bitcoin conversion, possibly via http://bitcoincharts.com/about/markets-api/ or https://mtgox.com/code/data/ticker.php
 
 ### LIVE
  * [LIVE](http://duckduckgo.com/?q=xkcd) ([sdball](https://github.com/sdball)): Latest XKCD comic ([code](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/xkcd))
