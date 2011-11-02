@@ -20,6 +20,7 @@ There are a ton of good APIs out there that we'd like to integrate, including th
  * GoodReads: return author images, summaries, events, blog posts, etc.
  * Get the newest movies for a given actor, including those in production (maybe using the TMDb API)
  * Get the newest books for a given author (maybe using the GoodReads API: http://www.goodreads.com/api)
+ * Check if a port is open.
 
 Feel free to edit this page and add to the above list if you have other source ideas or if you start working on one.
 
