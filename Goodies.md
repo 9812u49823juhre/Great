@@ -27,6 +27,7 @@ way?
  * capitalize x (including accent chars)
  * accents e -> accented chars with that base char
  * Add generator for Chess960 board.
+ * Mimic unix cal command, e.g. cal 1 2012
 
 ### Being Worked on
  * BEING WORKED ON Suicide hotline #s.
