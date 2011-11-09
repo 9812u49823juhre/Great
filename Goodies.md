@@ -33,7 +33,7 @@ way?
 ### Being Worked on
  * BEING WORKED ON Suicide hotline #s.
  * BEING WORKED ON Parsing crontab formats and explaining how they get called in a human readable manner :)
- * BEING WORKED ON It would be cool for designers to have a golden ratio calculator . So you type something like "golden ratio 1 : ?" and get 1.618033988749 or "golden ratio ? : 900" and get 556.2305898749.
+
 
 ### LIVE
  * [LIVE](http://duckduckgo.com/?q=binary+that) ([hunterlang](https://github.com/hunterlang)): binary ([code](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/binary/goodie.pl))
