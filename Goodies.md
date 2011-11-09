@@ -27,7 +27,7 @@ way?
  * accents e -> accented chars with that base char
  * Add generator for Chess960 board.
  * Mimic unix cal command, e.g. cal 1 2012
- * Bring up the datasheet when I search for an electronics part. Maybe it can be done with [the API of Octopart](http://octopart.com/api/overview)
+
 
 ### Being Worked on
  * BEING WORKED ON Suicide hotline #s.
