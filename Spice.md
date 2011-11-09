@@ -11,7 +11,7 @@ There are a ton of good APIs out there that we'd like to integrate, including th
  * [alternativeTo](http://alternativeto.net/api) - so we can display cool related topics for software
  * Like [XKCD](http://duckduckgo.com/?q=xkcd) but for sinfest and SMBC (Saturday Morning Breakfast Cereal) and the doghouse diaries.
  * Qype: http://www.qype.co.uk/developers/api - like our Yelp stuff: http://duckduckgo.com/?q=black+lab+bistro but for UK & Europe.
- * Part numbers, possibly via Octopart http://octopart.com/api/overview
+ * Part numbers and datasheets for electronics parts, possibly via [the Octopart API](http://octopart.com/api/overview)
  * Infochimps http://www.infochimps.com/apis (for data * searches)
  * Translator
  * From [this thread](https://duck.co/topic/other-0-ckick-info-idea-train-departure) "DDG should check for train departure"
