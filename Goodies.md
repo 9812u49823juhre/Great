@@ -10,7 +10,6 @@ There are lots of Goodie ideas out there, including the following. Feel free to 
 
 ### Requests
 
- * em to px converter 
  * spelling corrector. We have spelling now but this would be more an explicit attempt to think of alternatives.
  * rhyming dictionary.
  * Improve "lorem ipsum" http://duckduckgo.com/?q=lorem+ipsum goodie so that it shows different text each time
@@ -30,6 +29,7 @@ way?
 
 
 ### Being Worked on
+ * BEING WORKED ON em to px converter 
  * BEING WORKED ON Suicide hotline #s.
  * BEING WORKED ON Parsing crontab formats and explaining how they get called in a human readable manner :)
 
