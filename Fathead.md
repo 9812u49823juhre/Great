@@ -21,6 +21,7 @@ We should also note that this is a win-win for the data provider since we only s
  * [BoardGameGeek](http://boardgamegeek.com/) (being worked on, permission granted for crawler)
  * Mime types.
  * Currency in X, i.e. X is Japan = Yen.
+ * File extensions, e.g. .ost
 
 ### Being worked on
 
