@@ -27,7 +27,7 @@ way?
  * Add generator for Chess960 board.
  * Mimic unix cal command, e.g. cal 1 2012
  * Roman numerals.
-
+ * Ideas here: http://www.soople.com/
 
 ### Being Worked on
  * BEING WORKED ON em to px converter 
