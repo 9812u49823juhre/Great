@@ -22,6 +22,7 @@ We should also note that this is a win-win for the data provider since we only s
  * Mime types.
  * Currency in X, i.e. X is Japan = Yen.
  * File extensions, e.g. .ost
+ * Urbandictionary
 
 ### Being worked on
 
