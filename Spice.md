@@ -1,11 +1,4 @@
-### Overview
-
-[Repository](https://github.com/duckduckgo/zeroclickinfo-spice)
-
-For 0-click that changes a lot, e.g. weather, or which requires a lot of on-the-fly processing, e.g. WolframAlpha, we use external APIs and integrate them into search results in real-time. Working on this component involves writing some JavaScript that we would call at the appropriate time. What you would do is receive the object from the external API, massage it to extract the parts useful for 0-click, and then call an internal function to display it. 
-
-There are a ton of good APIs out there that we'd like to integrate, and we maintain [a request list](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/REQUESTS.md). Feel free to bring your own!
-
+Spice plugins are JavaScript blocks that process data from JSONP APIs. They are perfect for Zero-click Info that changes a lot, e.g. [Twitter](https://duckduckgo.com/%40duckduckgo), or which requires a lot of on-the-fly processing, e.g. [cost of living](https://duckduckgo.com/?q=cost+of+living+autin+philadelphia). They are colored purple on [the Trello board](https://trello.com/board/duckduckgo-open-source-plugins/4f08e96d947729b526070890).
 
 ### Getting started
 
