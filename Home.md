@@ -1,4 +1,4 @@
-We hope you'll join us in making DuckDuckGo the best search engine out there! A growing portion of our codebase is [open source](http://github.com/duckduckgo/), and we'd welcome your contributions.
+We hope you'll join us in making DuckDuckGo the best search engine out there! A rapidly growing portion of our codebase is [open source](http://github.com/duckduckgo/), and we'd welcome your contributions.
 
 # What to work on
 
