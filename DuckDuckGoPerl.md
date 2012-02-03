@@ -2,7 +2,7 @@
 
 ## Our version of Perl
 
-Right now, all we do on DuckDuckGo (so the search engine itself, the community platform and all additional services), is using Perl 5.10.1 as a base. In the near future we plan to upgrade to Perl 5.16 to bring the most recent speed advantages to our platform, but right now it's all Perl 5.10.1. This switch will not impact the development of the modules, because Perl 5.16 is compatible with Perl 5.10.1 (all Perl versions are backwards-compatible). This ensures that the switch will be very painless.
+Right now, all we do at DuckDuckGo (so the search engine itself, the community platform and all additional services), is using Perl 5.10.1 as a base. In the near future we plan to upgrade to Perl 5.16 to bring the most recent speed advantages to our platform, but right now it's all Perl 5.10.1. This switch will not impact the development of the modules, because Perl 5.16 is compatible with Perl 5.10.1 (all Perl versions are backwards-compatible). This ensures that the switch will be very painless.
 
 ## DuckDuckGo Core and DuckDuckGo Community
 
