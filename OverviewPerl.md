@@ -2,7 +2,7 @@
 
 ## What is Perl?
 
-Perl is a general purpose scripting language, which is often called "the glue of the internet". It is very flexible and powerful, and so it can be easily misused, which leads to a history full of misunderstandings, so please forget all of the negative things you may have heard regarding Perl, and start getting a feeling for the new, modern culture of Perl.
+Perl is a general purpose scripting language, which is often called "the glue of the internet". It is very flexible and powerful, and so it can be easily misused, which leads to a history full of misunderstandings - so please, forget all of the negative things you may have heard regarding Perl and start getting a feeling for the new, modern culture of Perl.
 
 In order to really get a complete overview of the current Perl culture, we strongly suggest you read Onyx Neon's [free modern Perl book](http://www.onyxneon.com/books/modern_perl/). This list will provide a concise overview of the most important things to know, directed mainly (but not only) at those who already know other programming languages and understand how software-development functions.
 
