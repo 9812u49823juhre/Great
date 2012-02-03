@@ -6,7 +6,7 @@ Right now, all we do on DuckDuckGo (so the search engine itself, the community p
 
 ## DuckDuckGo Core and DuckDuckGo Community
 
-On DuckDuckGo we try to use the best-fitting solutions for each problem we tackle. That's why we have split up our Perl development into 2 general paths: "Most Modern" and "Fastest." The "Most Modern" way is the way of the Community Platform and all other services that are not part of the core search engine implementation. This way we assure that we can use the most modern methods and bind in new services much faster and more easily. The "Fastest" way is the way we work on the search engine itself to ensure that we can answer the requests as fast as possible.
+At DuckDuckGo we try to use the best-fitting solutions for each problem we tackle. That's why we have split up our Perl development into 2 general paths: "Most Modern" and "Fastest." The "Most Modern" way is the way of the Community Platform and all other services that are not part of the core search engine implementation. This way we assure that we can use the most modern methods and bind in new services much faster and more easily. The "Fastest" way is the way we work on the search engine itself to ensure that we can answer the requests as fast as possible.
 
 The main difference between the two is the usage of the object layer in those areas. For the "Most Modern" method we use [Moose](https://metacpan.org/module/Moose) as the object layer, which also gives us the power of a Meta layer and the option to use many of the brand-new solutions out there, like [Catalyst](http://www.catalystframework.org/). Also, we use [DBIx::Class](http://metacpan.org/module/DBIx::Class) as a layer to abstract the database in an object orientated Perl-like way.
 
