@@ -57,7 +57,7 @@ $plugin->handle_request_matches($request,@matches_or_pos);
 
 Normally the developer doesnt need to handle this, cause we abstracted this in keywords, see later.
 
-## Sample Plugin
+## Sample DDG::Goodie Plugin for DDG::Block::Words
 
 ```perl
 package DDG::Goodie::Reverse;
@@ -94,3 +94,43 @@ Also here you may give a HashRef for the parameters. If you want to specify seve
 **handle** generates the required **handle_request_matches** function for you, depending on what you need to work inside the query. Here we do very massive Perl Blackmagic ;), so you shouldnt think too much how we make it happen (if you dislike this kind of Blackmagic you may do your own **handle_request_matches** function, as said in the overview. You can request all attributes of the given DDG::Request to be handled and in addition you can use **remainder** which is a special way to give you the "non matching" part of the query. This is what you mostly will want to work with. The value you request to handle will be given as **$_**.
 
 Additional you can use **query_raw**, **query**, **query_nowhitespace**, **query_nowhitespace_nodash**. You can see how they are generated and put together in DDG::Request code.
+
+Its important here that you only give back a ready string as one Scalar, not an Array, ArrayRef or HashRef.
+
+### returning nothing
+
+If your Plugin matches, but still is unable to provide a zeroclickinfo you must end with:
+
+```perl
+return;
+```
+
+## Sample DDG::Goodie Plugin for DDG::Block::Regexp
+
+```perl
+package DDG::Goodie::Reverse;
+
+use DDG::Goodie;
+
+zci is_cached => 1;
+
+regexp qr/reverse\s(.*)/i, qr/(.*)\sreverse/i;
+
+handle matches => sub { join('',reverse split(//,$_[0])) };
+
+1;
+```
+
+### regexp
+
+Instead of **words** you give here the regexp which should match against the query. You can also specify to match against other attributes of the query, but this is normally not necessary.
+
+### handle
+
+Regexp Plugins are not able to handle **remainder**, instead you get **matches**, which gives all the matches of the matching Regexp on **@_**. Parallel you can also access the raw query on **$_**.
+
+## Best start
+
+Checkout the [Block Test](https://github.com/duckduckgo/duckduckgo/blob/master/t/35-block.t) to get a nice base setup for making your own test.
+
+If you want to make a distribution directly, please use Dist::Zilla and so far just upload them to your Github (or other repository hosting whatever you have) and show it to us that we can discuss it. We want to provide easy ways for making those (which are already in the work, so this block of text will change soon ;) ).
