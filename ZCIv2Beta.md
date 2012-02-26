@@ -1,4 +1,4 @@
-# Zero-click Info API v2 Beta Test Information Page
+# Zero-click Info Developer API v2 Beta Test Information Page
 
 We suggest that you have Perl knowledge here. This is semi public, all Beta, please get in contact with us on IRC before doing stuff :).
 
