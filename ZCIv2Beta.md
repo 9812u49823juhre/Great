@@ -91,6 +91,6 @@ Also here you may give a HashRef for the parameters. If you want to specify seve
 
 ### handle
 
-**handle** generates the required **handle_request_matches** function for you, depending on what you need to work inside the query. Here we do very massive Perl Blackmagic ;), so you shouldnt think too much how we make it happen (if you dislike this kind of Blackmagic you may do your own **handle_request_matches** function, as said in the overview. You can request all attributes of the given DDG::Request to be handled and in addition you can use **remainder** which is a special way to give you the "non matching" part of the query. This is what you mostly will want to work with.
+**handle** generates the required **handle_request_matches** function for you, depending on what you need to work inside the query. Here we do very massive Perl Blackmagic ;), so you shouldnt think too much how we make it happen (if you dislike this kind of Blackmagic you may do your own **handle_request_matches** function, as said in the overview. You can request all attributes of the given DDG::Request to be handled and in addition you can use **remainder** which is a special way to give you the "non matching" part of the query. This is what you mostly will want to work with. The value you request to handle will be given as **$_**.
 
 Additional you can use **query_raw**, **query**, **query_nowhitespace**, **query_nowhitespace_nodash**. You can see how they are generated and put together in DDG::Request code.
