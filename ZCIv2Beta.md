@@ -2,6 +2,12 @@
 
 We suggest that you have Perl knowledge here. This is semi public, all Beta, please get in contact with us on IRC before doing stuff :).
 
+You need to install the DDG package from DuckPAN:
+
+```sh
+cpanm http://duckpan.org/authors/id/G/GE/GETTY/DDG-0.003.tar.gz
+```
+
 ## General organization
 
 The internal organization of DuckDuckGo is very complex, and cant be fully revealed to the public, out of this situation, we decided to invent the so called _Block-Technology_ which is making it possible to groupe together Bangs, Goodies, Spice and Fathead Plugins over one concept.
