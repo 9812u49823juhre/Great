@@ -5,7 +5,7 @@ We suggest that you have Perl knowledge here. This is semi public, all Beta, ple
 You need to install the DDG package from DuckPAN:
 
 ```sh
-cpanm http://duckpan.org/authors/id/G/GE/GETTY/DDG-0.003.tar.gz
+cpanm http://duckpan.org/authors/id/G/GE/GETTY/DDG-0.004.tar.gz
 ```
 
 ## General organization
