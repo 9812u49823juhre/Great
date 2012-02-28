@@ -4,8 +4,10 @@ We suggest that you have Perl knowledge here. This is semi public, all Beta, ple
 
 You need to install the DDG package from DuckPAN:
 
+WE ARE REFACTORING! CODE COMES!
+
 ```sh
-cpanm http://duckpan.org/authors/id/G/GE/GETTY/DDG-0.004.tar.gz
+.....
 ```
 
 ## General organization
@@ -87,11 +89,11 @@ More information about possible attributes, you can find at [WWW::DuckDuckGo::Ze
 
 You may give a HashRef to **zci**, to give several attributes at once.
 
-### words
+### triggers
 
-With words you can define the keywords for being used inside a [DDG::Block::Words](https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Block/Words.pm). We highly encourage using this method over the Regexp method which we explain later, cause this method is 10-100 times more efficient.
+With triggers you can define the keywords (or regexp, see later) for being used inside a [DDG::Block::Words](https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Block/Words.pm). We highly encourage that you make a trigger against a string, not a regexp (which is also possible see later), cause this method is like 100times faster, than a regexp. Also we handle several special situation with the string matching, which are more hard to get with a regexp matching.
 
-So far we support **any**, **before**, **after** and **around** as type for the words that trigger this plugin. You may give several **words** if you want, also with mixing types. **any** triggers if any of the query words matches any of the those words. **after** needs to be the last word in the query, **before** needs to be the first word in the query, and **around** is the same like given the word as **after** and **before**, so it triggers, when the query starts or ends with the specific word. Mostly you will use **around** if you make simple functional plugins.
+So far we support **any**, **start**, **end** and **startend** as type for the words that trigger this plugin. You may give several **triggers** if you want, also with mixing types. **any** triggers if any of the query words matches any of the those words. **end** needs to be the last word in the query, **start** needs to be the first word in the query, and **startend** is the same like given the word as **start** and **end**, so it triggers, when the query starts or ends with the specific word. Mostly you will use **around** if you make simple functional plugins.
 
 Also here you may give a HashRef for the parameters. If you want to specify several words of the same type, you can group them as ArrayRef.
 
@@ -127,13 +129,19 @@ handle matches => sub { join('',reverse split(//,$_[0])) };
 1;
 ```
 
-### regexp
+### triggers
 
-Instead of **words** you give here the regexp which should match against the query. You can also specify to match against other attributes of the query, but this is normally not necessary.
+Instead of given a string matching against a raw part of the query, you can also give a regexp with matches or without, and case sensitive or case in-sensitive (/i). you give here the regexp which should match against the query. You can also specify to match against other attributes of the query, but this is normally not necessary. Attributes you could specify like:
+
+```perl
+triggers query_nowhitespace_nodash => qr/xyz(.*)/;
+```
+
+Possible attributes for regexp queries: **query**, **query_lc**, **query_nowhitespace**, **query_nowhitespace_nodash**, **query_clean**. See [DDG::Request](https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Request.pm) for more deeper information what you have in those variables.
 
 ### handle
 
-Regexp Plugins are not able to handle **remainder**, instead you get **matches**, which gives all the matches of the matching Regexp on **@_**. Parallel you can also access the raw query on **$_**.
+Regexp Plugins are not able to handle **remainder**, instead you can handle **matches**, which gives all the matches of the matching Regexp on **@_**. Parallel you can also access the raw query on **$_**.
 
 ## Best start
 
