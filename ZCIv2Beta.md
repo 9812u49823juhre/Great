@@ -72,7 +72,7 @@ use DDG::Goodie;
 
 zci is_cached => 1;
 
-words around => 'reverse';
+triggers startend => 'reverse';
 
 handle remainder => sub { join('',reverse split(//,$_)) };
 
@@ -120,7 +120,7 @@ use DDG::Goodie;
 
 zci is_cached => 1;
 
-regexp qr/reverse\s(.*)/i, qr/(.*)\sreverse/i;
+triggers qr/reverse\s(.*)/i, qr/(.*)\sreverse/i;
 
 handle matches => sub { join('',reverse split(//,$_[0])) };
 
