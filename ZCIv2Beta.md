@@ -2,11 +2,18 @@
 
 We suggest that you have Perl knowledge here. This is semi public, all Beta, please get in contact with us on IRC before doing stuff :).
 
-You need to install the DDG package from DuckPAN:
+You need to install the DuckPAN package from CPAN:
+```sh
+cpanm App::DuckPAN
+```
+
+First execute the following, it will bring you through the requirements:
 
 ```sh
-cpanm http://duckpan.org/authors/id/G/GE/GETTY/DDG-0.005.tar.gz
+duckpan check
 ```
+
+You can also run **setup** if you have a [DuckDuckGo Community Platform](https://dukgo.com/) account, but we dont use this information in the current state.
 
 ## General organization
 
@@ -91,7 +98,7 @@ You may give a HashRef to **zci**, to give several attributes at once.
 
 With triggers you can define the keywords (or regexp, see later) for being used inside a [DDG::Block::Words](https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Block/Words.pm). We highly encourage that you make a trigger against a string, not a regexp (which is also possible see later), cause this method is like 100times faster, than a regexp. Also we handle several special situation with the string matching, which are more hard to get with a regexp matching.
 
-So far we support **any**, **start**, **end** and **startend** as type for the words that trigger this plugin. You may give several **triggers** if you want, also with mixing types. **any** triggers if any of the query words matches any of the those words. **end** needs to be the last word in the query, **start** needs to be the first word in the query, and **startend** is the same like given the word as **start** and **end**, so it triggers, when the query starts or ends with the specific word. Mostly you will use **around** if you make simple functional plugins.
+So far we support **any**, **start**, **end** and **startend** as type for the words that trigger this plugin. You may give several **triggers** if you want, also with mixing types. **any** triggers if any of the query words matches any of the those words. **end** needs to be the last word in the query, **start** needs to be the first word in the query, and **startend** is the same like given the word as **start** and **end**, so it triggers, when the query starts or ends with the specific word. Mostly you will use **startend** if you make simple functional plugins.
 
 Also here you may give a HashRef for the parameters. If you want to specify several words of the same type, you can group them as ArrayRef.
 
