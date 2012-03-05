@@ -10,7 +10,7 @@ There are four types of plugins:
 
 4. **Longtail**. Example: [snow albedo](https://duckduckgo.com/?q=snow+albedo). These plugins produce stand-alone data files based on APIs, web-crawling or existing databases and show instant answers based on full-text indexing.
 
-Goodies and Spice plugins are really easy to make (explained below). Fathead and Longtail plugins are still being converted to this new system. If you'd like to work on Fathead, check out [this readme](https://github.com/duckduckgo/zeroclickinfo-fathead). For Longtail, please contact us at open@duckduckgo.com.
+Goodies and Spice plugins are really easy to make (explained below). Fathead and Longtail plugins are still being converted to this new easy system. If you'd like to work on Fathead (feel free!), check out [this readme](https://github.com/duckduckgo/zeroclickinfo-fathead). For Longtail, please contact us at open@duckduckgo.com.
 
 ### Goodies
 
@@ -24,7 +24,13 @@ use DDG::Goodie;
 
 triggers startend => 'reverse';
 
-handle matches => sub { join('',reverse split(//,$_[0])) };
+handle remainder => sub { 
+  my $remainder = $_;
+  my @chars = split(//,$remainder);
+  @chars = reverse @chars;
+  my $answer = join('',@chars); 
+  return $answer;
+};
 
 zci is_cached => 1;
 
@@ -38,23 +44,66 @@ package DDG::Goodie::Reverse;
 # ABSTRACT: Reverse the order of chars in the remainder
 ```
 
-This defines a Perl package for your Goodie, which we will import into our back-end. You would change **Reverse** to your name (CamelCase). 
+First define a Perl package for your Goodie, which we will import into our back-end. You would change **Reverse** to your name (CamelCase). 
 
 You probably guessed # lines are comments. # ABSTRACT: is a special comment line that gets automatically parsed by [Dist::Zilla](https://metacpan.org/module/Dist::Zilla) to make nice documentation.
+
+Next we have a [use statement](https://duckduckgo.com/?q=perl+use) that imports [the magic behind](https://github.com/duckduckgo/duckduckgo/tree/master/lib/DDG) our plugin system into the local namespace.
 
 ```perl
 use DDG::Goodie;
 ```
 
-This [use statement](https://duckduckgo.com/?q=perl+use) imports [the magic behind](https://github.com/duckduckgo/duckduckgo/tree/master/lib/DDG) our plugin system so that the following blocks work. Operationally it adds various functions and objects to the local namespace.
+Then we see the triggers keyword that specifies on what queries the Goodie operates. Think of triggers as **trigger words**. We take the query and break it up into words and then use those words to trigger the Goodies. 
 
 ```perl
 triggers startend => 'reverse';
 ```
 
-Triggers is a keyword (internally it is just a hash) that specifies on what queries the Goodie operates. Think of triggers as **trigger words**. We take the query and break it up into words and then use those words to trigger the Goodies. You can specify where those words need to appear:
+You can use multiple trigger words.
+
+```perl
+triggers start => 'capitalize', 'uppercase';
+```
+
+You also specify where those words need to appear:
 * start - just at the start of the query
 * end - just at the end of the query
 * startend - at either end of the query
 * any - anywhere in the query
 
+Once triggers are specified you then define how to **handle** the query, which is another keyword. 
+
+```perl
+handle remainder => sub { 
+  my $remainder = $_;
+  my @chars = split(//,$remainder);
+  @chars = reverse @chars;
+  my $answer = join('',@chars); 
+  return $answer;
+}
+```
+
+**remainder** is one of the things you can handle, and refers to the remainder of the query (everything but the triggers). For example, if the query was reverse this query, the trigger would be _reverse_ and so the remainder would be _this query_. 
+
+Whatever you are handling is passed to the function as $_. You can also handle:
+* query_raw 
+* query
+* query_nowhitespace
+* query_nowhitespace_nodash
+
+If you are unable to provide a good instant answer, you can simply return nothing and short-circuit.
+
+```perl
+return;
+```
+
+If you can produce a useful instant answer you just return it as one Scalar (as opposed to an Array, ArrayRef or HashRef). 
+
+```perl
+zci is_cached => 1;
+```
+
+```perl
+1;
+```
