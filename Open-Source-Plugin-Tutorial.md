@@ -17,7 +17,7 @@ package DDG::Goodie::Length;
 
 use DDG::Goodie;
 
-triggers start => "length";
+triggers start => 'length';
 
 handle remainder => sub {
     return length $_ if $_;
@@ -29,11 +29,11 @@ zci is_cached => 1;
 1;
 ```
 
-We'll walk through it line by line in a minute. We wanted to get real code as close as possible to the top of this tutorial and highlight a few things before we get started:
+We'll walk through it line by line in a minute. (We wanted to get real code as close as possible to the top of this tutorial!) Here's a few things we wanted to highlight before we get started:
 
-* Yes, that's Perl, but you can also contribute the meat of certain plugins in JavaScript, Python or Ruby.
+* Yes, that's Perl, but you can also contribute the meat of certain plugins in JavaScript, Python or Ruby (see Plugin types).
 * We've tried to simplify plugin creation and distribution to be as condensed and intuitive as possible.
-* If you know Python, Ruby or PHP, you should be able to easily get started in Perl via [this awesome cheat-sheet](http://hyperpolyglot.org/scripting).
+* If you know Python, Ruby or PHP, [this awesome cheat-sheet](http://hyperpolyglot.org/scripting) should help you in translating your logic to Perl.
 
 ### Plugin types
 
@@ -41,49 +41,26 @@ There are four types of plugins:
 
 1. **Goodies**. Example: [reverse this query](https://duckduckgo.com/?q=reverse+this+query). These plugins are self-contained Perl functions that generate instant answers (server-side).
 
-2. **Spice**. Example: [xkcd](https://duckduckgo.com/?q=xkcd). These plugins are self-contained JavaScript functions that generate instant answers based on objects returned from external JSONP API calls (client-side).
+2. **Spice**. Example: [xkcd](https://duckduckgo.com/?q=xkcd). These plugins are self-contained JavaScript functions that generate instant answers based on objects returned from external [JSONP](https://duckduckgo.com/?q=jsonp) API calls (client-side).
 
 3. **Fathead**. Example: [git branch](https://duckduckgo.com/?q=git+branch). These plugins produce stand-alone data files based on APIs, web-crawling or existing databases and show instant answers based on slightly-fuzzy keyword matching.
 
 4. **Longtail**. Example: [snow albedo](https://duckduckgo.com/?q=snow+albedo). These plugins produce stand-alone data files based on APIs, web-crawling or existing databases and show instant answers based on full-text indexing.
 
-Goodies and Spice plugins are really easy to make (explained below). Fathead and Longtail plugins are still being converted to this new easy system. If you'd like to work on Fathead (feel free!), check out [this readme](https://github.com/duckduckgo/zeroclickinfo-fathead). For Longtail, please contact us at open@duckduckgo.com.
-
 ### Goodies
 
-Here's the code for the reverse Goodie example above.
+The example from above is a Goodie. Now let's go through it line by line.
+
+Each plugin is a [Perl package](https://duckduckgo.com/?q=perl+package) underneath, so we start by declaring the package namespace.
 
 ```perl
-package DDG::Goodie::Reverse;
-# ABSTRACT: Reverse the order of chars in the remainder
-
-use DDG::Goodie;
-
-triggers startend => 'reverse';
-
-handle remainder => sub { 
-  my $remainder = $_;
-  my @chars = split(//,$remainder);
-  @chars = reverse @chars;
-  my $answer = join('',@chars); 
-  return $answer;
-};
-
-zci is_cached => 1;
-
-1;
+package DDG::Goodie::Length;
+# ABSTRACT: Give the number of characters (length) of the query.
 ```
 
-Even if you don't know any Perl, Goodies should still be easy to make. Let's take each block in turn.
+You would change **Length** to your name ([CamelCase](https://duckduckgo.com/?q=camelcase)). 
 
-```perl
-package DDG::Goodie::Reverse;
-# ABSTRACT: Reverse the order of chars in the remainder
-```
-
-First define a Perl package for your Goodie, which we will import into our back-end. You would change **Reverse** to your name (CamelCase). 
-
-You probably guessed # lines are comments. # ABSTRACT: is a special comment line that gets automatically parsed by [Dist::Zilla](https://metacpan.org/module/Dist::Zilla) to make nice documentation.
+You probably guessed # denotes a comment. _# ABSTRACT:_ is a special comment line that gets automatically parsed by [Dist::Zilla](https://metacpan.org/module/Dist::Zilla) to make nice documentation.
 
 Next we have a [use statement](https://duckduckgo.com/?q=perl+use) that imports [the magic behind](https://github.com/duckduckgo/duckduckgo/tree/master/lib/DDG) our plugin system into the local namespace.
 
@@ -91,10 +68,10 @@ Next we have a [use statement](https://duckduckgo.com/?q=perl+use) that imports 
 use DDG::Goodie;
 ```
 
-Then we see the triggers keyword that specifies on what queries the Goodie operates. Think of triggers as **trigger words**. We take the query and break it up into words and then use those words to trigger the Goodies. 
+Then we see the **triggers** keyword that specifies on what queries the Goodie operates. Think of triggers as _trigger words_. We take the query and break it up into words and then use those words to _trigger_ the Goodies. 
 
 ```perl
-triggers startend => 'reverse';
+triggers start => 'length';
 ```
 
 You can use multiple trigger words.
@@ -103,43 +80,53 @@ You can use multiple trigger words.
 triggers start => 'capitalize', 'uppercase';
 ```
 
-You also specify where those words need to appear:
+The keyword after triggers, in this case **start**, specifies where the triggers need to appear:
+
 * start - just at the start of the query
 * end - just at the end of the query
 * startend - at either end of the query
 * any - anywhere in the query
 
-Once triggers are specified you then define how to **handle** the query, which is another keyword. 
+Once your triggers are specified, you then define how to **handle** the query, which is another keyword. 
 
 ```perl
-handle remainder => sub { 
-  my $remainder = $_;
-  my @chars = split(//,$remainder);
-  @chars = reverse @chars;
-  my $answer = join('',@chars); 
-  return $answer;
-}
+handle remainder => sub {
+    return length $_ if $_;
+    return;
+};
 ```
 
-**remainder** is one of the things you can handle, and refers to the remainder of the query (everything but the triggers). For example, if the query was reverse this query, the trigger would be _reverse_ and so the remainder would be _this query_. 
+You can _handle_ different pieces of the query, but the most common is **remainder**, which refers to the _remainder_ of the query (everything but the triggers). For example, if the query was length of this, the trigger would be _length_ and so the remainder would be _of this_. 
 
-Whatever you are handling is passed to the function as $_. You can also handle:
-* query_raw 
-* query
-* query_nowhitespace
-* query_nowhitespace_nodash
+Whatever you are handling is passed to the function in the $_ variable. You can also handle:
+* query_raw - the actual query
+* query - extra whitespace removed
+* query_nowhitespace - whitespace totally removed
+* query_nowhitespace_nodash - whitespace and dashes totally removed
 
-If you are unable to provide a good instant answer, you can simply return nothing and short-circuit.
+If you can produce a useful instant answer you just return it as one Scalar (as opposed to an Array, ArrayRef or HashRef). 
+
+```perl
+return length $_ if $_;
+```
+
+If you are unable to provide a good instant answer, you can simply return nothing.
 
 ```perl
 return;
 ```
 
-If you can produce a useful instant answer you just return it as one Scalar (as opposed to an Array, ArrayRef or HashRef). 
+In the example, you'll notice we did that if $_ didn't contain anything.
+
+Goodies technically return a [ZeroClickInfo object](https://metacpan.org/module/WWW::DuckDuckGo::ZeroClickInfo). This effect happens completely transparently to you by default, but you can override default behavior via the **zci** keyword.
 
 ```perl
 zci is_cached => 1;
 ```
+
+For example, you may want to set **is_cached** (like in the example) if instant answer never expires. You can find other attributes in the [object documentation](https://metacpan.org/module/WWW::DuckDuckGo::ZeroClickInfo).
+
+Finally, all Perl packages that load correctly should [return a true value](http://stackoverflow.com/questions/5293246/why-the-1-at-the-end-of-each-perl-package).
 
 ```perl
 1;
