@@ -17,7 +17,7 @@ You can also run **setup** if you have a [DuckDuckGo Community Platform](https:/
 
 ## General organization
 
-The internal organization of DuckDuckGo is very complex, and cant be fully revealed to the public, out of this situation, we decided to invent the so called _Block-Technology_ which is making it possible to groupe together Bangs, Goodies, Spice and Fathead Plugins over one concept.
+The internal organization of DuckDuckGo is very complex, and cant be fully revealed to the public, out of this situation, we decided to invent the so called _Block-Technology_ which is making it possible to group together Bangs, Goodies, Spice and Fathead Plugins over one concept.
 
 This means: When the user gives a query on DuckDuckGo it will produce a [DDG::Request](https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Request.pm) like this:
 
