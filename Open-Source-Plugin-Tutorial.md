@@ -132,7 +132,31 @@ Finally, all Perl packages that load correctly should [return a true value](http
 1;
 ```
 
-### Making Goodies
+You can see a lot of other working Goodie examples in our [zeroclickinfo-goodies repository](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie). Feel free to fork it, play around and submit a pull request!
 
-You can see a lot of working Goodie examples in our [zeroclickinfo-goodies repository](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie). Feel free to fork it, play around and submit a pull request!
+### Advanced goodies
 
+### Testing plugins
+
+### Spice
+
+### Fathead
+
+We are working on translating Fathead plugins into the Duckpan system. In the meantime you can check out our old Readme in the [zeroclickinfo-fathead repository](https://github.com/duckduckgo/zeroclickinfo-fathead).
+
+The output is a tab delimited file that could be produced in almost any language. Checkout the directories in that repository for a number of examples, some live and some still in development.
+
+A great way to get started would be to make more reference documentation, e.g. for your favorite programming languages/tools.
+
+### Longtail
+
+If you have an idea for data you think would be useful for full-text indexing to produce instant answers, please let us know at open@duckduckgo.com. We will work with you to get it integrated.
+
+The output would be a data file grouped by paragraphs and meta data (headings, URLs, etc.). You could use a variety of languages to generate this data file.
+
+Examples of existing longtail integrations are [Wikipedia](https://duckduckgo.com/?q=snow+albedo) and [Stack Exchange](https://duckduckgo.com/?q=nginx%20lighttpd&ky=-1). On the open source side we have [lyrics](https://github.com/duckduckgo/lyrics) (Python) and are working on [Quora](https://github.com/duckduckgo/zeroclickinfo-longtail/tree/master/quora-crawler) (Node).
+
+
+TODO: and in testing and DuckPan info when ready.
+
+### Plugin ideas
