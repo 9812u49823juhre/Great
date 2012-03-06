@@ -1,4 +1,41 @@
-DuckDuckGo plugins react to search queries and provide useful instant answers above the traditional link results.
+DuckDuckGo plugins react to search queries and provide [useful instant answers](https://duckduckgo.com/goodies.html) above traditional link results. 
+
+We hope that you will consider writing some! Here's why you might want to:
+
+* It's easy, fun and open source!
+* Improve search results in areas you care about, e.g. [programming documentation](https://duckduckgo.com/?q=perl+split), [gaming](https://duckduckgo.com/?q=roll+3d12+%2B+4) or [entertainment](https://duckduckgo.com/?q=xkcd).
+* Increase usage of your own projects, e.g. APIs, data stores.
+* Learn something new, e.g. Perl or JavaScript.
+
+### Example
+
+Here's an example that works on the query: [length of this](https://duckduckgo.com/?q=length+of+this).
+
+```perl
+package DDG::Goodie::Length;
+# ABSTRACT: Give the number of characters (length) of the query.
+
+use DDG::Goodie;
+
+triggers start => "length";
+
+handle remainder => sub {
+    return length $_ if $_;
+    return;
+};
+
+zci is_cached => 1;
+
+1;
+```
+
+We'll walk through it line by line in a minute. We wanted to get real code as close as possible to the top of this tutorial and highlight a few things before we get started:
+
+* Yes, that's Perl, but you can also contribute the meat of certain plugins in JavaScript, Python or Ruby.
+* We've tried to simplify plugin creation and distribution to be as condensed and intuitive as possible.
+* If you know Python, Ruby or PHP, you should be able to easily get started in Perl via [this awesome cheat-sheet](http://hyperpolyglot.org/scripting).
+
+### Plugin types
 
 There are four types of plugins:
 
