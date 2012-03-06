@@ -9,7 +9,7 @@ We hope that you will consider writing some. Here's why you might want to:
 
 ### Example
 
-Here's an example that works on the query: [length of this](https://duckduckgo.com/?q=length+of+this).
+Here's an example that works on the query [length of this](https://duckduckgo.com/?q=length+of+this).
 
 ```perl
 package DDG::Goodie::Length;
@@ -33,7 +33,7 @@ We'll walk through it line by line in a minute. (We wanted to get real code as c
 
 * Yes, that's Perl, but you can also contribute the meat of certain plugins in JavaScript, Python or Ruby (see Plugin types).
 * We've tried to simplify plugin creation and distribution to be as condensed and intuitive as possible.
-* If you know Python, Ruby or PHP, [this awesome cheat-sheet](http://hyperpolyglot.org/scripting) should help you in translating your logic to Perl.
+* If you know Python, Ruby or PHP, [this awesome cheat sheet](http://hyperpolyglot.org/scripting) should help you in translating your logic to Perl.
 
 ### Plugin types
 
@@ -47,7 +47,7 @@ There are four types of plugins:
 
 4. **Longtail**. Example: [snow albedo](https://duckduckgo.com/?q=snow+albedo). These plugins produce stand-alone data files based on APIs, web-crawling or existing databases and show instant answers based on full-text indexing.
 
-### Goodies
+### A Goodie line by line
 
 The example from above is a Goodie. Now let's go through it line by line.
 
@@ -96,13 +96,14 @@ handle remainder => sub {
 };
 ```
 
-You can _handle_ different pieces of the query, but the most common is **remainder**, which refers to the _remainder_ of the query (everything but the triggers). For example, if the query was length of this, the trigger would be _length_ and so the remainder would be _of this_. 
+You can _handle_ different pieces of the query, but the most common is **remainder**, which refers to the _remainder_ of the query (everything but the triggers). For example, if the query was _length of this_, the trigger would be _length_ and so the remainder would be _of this_. 
 
 Whatever you are handling is passed to the function in the $_ variable. You can also handle:
-* query_raw - the actual query
-* query - extra whitespace removed
-* query_nowhitespace - whitespace totally removed
-* query_nowhitespace_nodash - whitespace and dashes totally removed
+
+* query_raw - the actual (full) query
+* query - with extra whitespace removed
+* query_nowhitespace - with whitespace totally removed
+* query_nowhitespace_nodash - with whitespace and dashes totally removed
 
 If you can produce a useful instant answer you just return it as one Scalar (as opposed to an Array, ArrayRef or HashRef). 
 
@@ -110,24 +111,28 @@ If you can produce a useful instant answer you just return it as one Scalar (as 
 return length $_ if $_;
 ```
 
-If you are unable to provide a good instant answer, you can simply return nothing.
+If you are unable to provide a good instant answer, you can simply return nothing. You'll notice we did that if $_ didn't contain anything.
 
 ```perl
 return;
 ```
 
-In the example, you'll notice we did that if $_ didn't contain anything.
+Goodies technically return a [ZeroClickInfo object](https://metacpan.org/module/WWW::DuckDuckGo::ZeroClickInfo). This effect happens transparently by default, but you can override this default behavior via the **zci** keyword.
 
-Goodies technically return a [ZeroClickInfo object](https://metacpan.org/module/WWW::DuckDuckGo::ZeroClickInfo). This effect happens completely transparently to you by default, but you can override default behavior via the **zci** keyword.
+For example, you may want to set **is_cached** if your instant answer never expires. You can find other attributes in the [object documentation](https://metacpan.org/module/WWW::DuckDuckGo::ZeroClickInfo).
 
 ```perl
 zci is_cached => 1;
 ```
 
-For example, you may want to set **is_cached** (like in the example) if instant answer never expires. You can find other attributes in the [object documentation](https://metacpan.org/module/WWW::DuckDuckGo::ZeroClickInfo).
 
 Finally, all Perl packages that load correctly should [return a true value](http://stackoverflow.com/questions/5293246/why-the-1-at-the-end-of-each-perl-package).
 
 ```perl
 1;
 ```
+
+### Making Goodies
+
+You can see a lot of working Goodie examples in our [zeroclickinfo-goodies repository](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie). Feel free to fork it, play around and submit a pull request!
+
