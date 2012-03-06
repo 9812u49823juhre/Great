@@ -2,11 +2,11 @@
 
 ## Object layer
 
-We assume you understand in general what an object system is. In Perl there is the advantage, not like in many other languages, that you can pick the object system you wanna use. Perl as base language only use the concept of so called "blessed" hash references, to give the option for an object system, you can lookup this in [Perl Documentation perlobj](http://perldoc.perl.org/perlobj.html), but you will not need to understand blessing for first, cause its abstracted away through Moo or Moose in this case. This way it feels much more like the object systems you know from other languages, just a bit more cool ;).
+We assume you understand in general what an object system is. In Perl there is the advantage, unlike many other languages, that you can pick the object system you want to use. Perl as a base language only uses the concept of so called "blessed" hash references, however, to give the option of an object system you can lookup this in [Perl Documentation perlobj](http://perldoc.perl.org/perlobj.html), but you will not need to understand blessing as it is abstracted away through through the use of Moo (or Moose in this case). This way it feels much more like the object systems you know from other languages, just a bit cooler ;)
 
-[Moose](https://metacpan.org/release/Moose) is excellent documented and as a very good [Cookbook](https://metacpan.org/module/Moose::Cookbook) and a nice [Manual](https://metacpan.org/module/Moose::Manual) for getting into all details of it very easily. Moose is very heavy and gives a huge dimension of options, be aware if you really want to look into it, its the candy store of developers.... dont get fat ;).
+[Moose](https://metacpan.org/release/Moose) is well documented and has a very good [Cookbook](https://metacpan.org/module/Moose::Cookbook) as well as a nice [Manual](https://metacpan.org/module/Moose::Manual) for getting into all of the details very easily. Moose is very heavy and gives a huge dimension of options, but be aware if you really want to look into it, its the candy store of developers.... dont get fat ;)
 
-[Moo](https://metacpan.org/release/Moo) is an upcoming project, and still in development. Many features are still to come, but its a slow and very hard process to find useful abstractions of Moose features so easily. The documentation is right now a minimum, but if you getting into the flow, you will not need many documentation, cause the set of functions is very limited and clear.
+[Moo](https://metacpan.org/release/Moo) is an upcoming project, and still in development. Many features are still to come, but its a slow and very hard process to find useful abstractions of Moose features so easily. The documentation is right now at a minimum, but if you're getting into the flow, you won't need to use much documentation, because the set of functions are very limited and clear.
 
 ## Main concepts supported by Moo and Moose
 
