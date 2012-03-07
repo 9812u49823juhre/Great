@@ -2,7 +2,7 @@ DuckDuckGo plugins react to search queries and provide [useful instant answers](
 
 We hope that you will consider writing some. Here's why you might want to:
 
-* It's easy, fun and open source!
+* It's easy, fun, and open source!
 * Improve search results in areas you care about, e.g. [programming documentation](https://duckduckgo.com/?q=perl+split), [gaming](https://duckduckgo.com/?q=roll+3d12+%2B+4) or [entertainment](https://duckduckgo.com/?q=xkcd).
 * Increase usage of your own projects, e.g. APIs and data stores.
 * Learn something new, e.g. Perl or JavaScript.
@@ -29,7 +29,7 @@ zci is_cached => 1;
 1;
 ```
 
-We'll walk through it line by line in a minute. (We wanted to get real code as close as possible to the top of this tutorial!) Here's a few things we wanted to highlight before we get started:
+We'll walk through it line by line in a minute. (We wanted to get real code as close as possible to the top of this tutorial!) Here are a few things we wanted to highlight before we get started:
 
 * Yes, that's Perl, but you can also contribute the meat of certain plugins in JavaScript, Python or Ruby (see Plugin types).
 * We've tried to simplify plugin creation and distribution to be as condensed and intuitive as possible.
