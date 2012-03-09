@@ -137,6 +137,7 @@ You can see a lot of other working Goodie examples in our [zeroclickinfo-goodies
 ### Advanced goodies
 
 ### Testing plugins
+TODO: integrate https://metacpan.org/module/duckpan
 
 ### Spice
 
