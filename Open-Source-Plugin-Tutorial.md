@@ -126,14 +126,10 @@ Finally, all Perl packages that load correctly should [return a true value](http
 1;
 ```
 
-### Goodies
-
-### Spice
-
-
 ### Advanced techniques
 
-You can see a lot of other working Goodie examples in our [zeroclickinfo-goodies repository](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie). Feel free to fork it, play around and submit a pull request!
+
+
 
 ### Testing plugins
 TODO: integrate https://metacpan.org/module/duckpan
@@ -163,6 +159,33 @@ duckpan setup
 duckpan check
 duckpan DDG
 
-* If you know Python, Ruby or PHP, [this awesome cheat sheet](http://hyperpolyglot.org/scripting) should help you in translating your logic to Perl.
 
 ### Plugin ideas
+
+### Getting started
+
+1. Figure out what you want to work on. If you have any questions or want to discuss it with us please do!
+
+2. Figure out what type of plugin is best for your idea. It's probably obvious, but if not please discuss it with us.
+
+3. Fork the right repository on the [DuckDuckGo github](https://github.com/duckduckgo)
+
+ * [Goodies](https://github.com/duckduckgo/zeroclickinfo-goodies)
+
+ * [Spice](https://github.com/duckduckgo/zeroclickinfo-spice)
+
+ * [Fathead](https://github.com/duckduckgo/zeroclickinfo-fathead)
+
+ * [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail)
+
+4. Checkout the repository Readme for further details.
+
+5. Submit a pull request!
+
+### FAQ
+
+1. I don't know Perl!
+
+That's not a question :). If you don't know Perl, that's OK. First, the Longtail and Fathead plugins don't have to be written in Perl and the meat of the Spice plugins are in JavaScript. However, if you know PHP, Ruby or Python you should be able to write Goodies in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting) to help you in translating your psuedo-code to Perl.
+
+
