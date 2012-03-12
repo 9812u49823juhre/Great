@@ -1,14 +1,29 @@
 DuckDuckGo plugins react to search queries and provide [useful](https://duckduckgo.com/?q=%40duckduckgo) [instant](https://duckduckgo.com/?q=roman+xvi) [answers](https://duckduckgo.com/?q=private+ips) above traditional links. 
 
-### Overview 
+This tutorial will explain:
 
-We think that (relevant) instant answers provide for a much better search experience, and so we'd love to show them for as many queries as possible.
+* Why DuckDuckGo has open source plugins and why you may want to create them.
 
-We hope that you will consider helping to make some. Here's why you might want to:
+* What are the different types of DuckDuckGo plugins.
+
+* How a DuckDuckGo plugin works line by line.
+
+* Step by step instructions on creating, testing and suggesting new plugins.
+
+
+### Why plugins?
+
+Quite simply, we think that (relevant) instant answers provide for a much better search experience. As such, we'd love to show them for as many queries as possible.
+
+We're not experts in every subject, e.g. bioinformatics, and don't have the resources to develop plugins for niche search areas, e.g. lego parts. However, we think there could be great instant answers in those areas and thousands of others! 
+
+That's where you come in. You may be an expert or know an expert in a certain search area. If so, you're in a great position to help develop a plugin for that area. We also have an ever-increasing list of [plugin suggestions](http://duckduckgo.uservoice.com) from our user base.
+ 
+In any case, We hope that you will consider helping to make some DuckDuckGo plugins. Here's why you might want to:
 
 * Improve search results in areas you personally search and care about, e.g. [programming documentation](https://duckduckgo.com/?q=perl+split), [gaming](https://duckduckgo.com/?q=roll+3d12+%2B+4) or [entertainment](https://duckduckgo.com/?q=xkcd).
 * Increase usage of your own projects, e.g. [APIs](https://duckduckgo.com/?q=cost+of+living+nyc+philadelphia).
-* Learn something new, e.g. Perl or JavaScript.
+* Learn something new, e.g. more Perl or JavaScript.
 * See your code live on a [growing](https://duckduckgo.com/traffic.html) search engine!
 
 ### Plugin types
@@ -23,9 +38,10 @@ There are four types of DuckDuckGo plugins:
 
 4. **Longtail**. Example: [snow albedo](https://duckduckgo.com/?q=snow+albedo). These plugins produce stand-alone data files based on APIs, web-crawling or existing databases and show instant answers based on full-text indexing.
 
-### Example
+### Line by line example Goodie
 
-Here's an example Goodie that works on the query [chars test](https://duckduckgo.com/?q=chars test).
+We will now walk through a complete Goodie line by line. The following is the full code block that works on the query [chars test](https://duckduckgo.com/?q=chars test).
+
 
 ```perl
 package DDG::Goodie::Chars;
@@ -45,6 +61,18 @@ zci is_cached => 1;
 1;
 ```
 
+The code block is in Perl, though we've constructed the DuckDuckGo plugin system to be as condensed and as intuitive as possible. In other words, it may not look like any Perl you've seen before!
+
+At the highest level, the flow works like this:
+
+* Break the query into words (in the background).
+
+* See if any of those words match trigger words provided by the plugins (in this case **chars**).
+
+* If a Goodie is triggered, run its **handle** function.
+
+* If the Goodie's handle function returns an intstant answer, pass that back to the user.
+
 Let's take that line by line. Each plugin is a [Perl package](https://duckduckgo.com/?q=perl+package) underneath, so we start by declaring the package namespace.
 
 ```perl
@@ -52,7 +80,7 @@ package DDG::Goodie::Chars;
 # ABSTRACT: Give the number of characters (length) of the query.
 ```
 
-You would change **Chars** to your plugin's name ([CamelCase](https://duckduckgo.com/?q=camelcase)). 
+You would change **Chars** to the name of your plugin (written in [CamelCase](https://duckduckgo.com/?q=camelcase) format). 
 
 You probably guessed # denotes a comment. _# ABSTRACT:_ is a special comment line that gets automatically parsed by [Dist::Zilla](https://metacpan.org/module/Dist::Zilla) to make nice documentation.
 
@@ -64,24 +92,27 @@ use DDG::Goodie;
 
 Then we see the **triggers** keyword that specifies on what queries the Goodie operates. Think of triggers as _trigger words_. We take the query and break it up into words and then use those words to _trigger_ Goodies (and also Spice plugins). 
 
-```perl
-triggers start => 'char';
-```
-
-You can use multiple trigger words.
+In this case there is one trigger word, **chars**. In a query like _chars test_, chars is the first word and would therefore trigger our Goodie. The **start** keyword says look for the following triggers at the start of the query.
 
 ```perl
-triggers start => 'capitalize', 'uppercase';
+triggers start => 'chars';
 ```
 
-The keyword after triggers, in this case **start**, specifies where the triggers need to appear:
+You can also use multiple trigger words. For example, suppose you thought _numchars_ should also also trigger this Goodie (in addition to chars).
 
-* start - just at the start of the query
-* end - just at the end of the query
-* startend - at either end of the query
-* any - anywhere in the query
+```perl
+triggers start => 'chars', 'numchars';
+```
 
-Once your triggers are specified, you then define how to **handle** the query, which is another keyword. 
+Once your triggers are specified, you then define how to **handle** the query, which is another keyword. Like triggers, handle takes a second keyword, this time explaining what to handle.
+
+```perl
+handle remainder => sub {
+```
+
+You can _handle_ different pieces of the query, but the most common is **remainder**, which refers to the _remainder_ of the query (everything but the triggers). For example, if the query was _chars test string_, the trigger would be _chars_ and so the remainder would be _test string_. 
+
+The right side of the assignment (=>) is a function, denoted by the sub {} construction.
 
 ```perl
 handle remainder => sub {
@@ -90,14 +121,9 @@ handle remainder => sub {
 };
 ```
 
-You can _handle_ different pieces of the query, but the most common is **remainder**, which refers to the _remainder_ of the query (everything but the triggers). For example, if the query was _chars test string_, the trigger would be _chars_ and so the remainder would be _test string_. 
+This function is the meat of the Goodie that generates the instant answer (if any). Whatever you are handling is passed to the function in the $_ variable. 
 
-Whatever you are handling is passed to the function in the $_ variable. You can also handle:
 
-* query_raw - the actual (full) query
-* query - with extra whitespace removed
-* query_nowhitespace - with whitespace totally removed
-* query_nowhitespace_nodash - with whitespace and dashes totally removed
 
 If you can produce a useful instant answer you just return it as one Scalar (as opposed to an Array, ArrayRef or HashRef). 
 
@@ -127,6 +153,20 @@ Finally, all Perl packages that load correctly should [return a true value](http
 ```
 
 ### Advanced techniques
+
+As mentioned, the keyword after triggers, in this case **start**, specifies where the triggers need to appear:
+
+* start - just at the start of the query
+* end - just at the end of the query
+* startend - at either end of the query
+* any - anywhere in the query
+
+You can also handle:
+
+* query_raw - the actual (full) query
+* query - with extra whitespace removed
+* query_nowhitespace - with whitespace totally removed
+* query_nowhitespace_nodash - with whitespace and dashes totally removed
 
 
 
