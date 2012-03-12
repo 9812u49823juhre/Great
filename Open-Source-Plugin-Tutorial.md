@@ -1,23 +1,39 @@
-DuckDuckGo plugins react to search queries and provide [useful](http://duckduckgo.com/?q=area+of+china) instant answers](https://duckduckgo.com/goodies.html) above traditional link results. 
+DuckDuckGo plugins react to search queries and provide [useful](https://duckduckgo.com/?q=%40duckduckgo) [instant](https://duckduckgo.com/?q=roman+xvi) [answers](https://duckduckgo.com/?q=private+ips) above traditional links. 
 
-We hope that you will consider writing some. Here's why you might want to:
+### Overview 
 
-* It's easy, fun, and open source!
-* Improve search results in areas you care about, e.g. [programming documentation](https://duckduckgo.com/?q=perl+split), [gaming](https://duckduckgo.com/?q=roll+3d12+%2B+4) or [entertainment](https://duckduckgo.com/?q=xkcd).
-* Increase usage of your own projects, e.g. APIs and data stores.
+We think that (relevant) instant answers provide for a much better search experience, and so we'd love to show them for as many queries as possible.
+
+We hope that you will consider helping to make some! Here's why you might want to:
+
+* Improve search results in areas you personally search and care about, e.g. [programming documentation](https://duckduckgo.com/?q=perl+split), [gaming](https://duckduckgo.com/?q=roll+3d12+%2B+4) or [entertainment](https://duckduckgo.com/?q=xkcd).
+* Increase usage of your own projects, e.g. [APIs](https://duckduckgo.com/?q=cost+of+living+nyc+philadelphia).
 * Learn something new, e.g. Perl or JavaScript.
+* See your code live on a [growing](https://duckduckgo.com/traffic.html) search engine!
+
+### Plugin types
+
+There are four types of DuckDuckGo plugins:
+
+1. **Goodies**. Example: [reverse test](https://duckduckgo.com/?q=reverse+test). These plugins are self-contained Perl functions that generate instant answers (server-side).
+
+2. **Spice**. Example: [xkcd](https://duckduckgo.com/?q=xkcd). These plugins are self-contained JavaScript functions that generate instant answers based on objects returned from external [JSONP](https://duckduckgo.com/?q=jsonp) API calls (client-side).
+
+3. **Fathead**. Example: [git branch](https://duckduckgo.com/?q=git+branch). These plugins produce stand-alone data files based on APIs, web-crawling or existing databases and show instant answers based on slightly-fuzzy keyword matching.
+
+4. **Longtail**. Example: [snow albedo](https://duckduckgo.com/?q=snow+albedo). These plugins produce stand-alone data files based on APIs, web-crawling or existing databases and show instant answers based on full-text indexing.
 
 ### Example
 
-Here's an example that works on the query [length of this](https://duckduckgo.com/?q=length+of+this).
+Here's an example that works on the query [chars test](https://duckduckgo.com/?q=chars test).
 
 ```perl
-package DDG::Goodie::Length;
+package DDG::Goodie::Chars;
 # ABSTRACT: Give the number of characters (length) of the query.
 
 use DDG::Goodie;
 
-triggers start => 'length';
+triggers start => 'chars';
 
 handle remainder => sub {
     return length $_ if $_;
@@ -34,18 +50,6 @@ We'll walk through it line by line in a minute. (We wanted to get real code as c
 * Yes, that's Perl, but you can also contribute the meat of certain plugins in JavaScript, Python or Ruby (see Plugin types).
 * We've tried to simplify plugin creation and distribution to be as condensed and intuitive as possible.
 * If you know Python, Ruby or PHP, [this awesome cheat sheet](http://hyperpolyglot.org/scripting) should help you in translating your logic to Perl.
-
-### Plugin types
-
-There are four types of plugins:
-
-1. **Goodies**. Example: [reverse this query](https://duckduckgo.com/?q=reverse+this+query). These plugins are self-contained Perl functions that generate instant answers (server-side).
-
-2. **Spice**. Example: [xkcd](https://duckduckgo.com/?q=xkcd). These plugins are self-contained JavaScript functions that generate instant answers based on objects returned from external [JSONP](https://duckduckgo.com/?q=jsonp) API calls (client-side).
-
-3. **Fathead**. Example: [git branch](https://duckduckgo.com/?q=git+branch). These plugins produce stand-alone data files based on APIs, web-crawling or existing databases and show instant answers based on slightly-fuzzy keyword matching.
-
-4. **Longtail**. Example: [snow albedo](https://duckduckgo.com/?q=snow+albedo). These plugins produce stand-alone data files based on APIs, web-crawling or existing databases and show instant answers based on full-text indexing.
 
 ### A Goodie line by line
 
