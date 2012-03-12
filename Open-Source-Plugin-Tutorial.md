@@ -1,4 +1,4 @@
-DuckDuckGo plugins react to search queries and provide [useful instant answers](https://duckduckgo.com/goodies.html) above traditional link results. 
+DuckDuckGo plugins react to search queries and provide [useful](http://duckduckgo.com/?q=area+of+china) instant answers](https://duckduckgo.com/goodies.html) above traditional link results. 
 
 We hope that you will consider writing some. Here's why you might want to:
 
@@ -159,5 +159,10 @@ Examples of existing longtail integrations are [Wikipedia](https://duckduckgo.co
 
 
 TODO: and in testing and DuckPan info when ready.
+
+cpanm App::DuckPAN
+duckpan setup
+duckpan check
+duckpan DDG
 
 ### Plugin ideas
