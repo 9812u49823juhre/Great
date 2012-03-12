@@ -4,7 +4,7 @@ DuckDuckGo plugins react to search queries and provide [useful](https://duckduck
 
 We think that (relevant) instant answers provide for a much better search experience, and so we'd love to show them for as many queries as possible.
 
-We hope that you will consider helping to make some! Here's why you might want to:
+We hope that you will consider helping to make some. Here's why you might want to:
 
 * Improve search results in areas you personally search and care about, e.g. [programming documentation](https://duckduckgo.com/?q=perl+split), [gaming](https://duckduckgo.com/?q=roll+3d12+%2B+4) or [entertainment](https://duckduckgo.com/?q=xkcd).
 * Increase usage of your own projects, e.g. [APIs](https://duckduckgo.com/?q=cost+of+living+nyc+philadelphia).
@@ -25,7 +25,7 @@ There are four types of DuckDuckGo plugins:
 
 ### Example
 
-Here's an example that works on the query [chars test](https://duckduckgo.com/?q=chars test).
+Here's an example Goodie that works on the query [chars test](https://duckduckgo.com/?q=chars test).
 
 ```perl
 package DDG::Goodie::Chars;
@@ -45,37 +45,27 @@ zci is_cached => 1;
 1;
 ```
 
-We'll walk through it line by line in a minute. (We wanted to get real code as close as possible to the top of this tutorial!) Here are a few things we wanted to highlight before we get started:
-
-* Yes, that's Perl, but you can also contribute the meat of certain plugins in JavaScript, Python or Ruby (see Plugin types).
-* We've tried to simplify plugin creation and distribution to be as condensed and intuitive as possible.
-* If you know Python, Ruby or PHP, [this awesome cheat sheet](http://hyperpolyglot.org/scripting) should help you in translating your logic to Perl.
-
-### A Goodie line by line
-
-The example from above is a Goodie. Now let's go through it line by line.
-
-Each plugin is a [Perl package](https://duckduckgo.com/?q=perl+package) underneath, so we start by declaring the package namespace.
+Let's take that line by line. Each plugin is a [Perl package](https://duckduckgo.com/?q=perl+package) underneath, so we start by declaring the package namespace.
 
 ```perl
-package DDG::Goodie::Length;
+package DDG::Goodie::Chars;
 # ABSTRACT: Give the number of characters (length) of the query.
 ```
 
-You would change **Length** to your name ([CamelCase](https://duckduckgo.com/?q=camelcase)). 
+You would change **Chars** to your plugin's name ([CamelCase](https://duckduckgo.com/?q=camelcase)). 
 
 You probably guessed # denotes a comment. _# ABSTRACT:_ is a special comment line that gets automatically parsed by [Dist::Zilla](https://metacpan.org/module/Dist::Zilla) to make nice documentation.
 
-Next we have a [use statement](https://duckduckgo.com/?q=perl+use) that imports [the magic behind](https://github.com/duckduckgo/duckduckgo/tree/master/lib/DDG) our plugin system into the local namespace.
+Next we have a [use statement](https://duckduckgo.com/?q=perl+use) that imports [the magic behind](https://github.com/duckduckgo/duckduckgo/tree/master/lib/DDG) our plugin system into the local namespace (in this case the Goodie system).
 
 ```perl
 use DDG::Goodie;
 ```
 
-Then we see the **triggers** keyword that specifies on what queries the Goodie operates. Think of triggers as _trigger words_. We take the query and break it up into words and then use those words to _trigger_ the Goodies. 
+Then we see the **triggers** keyword that specifies on what queries the Goodie operates. Think of triggers as _trigger words_. We take the query and break it up into words and then use those words to _trigger_ Goodies (and also Spice plugins). 
 
 ```perl
-triggers start => 'length';
+triggers start => 'char';
 ```
 
 You can use multiple trigger words.
@@ -100,7 +90,7 @@ handle remainder => sub {
 };
 ```
 
-You can _handle_ different pieces of the query, but the most common is **remainder**, which refers to the _remainder_ of the query (everything but the triggers). For example, if the query was _length of this_, the trigger would be _length_ and so the remainder would be _of this_. 
+You can _handle_ different pieces of the query, but the most common is **remainder**, which refers to the _remainder_ of the query (everything but the triggers). For example, if the query was _chars test string_, the trigger would be _chars_ and so the remainder would be _test string_. 
 
 Whatever you are handling is passed to the function in the $_ variable. You can also handle:
 
@@ -136,14 +126,18 @@ Finally, all Perl packages that load correctly should [return a true value](http
 1;
 ```
 
-You can see a lot of other working Goodie examples in our [zeroclickinfo-goodies repository](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie). Feel free to fork it, play around and submit a pull request!
+### Goodies
 
-### Advanced goodies
+### Spice
+
+
+### Advanced techniques
+
+You can see a lot of other working Goodie examples in our [zeroclickinfo-goodies repository](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie). Feel free to fork it, play around and submit a pull request!
 
 ### Testing plugins
 TODO: integrate https://metacpan.org/module/duckpan
 
-### Spice
 
 ### Fathead
 
@@ -168,5 +162,7 @@ cpanm App::DuckPAN
 duckpan setup
 duckpan check
 duckpan DDG
+
+* If you know Python, Ruby or PHP, [this awesome cheat sheet](http://hyperpolyglot.org/scripting) should help you in translating your logic to Perl.
 
 ### Plugin ideas
