@@ -8,14 +8,14 @@ This tutorial will explain:
 
 * How a DuckDuckGo plugin works line by line.
 
-* Step by step instructions on creating, testing and submitting new plugins.
+* Step by step instructions for creating, testing and submitting new plugins.
 
 
 ### Why plugins?
 
 Quite simply, we think that (relevant) instant answers provide for a much better search experience. As such, we'd love to show them for as many queries as possible.
 
-We're not experts in every subject though, e.g. bioinformatics, and we also don't have the resources to develop plugins for niche search areas, e.g. lego parts. However, we think there could be great instant answers in those areas and thousands of others! 
+However, we're not experts in every subject, e.g. bioinformatics, and we also don't have the resources to develop plugins for niche search areas, e.g. lego parts. Yet we know there could be great instant answers in those areas and thousands of others! 
 
 That's where you come in. You may be an expert or know an expert or know an expert site in a certain search area. If so, you're in a great position to help develop a plugin for that area. We also have an ever-increasing list of [plugin suggestions](http://duckduckgo.uservoice.com) from our user base.
  
@@ -30,9 +30,9 @@ In any case, We hope that you will consider helping to make some DuckDuckGo plug
 
 There are four types of DuckDuckGo plugins:
 
-1. **Goodies**. Example: [reverse test](https://duckduckgo.com/?q=reverse+test). These plugins are self-contained Perl functions that generate instant answers (server-side).
+1. **Goodies**. Example: [reverse test](https://duckduckgo.com/?q=reverse+test). The core of these plugins are self-contained Perl functions that generate instant answers (server-side).
 
-2. **Spice**. Example: [xkcd](https://duckduckgo.com/?q=xkcd). These plugins are self-contained JavaScript functions that generate instant answers based on objects returned from external [JSONP](https://duckduckgo.com/?q=jsonp) API calls (client-side).
+2. **Spice**. Example: [xkcd](https://duckduckgo.com/?q=xkcd). The core of these plugins are self-contained JavaScript functions that generate instant answers based on objects returned from external [JSONP](https://duckduckgo.com/?q=jsonp) API calls (client-side).
 
 3. **Fathead**. Example: [git branch](https://duckduckgo.com/?q=git+branch). These plugins produce stand-alone data files based on APIs, web-crawling or existing databases and show instant answers based on slightly-fuzzy keyword matching.
 
@@ -40,7 +40,7 @@ There are four types of DuckDuckGo plugins:
 
 ### A plugin line by line
 
-We will now walk through a complete Goodie plugin line by line. The following is the full code block that works on the query [chars test](https://duckduckgo.com/?q=chars test). Don't worry about not getting it yet!
+We'll now walk through a complete Goodie plugin line by line. The following is the full code block that works on the query [chars test](https://duckduckgo.com/?q=chars test) and returns the number of characters of the query (after the trigger word chars). Don't worry about not getting it all yet!
 
 
 ```perl
@@ -61,17 +61,17 @@ zci is_cached => 1;
 1;
 ```
 
-The code block is in Perl, though we've constructed the DuckDuckGo plugin system to be as condensed and as intuitive as possible. In other words, it may not look like any Perl you've seen before.
+DuckDuckGo plugins are defined in Perl, though we've constructed the system to be as condensed and as intuitive as possible. In other words, it may not look like any Perl you've seen before.
 
-At the highest level, the plugin system like this:
+At the highest level, the plugin system works like this:
 
 * We break the query into words (in the background).
 
-* We see if any of those words match the trigger words provided by all the plugins (in this case **chars**).
+* We see if any of those words are **triggers** (trigger words) provided by all the plugins (in this case **chars**).
 
 * If a Goodie is triggered, we run its **handle** function.
 
-* If the Goodie's handle function returns an instant answer, we pass it back to the user.
+* If the Goodie's handle function outputs an instant answer via a **return** statement, we pass it back to the user.
 
 Now let's take this Goodie line by line. Feel free to open a text editor and type a parallel example along with us. Later we'll show you how to test it.
 
@@ -98,8 +98,7 @@ Then we see the **triggers** keyword that specifies on what queries the Goodie o
 triggers start => 'chars';
 ```
 
-In this case there is one trigger word, **chars**. In a query like _chars test_, chars is the first word and would therefore trigger our Goodie. The **start** keyword says make sure the trigger word is at the start of the query. The => symbol is an assignment operator that separates the trigger words from the keywords.
-
+In this case there is one trigger word, **chars**. In a query like _chars test_, chars is the first word and would therefore trigger our Goodie. The **start** keyword says make sure the trigger word is at the start of the query. The => symbol is there to separate the trigger words from the keywords.
 
 Once your triggers are specified, you then define how to **handle** the query, which is another keyword. Like triggers, handle takes a second keyword, this time explaining what to handle.
 
@@ -107,9 +106,9 @@ Once your triggers are specified, you then define how to **handle** the query, w
 handle remainder => sub {
 ```
 
-You can _handle_ different pieces of the query, but the most common is **remainder**, which refers to the _remainder_ of the query (everything but the triggers). For example, if the query was _chars test string_, the trigger would be _chars_ and so the remainder would be _test string_. 
+You can _handle_ different pieces of the query, but the most common is the **remainder** of it, which refers to the rest of the query (everything but the triggers). For example, if the query was _chars test string_, the trigger would be _chars_ and so the remainder would be _test string_. 
 
-The right side of the assignment (=>) is a function, denoted by the sub {} construction.
+The right side of the statement (after the =>) is a function, denoted by the sub {} construction.
 
 ```perl
 handle remainder => sub {
@@ -118,11 +117,11 @@ handle remainder => sub {
 };
 ```
 
-This function is the meat of the Goodie that generates the instant answer (if any). Whatever you are handling is passed to the function in the $_ variable. 
+This function is the meat of the Goodie that generates the instant answer (if any). Whatever you are handling is passed to the function in the $_ variable (e.g. _test string_ if the query was _chars test string_).
 
 
 
-If you can produce a useful instant answer you just return it as one Scalar (as opposed to an Array, ArrayRef or HashRef). 
+If you can produce a useful instant answer you just **return** it. 
 
 ```perl
 return length $_ if $_;
@@ -152,13 +151,13 @@ Finally, all Perl packages that load correctly should [return a true value](http
 1;
 ```
 
-### Creating your first plugin
+### Creating your first plugin step by step
 
-1. Figure out what you want to work on. If you have any questions or want to discuss it with us please do!
+**Step 1.** Figure out what you want to work on. If you don't have any ideas [start here](https://duckduckgo.uservoice.com/).
 
-2. Figure out what type of plugin is best for your idea. It's probably obvious, but if not please discuss it with us.
+**Step 2.** Figure out what type of plugin is best for your idea. It's probably a Goodie (like in the line by line example) or a Spice (using a JavaScript API). If it's not obvious, please [discuss it with us](http://webchat.freenode.net/?channels=duckduckgo).
 
-3. Fork the right repository on the [DuckDuckGo github](https://github.com/duckduckgo)
+**Step 3.** Fork the right repository on the [DuckDuckGo github](https://github.com/duckduckgo)
 
  * [Goodies](https://github.com/duckduckgo/zeroclickinfo-goodies)
 
@@ -168,11 +167,9 @@ Finally, all Perl packages that load correctly should [return a true value](http
 
  * [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail)
 
-4. Checkout the repository Readme for further details.
+**Step 4.** Checkout the repository Readme for further details.
 
-5. Submit a pull request!
-
-
+**Step 5.** Submit a pull request!
 
 
 ### Advanced techniques
