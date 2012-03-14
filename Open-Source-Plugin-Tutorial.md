@@ -314,16 +314,10 @@ The [Passphrase Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob
 
 ### Frequently made statements
 
-1. I don't know Perl!
+1. **I don't know Perl.** If you don't know Perl, that's OK. First, the meat of the Spice, Fathead and Longtail plugins do not have to be in Perl (Spice is JS and the others could be a variety of things). However, if you know PHP, Ruby or Python you should be able to write Goodies in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting) to help you in translating your psuedo-code to Perl.
 
-If you don't know Perl, that's OK. First, the meat of the Spice, Fathead and Longtail plugins do not have to be in Perl (Spice is JS and the others could be a variety of things). However, if you know PHP, Ruby or Python you should be able to write Goodies in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting) to help you in translating your psuedo-code to Perl.
+2. **I need help!** Please join us on IRC at [#duckduckgo on Freenode](http://webchat.freenode.net/?channels=duckduckgo). You can also email us privately at open@duckduckgo.com
 
+3. **I have/need a plugin idea.** Please check out [our uservoice site](http://duckduckgo.uservoice.com/) designed for this very purpose.
 
-2. I need help!
-
-Please join us on IRC at [#duckduckgo on Freenode](http://webchat.freenode.net/?channels=duckduckgo). You can also email us privately at open@duckduckgo.com
-
-
-3. I have/need a plugin idea!
-
-Please check out [our uservoice site](http://duckduckgo.uservoice.com/) designed for this very purpose.
+4. **I have an issue with an existing plugin.** Please submit a github issue in the appropriate repository.
