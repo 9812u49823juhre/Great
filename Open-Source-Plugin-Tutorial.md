@@ -173,7 +173,7 @@ Finally, all Perl packages that load correctly should [return a true value](http
 
 You may also want to [watch the repo](http://help.github.com/be-social/) while you're at it.
 
-**Step 6a.** If a Goodie or Spice plugin (if not, skip to Step 6e), set up [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without effecting your base Perl installation. We've created a script to make this really easy.
+**Step 6a.** If a Goodie or Spice plugin (if not, skip to Step 6f), set up [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without effecting your base Perl installation. We've created a script to make this really easy.
 
 ```sh
 curl http://duckpan.org/install.sh | perl
@@ -193,9 +193,38 @@ If you get a response, it's alive! If not, go back to Step 6a :(
 cpanm App::DuckPAN
 ```
 
-**Step 6e.** If a Fathead or Longtail plugin, checkout the repository Readme for further details on how to format your plugin. We're still in the process of converting these plugin types to the new system.
+**Step 6d.** Check if duckpan is installed correctly.
 
-**Step 7.** Submit a [pull request](http://help.github.com/send-pull-requests/)! That will let us know about your plugin and start the conversation about integrating it into the live search engine.
+```sh
+duckpan check
+```
+
+**Step 6e.** Go to the fork of your repository.
+
+```sh
+cd zeroclickinfo-goodies/
+```
+
+**Step 6e.** Test all the goodies.
+
+```sh
+duckpan goodie test
+```
+
+This will output all the plugins available in your repo (including the one you're working on) and then dump you to an interactive mode where you can type in queries and see the results. 
+
+When your plugin works like you want it to, go to Step 7.
+
+**Step 6f.** If a Fathead or Longtail plugin, checkout the repository Readme for further details on how to format your plugin. We're still in the process of converting these plugin types to the new system.
+
+**Step 7.** Commit and push your forked repository back to github. 
+
+```sh
+git commit -a -m "My first plugin is ready to go!"
+git push
+```
+
+**Step 8.** Go into github and submit a [pull request](http://help.github.com/send-pull-requests/)! That will let us know about your plugin and start the conversation about integrating it into the live search engine.
 
 
 ### Advanced techniques
