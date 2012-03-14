@@ -1,14 +1,14 @@
 DuckDuckGo plugins react to search queries and provide [useful](https://duckduckgo.com/?q=%40duckduckgo) [instant](https://duckduckgo.com/?q=roman+xvi) [answers](https://duckduckgo.com/?q=private+ips) above traditional links. 
 
-This tutorial will explain:
+This tutorial will answer:
 
-* Why DuckDuckGo has open source plugins and why you may want to create them.
+* Why DuckDuckGo has open source plugins and why you may want to create them?
 
-* What are the different types of DuckDuckGo plugins.
+* What are the different types of plugins?
 
-* How a DuckDuckGo plugin works line by line.
+* How does a DuckDuckGo plugin work, line by line?
 
-* Step by step instructions for creating, testing and submitting new plugins.
+* What are the step by step instructions for creating, testing and submitting new plugins?
 
 
 ### Why plugins?
@@ -28,7 +28,7 @@ In any case, We hope that you will consider helping to make some DuckDuckGo plug
 
 ### Plugin types
 
-There are four types of DuckDuckGo plugins:
+DuckDuckGo plugins are like browser extensions, but for a search engine. There are four types of DuckDuckGo plugins:
 
 1. **Goodies**. Example: [reverse test](https://duckduckgo.com/?q=reverse+test). The core of these plugins are self-contained Perl functions that generate instant answers (server-side).
 
@@ -61,19 +61,19 @@ zci is_cached => 1;
 1;
 ```
 
-DuckDuckGo plugins are defined in Perl, though we've constructed the system to be as condensed and as intuitive as possible. In other words, it may not look like any Perl you've seen before.
+DuckDuckGo plugins are defined in Perl, though we've constructed the system to be as condensed and as intuitive as possible. In other words, it may not look like any Perl you've seen before. Additionally, the meat of the plugin may not be in Perl at all (see Plugin types).
 
 At the highest level, the plugin system works like this:
 
-* We break the query into words (in the background).
+* We break the query (search terms) into words. This process happens in the background.
 
-* We see if any of those words are **triggers** (trigger words) provided by all the plugins (in this case **chars**).
+* We see if any of those words are **triggers** (trigger words) provided by all the plugins. In the example, the trigger word is **chars**.
 
 * If a Goodie is triggered, we run its **handle** function.
 
 * If the Goodie's handle function outputs an instant answer via a **return** statement, we pass it back to the user.
 
-Now let's take this Goodie line by line. Feel free to open a text editor and type a parallel example along with us. Later we'll show you how to test it.
+Now let's take this Goodie line by line. Feel free to open a text editor and type a parallel example along with us or look in the [Goodies repo](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie) and follow along in parallel with an example there. Later we'll show you how to test it.
 
 Each plugin is a [Perl package](https://duckduckgo.com/?q=perl+package) underneath, so we start by declaring the package namespace.
 
@@ -98,7 +98,7 @@ Then we see the **triggers** keyword that specifies on what queries the Goodie o
 triggers start => 'chars';
 ```
 
-In this case there is one trigger word, **chars**. In a query like _chars test_, chars is the first word and would therefore trigger our Goodie. The **start** keyword says make sure the trigger word is at the start of the query. The => symbol is there to separate the trigger words from the keywords.
+In this case there is one trigger word, **chars**. In a query like _chars test_, chars is the first word and would therefore trigger our Goodie. The **start** keyword says make sure the trigger word is at the start of the query. The => symbol is there to separate the trigger words from the keywords (for readability).
 
 Once your triggers are specified, you then define how to **handle** the query, which is another keyword. Like triggers, handle takes a second keyword, this time explaining what to handle.
 
@@ -155,21 +155,47 @@ Finally, all Perl packages that load correctly should [return a true value](http
 
 **Step 1.** Figure out what you want to work on. If you don't have any ideas [start here](https://duckduckgo.uservoice.com/).
 
-**Step 2.** Figure out what type of plugin is best for your idea. It's probably a Goodie (like in the line by line example) or a Spice (using a JavaScript API). If it's not obvious, please [discuss it with us](http://webchat.freenode.net/?channels=duckduckgo).
+**Step 2.** Figure out what type of plugin is best for your idea (see Plugin types). It's probably a Goodie (like in the line by line example) or a Spice (using a JavaScript API). If it's not obvious, please [discuss it with us](http://webchat.freenode.net/?channels=duckduckgo). If you got your plugin idea from the [suggestion list](https://duckduckgo.uservoice.com/), most are tagged with what we think would be the appropriate type.
 
-**Step 3.** Fork the right repository on the [DuckDuckGo github](https://github.com/duckduckgo)
+**Step 3.** Get a [github account](https://github.com/) if you don't have one already. We use github [to host](https://github.com/duckduckgo) all of our open source code.
 
- * [Goodies](https://github.com/duckduckgo/zeroclickinfo-goodies)
+**Step 4.** Set up git on your computer if you haven't already. Github provides instructions for [Linux](http://help.github.com/linux-set-up-git/), [OSX](http://help.github.com/mac-set-up-git/) and [Windows](http://help.github.com/win-set-up-git/) (though Linux is preferred since that is what we use for development).
 
- * [Spice](https://github.com/duckduckgo/zeroclickinfo-spice)
+**Step 5.** Fork the right repository depending on your plugin type. If you've never forked a repository before, follow the [github directions](http://help.github.com/fork-a-repo/). Here are the links to the repositories:
 
- * [Fathead](https://github.com/duckduckgo/zeroclickinfo-fathead)
+ * [Goodies](https://github.com/duckduckgo/zeroclickinfo-goodies) (Perl functions)
 
- * [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail)
+ * [Spice](https://github.com/duckduckgo/zeroclickinfo-spice) (JavaScript functions)
 
-**Step 4.** Checkout the repository Readme for further details.
+ * [Fathead](https://github.com/duckduckgo/zeroclickinfo-fathead) (Keyword data)
 
-**Step 5.** Submit a pull request!
+ * [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail) (Full-text data)
+
+You may also want to [watch the repo](http://help.github.com/be-social/) while you're at it.
+
+**Step 6a.** If a Goodie or Spice plugin (if not, skip to Step 6e), set up [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without effecting your base Perl installation. We've created a script to make this really easy.
+
+```sh
+curl http://duckpan.org/install.sh | perl
+```
+
+**Step 6b.** Make sure local::lib is installed right by looking for the cpanm command.
+
+```sh
+which cpanm
+```
+
+If you get a response, it's alive! If not, go back to Step 6a :(
+
+**Step 6c.** cpanm lets you install Perl modules super easily and segments them in your home directory. Use it to install [App::DuckPAN](https://metacpan.org/module/duckpan) (our plugin utilities).
+
+```sh
+cpanm App::DuckPAN
+```
+
+**Step 6e.** If a Fathead or Longtail plugin, checkout the repository Readme for further details on how to format your plugin. We're still in the process of converting these plugin types to the new system.
+
+**Step 7.** Submit a [pull request](http://help.github.com/send-pull-requests/)! That will let us know about your plugin and start the conversation about integrating it into the live search engine.
 
 
 ### Advanced techniques
@@ -235,5 +261,3 @@ duckpan DDG
 1. I don't know Perl!
 
 That's not a question :). If you don't know Perl, that's OK. First, the Longtail and Fathead plugins don't have to be written in Perl and the meat of the Spice plugins are in JavaScript. However, if you know PHP, Ruby or Python you should be able to write Goodies in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting) to help you in translating your psuedo-code to Perl.
-
-
