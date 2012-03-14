@@ -173,7 +173,7 @@ Finally, all Perl packages that load correctly should [return a true value](http
 
 You may also want to [watch the repo](http://help.github.com/be-social/) while you're at it.
 
-**Step 6a.** If a Goodie or Spice plugin (if not, skip to Step 6f), set up [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without effecting your base Perl installation. We've created a script to make this really easy.
+**Step 6a.** If you are making a Goodie or Spice plugin (if not, skip to Step 6f), set up [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without changing your base Perl installation. We've created a script to make this really easy.
 
 ```sh
 curl http://duckpan.org/install.sh | perl
@@ -211,7 +211,7 @@ cd zeroclickinfo-goodies/
 duckpan goodie test
 ```
 
-This will output all the plugins available in your repo (including the one you're working on) and then dump you to an interactive mode where you can type in queries and see the results. 
+This will output all the plugins available in your repo (including the one you're working on) and then dump you to an interactive mode where you can type in queries and see the results. For Spice plugins, you will want to do additional testing (see the Spice section below).
 
 When your plugin works like you want it to, go to Step 7.
 
@@ -227,34 +227,63 @@ git push
 **Step 8.** Go into github and submit a [pull request](http://help.github.com/send-pull-requests/)! That will let us know about your plugin and start the conversation about integrating it into the live search engine.
 
 
-### Advanced techniques
+### Spice
 
-You can also use multiple trigger words. For example, suppose you thought _numchars_ should also also trigger this Goodie (in addition to chars).
+Spice plugins are a bit different than Goodie plugins in that their central functions (to generate the instant answers) are done in JavaScript instead of Perl. As such, there are a few extra steps to reference and test this JavaScript.
 
- You can find other attributes in the [object documentation](https://metacpan.org/module/WWW::DuckDuckGo::ZeroClickInfo).
+***TODO: walk through xkcd plugin when converted***
+
+
+### Advanced plugin techniques
+
+Here are some relatively common things that plugins may require.
+
+**Multiple trigger words**.  For example, suppose you thought for the [chars goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Chars.pm) _numchars_ should also also trigger this Goodie (in addition to _chars_). Simply add the extra trigger words at the end.
+
 ```perl
 triggers start => 'chars', 'numchars';
 ```
 
-As mentioned, the keyword after triggers, in this case **start**, specifies where the triggers need to appear:
+**Trigger locations.** As mentioned, the keyword after triggers, **start** in the Chars example, specifies where the triggers need to appear. Here are all the choices:
 
 * start - just at the start of the query
 * end - just at the end of the query
 * startend - at either end of the query
 * any - anywhere in the query
 
-You can also handle:
+**Handling the whole query.** In the Chars example, we handled the **remainder**. You can also handle:
 
 * query_raw - the actual (full) query
 * query - with extra whitespace removed
+* query_parts - query but, given as an array of words.
 * query_nowhitespace - with whitespace totally removed
 * query_nowhitespace_nodash - with whitespace and dashes totally removed
 
+For example, the [Xor Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Xor.pm) handles query_raw and the [GoldenRatio](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GoldenRatio.pm) handles query_parts.
+
+**Returning html**. Goodies return text instant answers by default, but could return simple html as well. In that case, simply attach the html version to the end of the return statement:
+
+```perl
+return $text, html => $html
+```
+
+**Other zci keywords**. The Chars example set the **is_cached** zci keyword. You can find other settable attributes in the [object documentation](https://metacpan.org/module/WWW::DuckDuckGo::ZeroClickInfo). For example, the [GoldenRatio Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GoldenRatio.pm) sets the **answer_type** variable, which gets returned in the API.
+
+```perl
+zci answer_type => "golden_ratio";
+```
 
 
 
-### Testing plugins
-TODO: integrate https://metacpan.org/module/duckpan
+
+### FAQ
+
+1. I don't know Perl!
+
+That's not a question :). If you don't know Perl, that's OK. First, the Longtail and Fathead plugins don't have to be written in Perl and the meat of the Spice plugins are in JavaScript. However, if you know PHP, Ruby or Python you should be able to write Goodies in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting) to help you in translating your psuedo-code to Perl.
+
+
+### To fit in
 
 
 ### Fathead
@@ -283,10 +312,3 @@ duckpan DDG
 
 
 ### Plugin ideas
-
-
-### FAQ
-
-1. I don't know Perl!
-
-That's not a question :). If you don't know Perl, that's OK. First, the Longtail and Fathead plugins don't have to be written in Perl and the meat of the Spice plugins are in JavaScript. However, if you know PHP, Ruby or Python you should be able to write Goodies in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting) to help you in translating your psuedo-code to Perl.
