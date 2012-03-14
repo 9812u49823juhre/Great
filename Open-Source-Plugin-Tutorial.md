@@ -271,6 +271,8 @@ Another technique is to use a hash to allow for specific query strings like the 
 return unless exists $guid{$_};
 ```
 
+In rare cases, trigger words don't work at all, for example when you need to trigger on sub-words. In those cases instead of using trigger words you can trigger on a regular expression like the [PrivateNetwork Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/PrivateNetwork.pm) does.
+
 **Handling the whole query.** In the Chars example, we handled the **remainder**. You can also handle:
 
 * query_raw - the actual (full) query
@@ -293,42 +295,35 @@ return $text, html => $html
 zci answer_type => "golden_ratio";
 ```
 
+**Using files**. You can use simple text/html input files for display or processing. To do so, you want to add a couple of modules to the top of your plugin.
+
+```perl
+use File::ShareDir::ProjectDistDir;
+use IO::All;
+```
+
+Then inside your handle function you can read in the file.
+
+```perl
+my $sharedir = dist_dir('zeroclickinfo-goodies');
+my $lines = io("$sharedir/privatenetwork/privatenetwork.html")->slurp;
+```
+
+The [Passphrase Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Passphrase.pm) does this for processing purposes and the [PrivateNetwork Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/PrivateNetwork.pm) does it for display purposes.
 
 
-
-### FAQ
+### Frequently made statements
 
 1. I don't know Perl!
 
-That's not a question :). If you don't know Perl, that's OK. First, the Longtail and Fathead plugins don't have to be written in Perl and the meat of the Spice plugins are in JavaScript. However, if you know PHP, Ruby or Python you should be able to write Goodies in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting) to help you in translating your psuedo-code to Perl.
+If you don't know Perl, that's OK. First, the meat of the Spice, Fathead and Longtail plugins do not have to be in Perl (Spice is JS and the others could be a variety of things). However, if you know PHP, Ruby or Python you should be able to write Goodies in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting) to help you in translating your psuedo-code to Perl.
 
 
-### To fit in
+2. I need help!
+
+Please join us on IRC at [#duckduckgo on Freenode](http://webchat.freenode.net/?channels=duckduckgo). You can also email us privately at open@duckduckgo.com
 
 
-### Fathead
+3. I have/need a plugin idea!
 
-We are working on translating Fathead plugins into the Duckpan system. In the meantime you can check out our old Readme in the [zeroclickinfo-fathead repository](https://github.com/duckduckgo/zeroclickinfo-fathead).
-
-The output is a tab delimited file that could be produced in almost any language. Checkout the directories in that repository for a number of examples, some live and some still in development.
-
-A great way to get started would be to make more reference documentation, e.g. for your favorite programming languages/tools.
-
-### Longtail
-
-If you have an idea for data you think would be useful for full-text indexing to produce instant answers, please let us know at open@duckduckgo.com. We will work with you to get it integrated.
-
-The output would be a data file grouped by paragraphs and meta data (headings, URLs, etc.). You could use a variety of languages to generate this data file.
-
-Examples of existing longtail integrations are [Wikipedia](https://duckduckgo.com/?q=snow+albedo) and [Stack Exchange](https://duckduckgo.com/?q=nginx%20lighttpd&ky=-1). On the open source side we have [lyrics](https://github.com/duckduckgo/lyrics) (Python) and are working on [Quora](https://github.com/duckduckgo/zeroclickinfo-longtail/tree/master/quora-crawler) (Node).
-
-
-TODO: and in testing and DuckPan info when ready.
-
-cpanm App::DuckPAN
-duckpan setup
-duckpan check
-duckpan DDG
-
-
-### Plugin ideas
+Please check out [our uservoice site](http://duckduckgo.uservoice.com/) designed for this very purpose.
