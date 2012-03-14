@@ -251,6 +251,26 @@ triggers start => 'chars', 'numchars';
 * startend - at either end of the query
 * any - anywhere in the query
 
+**Further qualifying the query.** Trigger words are blunt instruments, which may send you queries you cannot handle. As such, you generally need to further qualify the query (and return nothing in cases where the query doesn't really qualify for your goodie).
+
+There are number of techniques for doing so. For example, the first line of [Base Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Base.pm) has a return statement paired with unless.
+
+```perl
+return unless  /^([0-9]+)\s*(?:(?:in|as)\s+)?(hex|hexadecimal|octal|oct|binary|base\s*([0-9]+))$/;
+```
+
+You could also do it the other way like the [GoldenRatio Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GoldenRatio.pm) does.
+
+```perl
+if ($input =~ /^(?:(?:(\?)\s*:\s*(\d+(?:\.\d+)?))|(?:(\d+(?:\.\d+)?)\s*:\s*(\?)))$/) {
+```
+
+Another technique is to use a hash to allow for specific query strings like the [GUID Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GUID.pm) does.
+
+```
+return unless exists $guid{$_};
+```
+
 **Handling the whole query.** In the Chars example, we handled the **remainder**. You can also handle:
 
 * query_raw - the actual (full) query
@@ -259,7 +279,7 @@ triggers start => 'chars', 'numchars';
 * query_nowhitespace - with whitespace totally removed
 * query_nowhitespace_nodash - with whitespace and dashes totally removed
 
-For example, the [Xor Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Xor.pm) handles query_raw and the [GoldenRatio](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GoldenRatio.pm) handles query_parts.
+For example, the [Xor Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Xor.pm) handles query_raw and the [ABC Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/ABC.pm) handles query_parts.
 
 **Returning html**. Goodies return text instant answers by default, but could return simple html as well. In that case, simply attach the html version to the end of the return statement:
 
