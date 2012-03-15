@@ -6,7 +6,7 @@ This tutorial will answer:
 
 * What are the different types of plugins?
 
-* How does a DuckDuckGo plugin work, line by line?
+* How does a DuckDuckGo plugin work, line-by-line?
 
 * What are the step-by-step instructions for creating, testing, and submitting new plugins?
 
