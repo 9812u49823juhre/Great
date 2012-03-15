@@ -40,7 +40,7 @@ DuckDuckGo plugins are like browser extensions, but for a search engine. There a
 
 ### A plugin line by line
 
-We'll now walk through a complete Goodie plugin line by line. The following is the full code block that works on the query [chars test](https://duckduckgo.com/?q=chars test) and returns the number of characters of the query (after the trigger word chars). Don't worry about not getting it all yet!
+We'll now walk through a complete Goodie plugin line by line. The following is the full code block that works on the query [chars test](https://duckduckgo.com/?q=chars+test) and returns the number of characters of the query (after the trigger word chars). Don't worry about not getting it all yet!
 
 
 ```perl
@@ -173,10 +173,10 @@ Finally, all Perl packages that load correctly should [return a true value](http
 
 You may also want to [watch the repo](http://help.github.com/be-social/) while you're at it.
 
-**Step 6a.** If you are making a Goodie or Spice plugin (if not, skip to Step 6f), set up [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without changing your base Perl installation. We've created a script to make this really easy.
+**Step 6a.** If you are making a Goodie or Spice plugin (if not, skip to Step 6f), set up [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without changing your base Perl installation. We've created a script to make this really easy. This script also installs everything else for you till Step 6d.
 
 ```sh
-curl http://duckpan.org/install.sh | perl
+curl http://duckpan.org/install.pl | perl
 ```
 
 **Step 6b.** Make sure local::lib is installed right by looking for the cpanm command.
@@ -205,7 +205,18 @@ duckpan check
 cd zeroclickinfo-goodies/
 ```
 
-**Step 6e.** Test all the goodies.
+**Step 6f.** Install the distribution requirements
+
+Most modern Perl developer use a distribution manager called [Dist::Zilla](http://dzil.org/) which is useful for generation ready to distribute Perl distributions. Perl uses a so called toolchain to assure the installation process for the distribution, Dist::Zilla covers the hard parts of the generation of the required files for such a distribution, so that we are able to just install it with any CPAN client and concept. For using the modules inside the **zeroclickinfo-goodies** repository we now need to install their requirements, which are listed in the **dist.ini**. Dist::Zilla now offers a program **dzil** which works with this file to supply us with the required informations which we can then pipe to cpanminus:
+
+```sh
+dzil authordeps --missing | cpanm
+dzil listdeps --missing | cpanm
+```
+
+The **authordeps** command will find the required Dist::Zilla plugins we use in this distribution. After those are installed the **listdeps** command is able to give out the Perl modules required for using our **zeroclickinfo-goodies**.
+
+**Step 6g.** Test all the goodies.
 
 ```sh
 duckpan goodie test
@@ -215,7 +226,7 @@ This will output all the plugins available in your repo (including the one you'r
 
 When your plugin works like you want it to, go to Step 7.
 
-**Step 6f.** If a Fathead or Longtail plugin, checkout the repository Readme for further details on how to format your plugin. We're still in the process of converting these plugin types to the new system.
+**Step 6h.** If a Fathead or Longtail plugin, checkout the repository Readme for further details on how to format your plugin. We're still in the process of converting these plugin types to the new system.
 
 **Step 7.** Commit and push your forked repository back to github. 
 
