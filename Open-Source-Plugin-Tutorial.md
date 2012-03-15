@@ -34,9 +34,9 @@ DuckDuckGo plugins are like browser extensions, but for a search engine. There a
 
 2. **Spice**. Example: [xkcd](https://duckduckgo.com/?q=xkcd). The core of these plugins are self-contained JavaScript functions that generate instant answers based on objects returned from external [JSONP](https://duckduckgo.com/?q=jsonp) API calls (client-side).
 
-3. **Fathead**. Example: [git branch](https://duckduckgo.com/?q=git+branch). These plugins produce stand-alone data files based on APIs, web-crawling or existing databases and show instant answers based on slightly-fuzzy keyword matching.
+3. **Fathead**. Example: [git branch](https://duckduckgo.com/?q=git+branch). The core of these plugins are data files based on APIs, web-crawling or existing databases that we put in our own databases and show instant answers based on slightly-fuzzy keyword matching.
 
-4. **Longtail**. Example: [snow albedo](https://duckduckgo.com/?q=snow+albedo). These plugins produce stand-alone data files based on APIs, web-crawling or existing databases and show instant answers based on full-text indexing.
+4. **Longtail**. Example: [snow albedo](https://duckduckgo.com/?q=snow+albedo). The core of these plugins are data files based on APIs, web-crawling or existing databases that we put in our own databases and show instant answers based on full-text indexing.
 
 ### A plugin line by line
 
@@ -73,7 +73,7 @@ At the highest level, the plugin system works like this:
 
 * If the Goodie's handle function outputs an instant answer via a **return** statement, we pass it back to the user.
 
-Now let's take this Goodie line by line. Feel free to open a text editor and type a parallel example along with us or look in the [Goodies repo](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie) and follow along in parallel with an example there. Later we'll show you how to test it.
+Now let's take this Goodie line by line. Feel free to open a text editor and type a parallel example along with us or look in the [Goodies repository](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie) and follow along in parallel with an example there. Later we'll show you how to test it.
 
 Each plugin is a [Perl package](https://duckduckgo.com/?q=perl+package) underneath, so we start by declaring the package namespace.
 
@@ -129,7 +129,7 @@ return length $_ if $_;
 
 In this case, the heart of the function is just this one line. The remainder is in the $_ variable. If it is not blank (**if $_**), we return the number of chars using [perl's length built-in](https://duckduckgo.com/?q=perl+length).
 
-Perl has a lot of built-in functions, but it also has thousands and thousands of modules available [via CPAN](https://metacpan.org/). You can leverage most of these modules when making Goodies, like how the [Roman Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Roman.pm) uses the [Roman module](https://metacpan.org/module/Roman).
+Perl has a lot of built-in functions, but it also has thousands and thousands of modules available [via CPAN](https://metacpan.org/). You can leverage these modules when making Goodies, like how the [Roman Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Roman.pm) uses the [Roman module](https://metacpan.org/module/Roman).
 
 If you are unable to provide a good instant answer, you can simply return nothing. You'll notice we did that if $_ didn't contain anything.
 
@@ -173,39 +173,48 @@ Finally, all Perl packages that load correctly should [return a true value](http
 
 You may also want to [watch the repo](http://help.github.com/be-social/) while you're at it.
 
-**Step 6a.** If you are making a Goodie or Spice plugin (if not, skip to Step 6f), set up [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without changing your base Perl installation. We've created a script to make this really easy. This script also installs everything else for you till Step 6d.
+**Step 6a.** If you are making a Goodie or Spice plugin (if not, skip to Step 6f), run our install script.
 
 ```sh
 curl http://duckpan.org/install.pl | perl
+
+ ____             _    ____             _     ____
+|  _ \ _   _  ___| | _|  _ \ _   _  ___| | __/ ___| ___
+| | | | | | |/ __| |/ / | | | | | |/ __| |/ / |  _ / _ \
+| |_| | |_| | (__|   <| |_| | |_| | (__|   <| |_| | (_) |
+|____/ \__,_|\___|_|\_\____/ \__,_|\___|_|\_\\____|\___/
+=========================================================
 ```
 
-**Step 6b.** Make sure local::lib is installed right by looking for the cpanm command.
+This will set up [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without changing your base Perl installation. (If you already use local::lib or [perlbrew](https://metacpan.org/module/perlbrew), don't worry -- this script will intelligently use what you have.) It will also install all of the needed dependencies to run [App::DuckPAN](https://metacpan.org/module/duckpan), our plugin utility. 
+
+If you didn't have a local::lib before running the install script, you will need to log out, log in and re-run the script in the middle of it. It should tell you do so like this:
+
+```txt
+local::lib (or perlbrew) is not active. If you ran this script for the first time, 
+please now re-login to your user account and run it again!
+```
+
+If everything works, you should see this at the end.
 
 ```sh
-which cpanm
+EVERYTHING OK! You can now go hacking! :)
 ```
 
-If you get a response, it's alive! If not, go back to Step 6a :(
-
-**Step 6c.** cpanm lets you install Perl modules super easily and segments them in your home directory. Use it to install [App::DuckPAN](https://metacpan.org/module/duckpan) (our plugin utilities).
+With local::lib installed, note you can now easily install perl modules with the cpanm command.
 
 ```sh
 cpanm App::DuckPAN
+App::DuckPAN is up to date. 
 ```
 
-**Step 6d.** Check if duckpan is installed correctly.
-
-```sh
-duckpan check
-```
-
-**Step 6e.** Go to the fork of your repository.
+**Step 6b.** Go to the fork of your repository.
 
 ```sh
 cd zeroclickinfo-goodies/
 ```
 
-**Step 6f.** Install the distribution requirements
+**Step 6c.** Install the distribution requirements
 
 Most modern Perl developer use a distribution manager called [Dist::Zilla](http://dzil.org/) which is useful for generation ready to distribute Perl distributions. Perl uses a so called toolchain to assure the installation process for the distribution, Dist::Zilla covers the hard parts of the generation of the required files for such a distribution, so that we are able to just install it with any CPAN client and concept. For using the modules inside the **zeroclickinfo-goodies** repository we now need to install their requirements, which are listed in the **dist.ini**. Dist::Zilla now offers a program **dzil** which works with this file to supply us with the required informations which we can then pipe to cpanminus:
 
