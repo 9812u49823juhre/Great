@@ -254,6 +254,20 @@ Spice plugins are a bit different than Goodie plugins in that their central func
 ***TODO: walk through xkcd plugin when converted***
 
 
+### Guidelines
+
+The instant answers returned by plugins appear at the top of search results pages, which is the most valuable real estate on the page. As such, we have these guidelines about what should and should not be there.
+
+**Better than links.** Since instant answers are above the traditional links, they should be unambiguously better than them.
+
+**No false positives.** A false positive is an irrelevant instant answer. For example, suppose there was a plugin that triggered on the word amazon and showed information from Amazon.com. If someone typed in Amazon River, they likely would not want information from that plugin. We have systems in place to automatically weed out cases like this one, but you should be careful to only return an instant answer when you know it is good, and otherwise return nothing.
+
+**Minimize vertical space.** We try to keep the instant answer box as small as possible, which generally means leaving out extraneous information. We try to put the most important information in the box, and then offer the user to click through to another page for more detailed information.
+
+**Readable answers.** The instant answer area is supposed to make inherent sense, as opposed to the snippets in traditional links, which may or may not be actually readable. Generally the way we achieve this is create sentences or short statements that users can actually read. A good technique is to read your answers out loud and see if they make sense to someone else.
+
+**Consistent design.** When in doubt, copy what already exists!
+
 ### Advanced plugin techniques
 
 Here are some relatively common things that plugins may require.
@@ -332,12 +346,16 @@ my $lines = io("$sharedir/privatenetwork/privatenetwork.html")->slurp;
 The [Passphrase Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Passphrase.pm) does this for processing purposes and the [PrivateNetwork Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/PrivateNetwork.pm) does it for display purposes.
 
 
-### Frequently made statements
+### Frequently Asked Questions
 
-1. **I don't know Perl.** If you don't know Perl, that's OK. First, the meat of the Spice, Fathead, and Longtail plugins do not have to be in Perl (Spice is JS and the others could be a variety of things). However, if you know PHP, Ruby, or Python you should be able to write Goodies in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting) to help you in translating your psuedo-code to Perl.
+1. **What if I don't know Perl?** If you don't know Perl, that's OK! First, the meat of the Spice, Fathead, and Longtail plugins do not have to be in Perl (Spice is JS and the others could be a variety of things). However, if you know PHP, Ruby, or Python you should be able to write Goodies in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting) to help you in translating your psuedo-code to Perl.
 
-2. **I need help!** Please join us on IRC at [#duckduckgo on Freenode](http://webchat.freenode.net/?channels=duckduckgo). You can also email us privately at open@duckduckgo.com.
+2. **Can you help me?** Of course! Please join us on IRC at [#duckduckgo on Freenode](http://webchat.freenode.net/?channels=duckduckgo). You can also email us privately at open@duckduckgo.com.
 
-3. **I have/need a plugin idea.** Please check out [our uservoice site](http://duckduckgo.uservoice.com/) designed for this very purpose.
+3. **Do you have any plugin ideas?** Of course! Please check out [our uservoice site](http://duckduckgo.uservoice.com/) designed for this very purpose.
 
-4. **I have an issue with an existing plugin.** Please submit a GitHub issue in the appropriate repository.
+4. **Where I can report plugin pugs?** Please submit a GitHub issue in the [appropriate repository](http://github.com/duckduckgo).
+
+5. **What if there are plugin conflicts?** The ultimate arbiter is the user, and that's the perspective we take, i.e. what is best for the user experience? That said, often times it makes sense to combine ideas into one, better plugin.
+
+6. **Can I do something more complicated?** Maybe. There are a bunch more internal interfaces we haven't exposed yet, and we'd love to hear your ideas to influence that roadmap.
