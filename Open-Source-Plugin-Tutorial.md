@@ -512,7 +512,7 @@ The [Passphrase Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob
 
 3. **Do you have any plugin ideas?** Of course! Please check out [our uservoice site](http://duckduckgo.uservoice.com/) designed for this very purpose.
 
-4. **Where I can report plugin pugs?** Please submit a GitHub issue in the [appropriate repository](http://github.com/duckduckgo).
+4. **Where I can report plugin bugs?** Please submit a GitHub issue in the [appropriate repository](http://github.com/duckduckgo).
 
 5. **What if there are plugin conflicts?** The ultimate arbiter is the user, and that's the perspective we take, i.e. what is best for the user experience? That said, often times it makes sense to combine ideas into one, better plugin.
 
