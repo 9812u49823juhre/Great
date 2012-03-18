@@ -424,7 +424,7 @@ The instant answers returned by plugins appear at the top of search results page
 
 **Readable answers.** The instant answer area is supposed to make inherent sense, as opposed to the snippets in traditional links, which may or may not be actually readable. Generally the way we achieve this is create sentences or short statements that users can actually read. A good technique is to read your answers out loud and see if they make sense to someone else.
 
-**Consistent design.** When in doubt, copy what already exists!
+**Consistent design.** When in doubt, copy what already exists! If still in doubt, [ask us](http://webchat.freenode.net/?channels=duckduckgo)!
 
 ### Advanced plugin techniques
 
