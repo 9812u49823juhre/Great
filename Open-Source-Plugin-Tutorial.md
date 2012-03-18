@@ -1,23 +1,131 @@
 DuckDuckGo plugins react to search queries and provide [useful](https://duckduckgo.com/?q=%40duckduckgo) [instant](https://duckduckgo.com/?q=roman+xvi) [answers](https://duckduckgo.com/?q=private+ips) above traditional links. 
 
-This tutorial will answer:
+### A plugin line-by-line
 
-* Why DuckDuckGo has open source plugins and why you may want to create them?
+In this tutorial, we'll be making a plugin that checks the number of characters in a given search query. Then end result will look [like this](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Length.pm) and works [like this](https://duckduckgo.com/?q=chars+How+many+characters+is+this+sentence%3F). It's in Perl though the meat of some plugin types can be written in other languages (see Plugin types).
 
-* What are the different types of plugins?
+Let's begin. Open a text editor like [gedit](http://projects.gnome.org/gedit/), notepad or [emacs](http://www.gnu.org/software/emacs/) and type the following.
 
-* How does a DuckDuckGo plugin work, line-by-line?
+```perl
+package DDG::Goodie::Chars;
+# ABSTRACT: Give the number of characters (length) of the query.
+```
 
-* What are the step-by-step instructions for creating, testing, and submitting new plugins?
+Each plugin is a [Perl package](https://duckduckgo.com/?q=perl+package), so we start by declaring the package namespace. In a new plugin, you would change **Chars** to the name of the new plugin (written in [CamelCase](https://duckduckgo.com/?q=camelcase) format). 
+
+The second line is a special comment line that gets parsed automatically to make nice documentation (by [Dist::Zilla](https://metacpan.org/module/Dist::Zilla)).
+
+Next, type the following [use statement](https://duckduckgo.com/?q=perl+use) to import [the magic behind](https://github.com/duckduckgo/duckduckgo/tree/master/lib/DDG) our plugin system. In this example we are making a Goodie (one of four DuckDuckGo plugin types defined later).
+
+```perl
+use DDG::Goodie;
+```
+
+Now here's where it gets interesting. Type:
+
+```perl
+triggers start => 'chars';
+```
+
+**triggers** are keywords that tell us when to make the Goodie run. They are _trigger words_. When a particular trigger word is part of a search query, it tells DuckDuckGo to _trigger_ the appropriate plugins. 
+
+In this case there is one trigger word, **chars**. Let's say someone searched "_chars this is a test_." **chars** is the first word so it would trigger our Goodie. The **start** keyword says, "Make sure the trigger word is at the start of the query." The **=>** symbol is there to separate the trigger words from the keywords (for readability).
+
+Now type in this line:
+
+```perl
+handle remainder => sub {
+```
+
+Once triggers are specified, we define how to _handle_ the query. **handle** is another keyword, similar to triggers.
+
+You can _handle_ different aspects of the search query, but the most common is the **remainder**, which refers to the rest of the query (everything but the triggers). For example, if the query was "_chars this is a test_", the trigger would be _chars_ and the remainder would be _this is a test_. 
+
+Now add another couple of lines to complete the handle function.
+
+```perl
+handle remainder => sub {
+    return length $_ if $_;
+    return;
+};
+```
+
+This function (the part within the **{}** after **sub**) is the meat of the Goodie. It generates the instant answer that is displayed at the top of the [search results page](https://duckduckgo.com/?q=chars+this+is+a+test). 
+
+Whatever you are handling is passed to the function in the **$_** variable (**$_** is a special default variable in Perl that is used commonly to store temporary values). For example, if you searched DuckDuckGo for "_chars this is a test_", the value of **$_** will be "_this is a test_", i.e. the remainder.
+
+Let's take a closer look at the first line of the function.
+
+```perl
+return length $_ if $_;
+```
+
+In this case, the heart of the function is just this one line. The **remainder** is in the **$_** variable as discussed. If it is not blank (**if $_**), we return the number of chars using Perl's built-in [length function](https://duckduckgo.com/?q=perl+length).
+
+Perl has a lot of built-in functions, as well as thousands and thousands of modules available [via CPAN](https://metacpan.org/). You can leverage these modules when making Goodies, like how the [Roman Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Roman.pm) uses the [Roman module](https://metacpan.org/module/Roman).
+
+If we are unable to provide a good instant answer, we simply **return** nothing. And that's exactly what the second line in the function does.
+
+```perl
+return;
+```
+
+This line is only run if **$_** contained nothing, because otherwise the line before it would return something and end the function.
+
+Now, below your function type the following line.
+
+```perl
+zci is_cached => 1;
+```
+
+This line is optional. Goodies technically return a [ZeroClickInfo object](https://metacpan.org/module/WWW::DuckDuckGo::ZeroClickInfo) (abbreviated as **zci**). This effect happens transparently by default, but you can override this default behavior via the **zci** keyword.
+
+We set **is_cached** to true (0 is false, 1 is true) because this plugin will always return the same answer for the same query. This speeds up future answers by caching (saving previous answers). 
+
+Finally, all Perl packages that load correctly should [return a true value](http://stackoverflow.com/questions/5293246/why-the-1-at-the-end-of-each-perl-package) so add a 1 on the very last line.
+
+```perl
+1;
+```
+
+And that's it! A this point you have a working DuckDuckGo Goodie plugin that should look like this:
+
+```perl
+package DDG::Goodie::Chars;
+# ABSTRACT: Give the number of characters (length) of the query.
+
+use DDG::Goodie;
+
+triggers start => 'chars';
+
+handle remainder => sub {
+    return length $_ if $_;
+    return;
+};
+
+zci is_cached => 1;
+
+1;
+```
+
+To review, the plugin system works like this at the highest level:
+
+* We break the query (search terms) into words. This process happens in the background.
+
+* We see if any of those words are **triggers** (trigger words). These are provided by each of the plugins. In the example, the trigger word is **chars**.
+
+* If a Goodie is triggered, we run its **handle** function.
+
+* If the Goodie's handle function outputs an instant answer via a **return** statement, we pass it back to the user.
 
 
 ### Why plugins?
 
-Quite simply, we think that (relevant) instant answers provide a much better search experience. As such, we'd love to show them for as many queries as possible.
+We made the DuckDuckGo plugin system because we strongly believe that (relevant) instant answers provide a much better search experience than traditional (link) results. As such, we'd love to show them for as many search queries as possible.
 
-However, we're not experts in every subject, e.g. bioinformatics, nor do we have the resources to develop plugins for niche search areas, e.g. lego parts, but we know there could be great instant answers in those areas and thousands of others! 
+We're not experts in every subject, e.g. bioinformatics, nor do we have the resources to develop plugins for niche search areas, e.g. lego parts. Yet we know there could be great instant answers in those areas and thousands of others! 
 
-That's where you come in. You may be an expert or know an expert or know an expert site in a certain search area. If so, you're in a great position to help develop a plugin for that area. We also have an ever-increasing list of [plugin suggestions](http://duckduckgo.uservoice.com) from our user base.
+That's where you come in. You may be an expert or know an expert or know an expert site in a certain search areas. If so, you're in a great position to help develop plugins for those areas. We also have an ever-increasing list of [plugin suggestions](http://duckduckgo.uservoice.com) from DuckDuckGo users.
  
 In any case, we hope that you will consider helping to make some DuckDuckGo plugins. Here's why you might want to:
 
@@ -28,128 +136,17 @@ In any case, we hope that you will consider helping to make some DuckDuckGo plug
 
 ### Plugin types
 
-DuckDuckGo plugins are like browser extensions, but for a search engine. There are four types of DuckDuckGo plugins:
+DuckDuckGo plugins are defined in [Perl](https://duckduckgo.com/Perl), though we've constructed the system to be as condensed and intuitive as possible. As a result, it may not look like any Perl you've seen before. Additionally, the meat of the plugin may not be in Perl at all.
 
-1. **Goodies**. Example: [reverse test](https://duckduckgo.com/?q=reverse+test). The core of these plugins are self-contained Perl functions that generate instant answers (server-side).
+There are four types of DuckDuckGo plugins:
 
-2. **Spice**. Example: [xkcd](https://duckduckgo.com/?q=xkcd). The core of these plugins are self-contained JavaScript functions that generate instant answers based on objects returned from external [JSONP](https://duckduckgo.com/?q=jsonp) API calls (client-side).
+1. **Goodies**. Example: [reverse test](https://duckduckgo.com/?q=reverse+test). The core of these plugins are self-contained Perl functions that generate instant answers (server-side). [Goodie repository](https://github.com/duckduckgo/zeroclickinfo-goodies). [Goodie suggestions](https://duckduckgo.uservoice.com/forums/5168-plugins/category/41841-goodies).
 
-3. **Fathead**. Example: [git branch](https://duckduckgo.com/?q=git+branch). The core of these plugins are data files based on APIs, web-crawling, or existing databases that we put in our own databases and show instant answers based on slightly fuzzy keyword matching.
+2. **Spice**. Example: [xkcd](https://duckduckgo.com/?q=xkcd). The core of these plugins are self-contained JavaScript functions that generate instant answers based on objects returned from external [JSONP](https://duckduckgo.com/?q=jsonp) API calls (client-side). [Spice repository](https://github.com/duckduckgo/zeroclickinfo-spice). [Spice suggestions](https://duckduckgo.uservoice.com/forums/5168-plugins/category/41838-spice).
 
-4. **Longtail**. Example: [snow albedo](https://duckduckgo.com/?q=snow+albedo). The core of these plugins are data files based on APIs, web-crawling or existing databases that we put in our own databases and show instant answers based on full-text indexing.
+3. **Fathead**. Example: [git branch](https://duckduckgo.com/?q=git+branch). The core of these plugins are data files based on APIs, web-crawling, or existing databases that we put in our own databases and show instant answers based on slightly fuzzy keyword matching. [Fathead repository](https://github.com/duckduckgo/zeroclickinfo-fathead). [Fathead suggestions](https://duckduckgo.uservoice.com/forums/5168-plugins/category/41839-fathead).
 
-### A plugin line-by-line
-
-We'll now walk through a complete Goodie plugin line-by-line. The following is the full code block that works on the query [chars test](https://duckduckgo.com/?q=chars+test) and returns the number of characters that make up the query (after the trigger word _chars_). Don't worry about not getting it all yet!
-
-
-```perl
-package DDG::Goodie::Chars;
-# ABSTRACT: Give the number of characters (length) of the query.
-
-use DDG::Goodie;
-
-triggers start => 'chars';
-
-handle remainder => sub {
-    return length $_ if $_;
-    return;
-};
-
-zci is_cached => 1;
-
-1;
-```
-
-DuckDuckGo plugins are defined in Perl, though we've constructed the system to be as condensed and intuitive as possible. As a result, it may not look like any Perl you've seen before. Additionally, the meat of the plugin may not be in Perl at all (see Plugin types).
-
-At the highest level, the plugin system works like this:
-
-* We break the query (search terms) into words. This process happens in the background.
-
-* We see if any of those words are **triggers** (trigger words). These are provided by each of the plugins. In the example, the trigger word is **chars**.
-
-* If a Goodie is triggered, we run its **handle** function.
-
-* If the Goodie's handle function outputs an instant answer via a **return** statement, we pass it back to the user.
-
-Now let's take this Goodie line-by-line. Feel free to open a text editor and type an example along with us or look in the [Goodies repository](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie) and follow along with an example there. Later, we'll show you how to test it.
-
-Each plugin is a [Perl package](https://duckduckgo.com/?q=perl+package), so we start by declaring the package namespace.
-
-```perl
-package DDG::Goodie::Chars;
-# ABSTRACT: Give the number of characters (length) of the query.
-```
-
-You would change **Chars** to the name of your plugin (written in [CamelCase](https://duckduckgo.com/?q=camelcase) format). 
-
-You can probably guess that # denotes a comment. _# ABSTRACT:_ is a special comment line that gets parsed automatically by [Dist::Zilla](https://metacpan.org/module/Dist::Zilla) to make nice documentation.
-
-Next we have a [use statement](https://duckduckgo.com/?q=perl+use) that imports [the magic behind](https://github.com/duckduckgo/duckduckgo/tree/master/lib/DDG) our plugin system into the local namespace (in this case, the Goodie system).
-
-```perl
-use DDG::Goodie;
-```
-
-Then we see the **triggers** keyword that specifies on which queries the Goodie operates. Think of triggers as _trigger words_. We take the query and break it up into words and then use those words to _trigger_ DuckDuckGo plugins. 
-
-```perl
-triggers start => 'chars';
-```
-
-In this case there is one trigger word, **chars**. In a query like _chars test_, chars is the first word so it would trigger our Goodie. The **start** keyword says, "Make sure the trigger word is at the start of the query". The => symbol is there to separate the trigger words from the keywords (for readability).
-
-Once your triggers are specified, you define how to **handle** the query; _handle_ is another keyword. Like triggers, handle takes a second keyword, this time explaining what to handle.
-
-```perl
-handle remainder => sub {
-```
-
-You can _handle_ different pieces of the query, but the most common is the **remainder**, which refers to the rest of the query (everything but the triggers). For example, if the query was _chars test string_, the trigger would be _chars_ and the remainder would be _test string_. 
-
-The right side of the statement (after the =>) is a function, denoted by the sub {} construction.
-
-```perl
-handle remainder => sub {
-    return length $_ if $_;
-    return;
-};
-```
-
-This function is the meat of the Goodie; it generates the instant answer (if any). Whatever you are handling is passed to the function in the $_ variable (e.g. _test string_ if the query was _chars test string_).
-
-
-
-If you can produce a useful instant answer you just **return** it. 
-
-```perl
-return length $_ if $_;
-```
-
-In this case, the heart of the function is just this one line. The remainder is in the $_ variable. If it is not blank (**if $_**), we return the number of chars using Perl's built-in [length function](https://duckduckgo.com/?q=perl+length).
-
-Perl has a lot of built-in functions, as well as thousands and thousands of modules available [via CPAN](https://metacpan.org/). You can leverage these modules when making Goodies, like how the [Roman Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Roman.pm) uses the [Roman module](https://metacpan.org/module/Roman).
-
-If you are unable to provide a good instant answer, you can simply return nothing. You'll notice we did that if $_ didn't contain anything.
-
-```perl
-return;
-```
-
-Goodies technically return a [ZeroClickInfo object](https://metacpan.org/module/WWW::DuckDuckGo::ZeroClickInfo) (abbreviated as zci). This effect happens transparently by default, but you can override this default behavior via the **zci** keyword.
-
-For example, if your Goodie always returns the same answer for the same query, we could speed up future answers by caching (saving previous answers). In this case, you may want to set **is_cached** like in the example.
-
-```perl
-zci is_cached => 1;
-```
-
-Finally, all Perl packages that load correctly should [return a true value](http://stackoverflow.com/questions/5293246/why-the-1-at-the-end-of-each-perl-package).
-
-```perl
-1;
-```
+4. **Longtail**. Example: [snow albedo](https://duckduckgo.com/?q=snow+albedo). The core of these plugins are data files based on APIs, web-crawling or existing databases that we put in our own databases and show instant answers based on full-text indexing. [Longtail repository](https://github.com/duckduckgo/zeroclickinfo-longtail). [Longtail suggestions](https://duckduckgo.uservoice.com/forums/5168-plugins/category/41840-longtail).
 
 ### Creating your first plugin step-by-step
 
