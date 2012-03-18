@@ -156,7 +156,7 @@ There are four types of DuckDuckGo plugins:
 
 **Step 3.** Get a [GitHub account](https://github.com/) if you don't have one already. We use GitHub [to host](https://github.com/duckduckgo) all of our open-source code.
 
-**Step 4.** If you haven't already, set-up git on your computer. GitHub provides instructions for [Linux](http://help.github.com/linux-set-up-git/), [OSX](http://help.github.com/mac-set-up-git/), and [Windows](http://help.github.com/win-set-up-git/) (though Linux is preferred since that is what we use for development). If you don't have Linux but want to try it, you can use a [virtual machine like VirtualBox](https://www.virtualbox.org/) or get a [free instance on Amazon Web Services](http://aws.amazon.com/free/).
+**Step 4.** If you haven't already, set-up git on your computer. GitHub provides instructions for [Linux](http://help.github.com/linux-set-up-git/), [OSX](http://help.github.com/mac-set-up-git/), and [Windows](http://help.github.com/win-set-up-git/) (though Linux is preferred since that is what we use for development). If you don't have Linux but want to try it, you set up a virtual machine using [VirtualBox](https://www.virtualbox.org/) or [VMWare](http://www.vmware.com/products/player/) or use a free micro-instance on [Amazon Web Services](http://aws.amazon.com/free/).
 
 **Step 5.** Fork the right repository (depending on your plugin type). If you've never forked a repository before, follow the [GitHub instructions](http://help.github.com/fork-a-repo/). Here are the links to the repositories:
 
@@ -198,40 +198,202 @@ cpanm App::DuckPAN
 App::DuckPAN is up to date. 
 ```
 
-**Step 6b.** Go to your fork of the repository (a directory or folder on your computer).
+**Step 6b.** Go to your fork of the repository (a directory or folder on your computer). The fork directory should have been created when you forked the repository in Step 5.
 
 ```sh
 cd zeroclickinfo-goodies/
 ```
 
-**Step 6c.** Install the repository requirements using duckpan.
+**Step 6c.** Install the repository requirements using duckpan, a utility that was installed as part of Step 6a (install script) and is part of [App::DuckPAN](https://metacpan.org/module/App::DuckPAN).
 
-```sh
+```txt
 duckpan installdeps
 ```
 
-These are modules that the plugins within the repository use.
+This command will install all the Perl modules used by the DuckDuckGo plugins within your local repository. These requirements are defined in the [_dist.ini_ file](http://blog.urth.org/2010/06/walking-through-a-real-distini.html) at the root of the repository.
 
-**Step 6e.** Add your plugin.
+**Step 6d.** Add your plugin.
 
 Make a new file in the **lib/DDG/Goodie/** directory for Goodies or the **lib/DDG/Spice/** directory for Spice. The name of the file is the name of the plugin followed by the extension **.pm** because it is a Perl package. For example, if the name of your plugin was _TestPlugin_, the file would be _TestPlugin.pm_. 
 
-**Step 6f.** Test your plugin.
+**Step 6e.** Test your plugin interactively.
 
-Make a new file in the test directory
+Type this command at the command line.
 
-
-**Step 6d.** Test all the plugins.
-
-```sh
+```txt
 duckpan goodie test
 ```
 
-This will output all of the plugins available in your repo (including the one you're working on) and switch you to an interactive mode where you can enter queries and see the results. For Spice plugins, you will want to do additional testing (see the Spice section below).
+This command will first output all of the plugins available in your local plugin repository.
 
-Once your plugin is working, go to Step 7.
+```md
+Using the following DDG::Goodie plugins:
 
-**Step 6h.** If you're working on a Fathead or Longtail plugin, see the repository Readme for further details on how to format your plugin. We're still in the process of converting these plugin types to the new system.
+ - DDG::Goodie::Xor (Words)
+ - DDG::Goodie::SigFigs (Words)
+ - DDG::Goodie::EmToPx (Words)
+ - DDG::Goodie::Length (Words)
+ - DDG::Goodie::ABC (Words)
+ - DDG::Goodie::Chars (Words)
+ ...
+```
+
+You should see your plugin in there as well. When that output is finished it gives you an interactive prompt.
+
+```
+(Empty query for ending test)
+Query:
+```
+
+Now you can type in any query and see what the response will be.
+
+```
+Query: chars this is a test
+
+DDG::ZeroClickInfo  {
+    Parents       WWW::DuckDuckGo::ZeroClickInfo
+    Linear @ISA   DDG::ZeroClickInfo, WWW::DuckDuckGo::ZeroClickInfo, Moo::Object
+    public methods (3) : is_cached, new, ttl
+    private methods (0)
+    internals: {
+        answer   14,
+        answer_type   "chars",
+        is_cached   1
+    }
+}
+```
+
+There is a lot of debugging output, but you will want to pay special attention to the internals section.
+
+```txt
+    internals: {
+        answer   14,
+        answer_type   "chars",
+        is_cached   1
+    }
+```
+
+Here you can see the answer returned, as well as any **zci** keywords (by default there will be a default **answer_type** and **is_cached** value).
+
+For Spice plugins, you will want to do additional testing (see the Spice section below).
+
+Simply hit enter (a blank query) to exit interactive mode.
+
+```txt
+Query:
+
+\_o< Thanks for testing!
+```
+
+**Step 6f.** Add your plugin test file.
+
+Now make a new file in the test directory **t/**. The name of the file is again the name of your plugin, but this time followed by the extension **.t** for test because it is a Perl testing file. For example, if the name of your plugin was _TestPlugin_, the file would be _TestPlugin.t_.
+
+The top of the file reads like a normal Perl script with some use statements to include testing modules, including the DuckDuckGo testing module.
+
+```perl
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use Test::More;
+use DDG::Test::Goodie;
+```
+
+Then you define any default **zci** values that you set, which you want to make sure are set right.
+
+```perl
+zci answer_type => 'chars';
+zci is_cached => 1;
+```
+
+These should match exactly what you set in your **.pm** file.
+
+Next comes the actual testing function.
+
+```
+ddg_goodie_test(
+        [qw(
+                DDG::Goodie::Chars
+        )],
+        'chars test' => test_zci('4'),
+        'chars this is a test' => test_zci('14'),
+);
+```
+
+For each test, you include a line like this:
+
+```perl
+        'chars test' => test_zci('4'),
+```
+
+The first part, **'chars test'** in this example, is the test query. The second part, **test_zci('4')** calls the test function and looks for **4** within the answer.
+
+Finally you end a testing file with this line.
+
+```perl
+done_testing;
+```
+
+The full file should look like this:
+
+```perl
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use Test::More;
+use DDG::Test::Goodie;
+
+zci answer_type => 'chars';
+zci is_cached => 1;
+
+ddg_goodie_test(
+        [qw(
+                DDG::Goodie::Chars
+        )],
+        'chars test' => test_zci('4'),
+        'chars this is a test' => test_zci('14'),
+);
+
+done_testing;
+```
+
+
+**Step 6g.** Test your plugin programmatically.
+
+Run your plugin test file like this:
+
+```txt
+perl -Ilib t/Chars.t
+```
+
+If successful, you should see a lot of **ok** lines.
+
+```txt
+ubuntu@yegg:~/zeroclickinfo-goodies$ perl -Ilib t/Chars.t
+ok 1 - Testing query chars test
+ok 2 - Testing query chars this is a test
+1..2
+```
+
+If unsuccessful, you will see one or more **not ok** lines followed with some debugging output to help you chase down the error(s).
+
+```txt
+ok 1 - Testing query chars test
+not ok 2 - Testing query chars this is a test
+#   Failed test 'Testing query chars this is a test'
+#   at /usr/local/ddg.cpan/perl5/lib/perl5/DDG/Test/Goodie.pm line 69.
+#     Structures begin differing at:
+#          $got->{answer} = '14'
+#     $expected->{answer} = '15'
+1..2
+# Looks like you failed 1 test of 2.
+```
+
+If everything looks good, you're all set! Move onto **Step 7.**
+
+**Step 6h.** If you're working on a Fathead or Longtail plugin, see the repository Readme for further details on how to format your plugin. We're still in the process of converting these plugin types to the new (duckpan) system.
 
 **Step 7.** Commit your changes and push your forked repository back to GitHub. 
 
