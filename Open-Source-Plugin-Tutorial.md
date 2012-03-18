@@ -148,15 +148,15 @@ There are four types of DuckDuckGo plugins:
 
 4. **Longtail**. Example: [snow albedo](https://duckduckgo.com/?q=snow+albedo). The core of these plugins are data files based on APIs, web-crawling or existing databases that we put in our own databases and show instant answers based on full-text indexing. [Longtail repository](https://github.com/duckduckgo/zeroclickinfo-longtail). [Longtail suggestions](https://duckduckgo.uservoice.com/forums/5168-plugins/category/41840-longtail).
 
-### Creating your first plugin step-by-step
+### Submitting your first plugin step-by-step
 
 **Step 1.** Decide what you want to work on. If you don't have any ideas, [start here](https://duckduckgo.uservoice.com/).
 
-**Step 2.** Figure out what type of plugin is best for your idea (see Plugin types). It's probably a Goodie (like in the line-by-line example) or a Spice (using a JavaScript API). If it's not obvious, please [discuss it with us](http://webchat.freenode.net/?channels=duckduckgo). If you got your plugin idea from the [suggestion list](https://duckduckgo.uservoice.com/), most are tagged with what we think would be the appropriate type.
+**Step 2.** Figure out what type of plugin is best for your idea (see Plugin types). It's probably a Goodie (like in the line-by-line example) or a Spice (similar, but in JavaScript and using an API from another site for data). If it's not obvious, please [discuss it with us](http://webchat.freenode.net/?channels=duckduckgo). If you got your plugin idea from the [suggestion list](https://duckduckgo.uservoice.com/), many are tagged with what we think would be the appropriate type (see tag filter links on the right sidebar).
 
 **Step 3.** Get a [GitHub account](https://github.com/) if you don't have one already. We use GitHub [to host](https://github.com/duckduckgo) all of our open-source code.
 
-**Step 4.** If you haven't already, set-up git on your computer. GitHub provides instructions for [Linux](http://help.github.com/linux-set-up-git/), [OSX](http://help.github.com/mac-set-up-git/), and [Windows](http://help.github.com/win-set-up-git/) (though Linux is preferred since that is what we use for development).
+**Step 4.** If you haven't already, set-up git on your computer. GitHub provides instructions for [Linux](http://help.github.com/linux-set-up-git/), [OSX](http://help.github.com/mac-set-up-git/), and [Windows](http://help.github.com/win-set-up-git/) (though Linux is preferred since that is what we use for development). If you don't have Linux but want to try it, you can use a [virtual machine like VirtualBox](https://www.virtualbox.org/) or get a [free instance on Amazon Web Services](http://aws.amazon.com/free/).
 
 **Step 5.** Fork the right repository (depending on your plugin type). If you've never forked a repository before, follow the [GitHub instructions](http://help.github.com/fork-a-repo/). Here are the links to the repositories:
 
@@ -168,24 +168,17 @@ There are four types of DuckDuckGo plugins:
 
  * [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail) (Full-text data)
 
-You may also want to [watch the repo](http://help.github.com/be-social/) while you're at it.
+You may also want to [watch these repositories](http://help.github.com/be-social/) while you're at it.
 
-**Step 6a.** If you are making a Goodie or Spice plugin run our install script; if not, skip to step 6f.
+**Step 6a.** If you are making a Goodie or Spice plugin run our install script; if not, skip to step 6h.
 
 ```sh
 curl http://duckpan.org/install.pl | perl
-
- ____             _    ____             _     ____
-|  _ \ _   _  ___| | _|  _ \ _   _  ___| | __/ ___| ___
-| | | | | | |/ __| |/ / | | | | | |/ __| |/ / |  _ / _ \
-| |_| | |_| | (__|   <| |_| | |_| | (__|   <| |_| | (_) |
-|____/ \__,_|\___|_|\_\____/ \__,_|\___|_|\_\\____|\___/
-=========================================================
 ```
 
-This will set-up [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without changing your base Perl installation (if you already use local::lib or [perlbrew](https://metacpan.org/module/perlbrew), don't worry, this script will intelligently use what you already have). It will also install all of the dependencies needed to run [App::DuckPAN](https://metacpan.org/module/duckpan), our plugin utility. 
+This will set-up [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without changing your base Perl installation. If you already use local::lib or [perlbrew](https://metacpan.org/module/perlbrew), don't worry, this script will intelligently use what you already have. It will also install [duckpan](https://metacpan.org/module/duckpan), our plugin utility. 
 
-If you didn't have a local::lib before running the install script, you will need to log-out, log-in, and re-run the script. It should tell you to do so like this:
+If you didn't have a local::lib before running the install script, you will need to run the script twice. It should tell you when like this:
 
 ```txt
 local::lib (or perlbrew) is not active. If you ran this script for the first time, 
@@ -198,31 +191,37 @@ If everything works, you should see this at the end:
 EVERYTHING OK! You can now go hacking! :)
 ```
 
-With local::lib installed, you can easily install perl modules with the cpanm command.
+Note that with local::lib now installed, you can easily install [Perl modules](http://search.cpan.org/) with the cpanm command.
 
 ```sh
 cpanm App::DuckPAN
 App::DuckPAN is up to date. 
 ```
 
-**Step 6b.** Go to your fork of the repository.
+**Step 6b.** Go to your fork of the repository (a directory or folder on your computer).
 
 ```sh
 cd zeroclickinfo-goodies/
 ```
 
-**Step 6c.** Install the distribution requirements.
-
-Most modern Perl developers use a distribution manager called [Dist::Zilla](http://dzil.org/) which is useful for generating ready to distribute Perl distributions. Perl uses what's called a "toolchain" to ensure the installation of the distribution. Dist::Zilla covers the generation of the required files for a distribution, so we can install it with any CPAN client and concept. To use the modules inside the **zeroclickinfo-goodies** repository, we need to install their requirements, listed in **dist.ini**. Dist::Zilla now offers a program, **dzil**, which works with this file to supply us with the required information which we can then pipe to cpanminus:
+**Step 6c.** Install the repository requirements using duckpan.
 
 ```sh
-dzil authordeps --missing | cpanm
-dzil listdeps --missing | cpanm
+duckpan installdeps
 ```
 
-The **authordeps** command will find the required Dist::Zilla plugins used in this distribution. Once those are installed, the **listdeps** command tells us the Perl modules required for **zeroclickinfo-goodies**.
+These are modules that the plugins within the repository use.
 
-**Step 6g.** Test all the goodies.
+**Step 6e.** Add your plugin.
+
+Make a new file in the **lib/DDG/Goodie/** directory for Goodies or the **lib/DDG/Spice/** directory for Spice. The name of the file is the name of the plugin followed by the extension **.pm** because it is a Perl package. For example, if the name of your plugin was _TestPlugin_, the file would be _TestPlugin.pm_. 
+
+**Step 6f.** Test your plugin.
+
+Make a new file in the test directory
+
+
+**Step 6d.** Test all the plugins.
 
 ```sh
 duckpan goodie test
