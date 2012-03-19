@@ -1,3 +1,13 @@
+***
+***
+***
+
+**PLEASE GO HERE: [Open Source Plugin Tutorial](https://github.com/duckduckgo/duckduckgo/wiki/Open-Source-Plugin-Tutorial)**
+
+***
+***
+***
+
 # Zero-click Info Developer API v2 Beta Test Information Page
 
 We suggest that you have Perl knowledge here. This is semi public, all Beta, please get in contact with us on IRC before doing stuff :).
@@ -153,3 +163,6 @@ Regexp Plugins are not able to handle **remainder**, instead you can handle **ma
 Checkout the [Block Test](https://github.com/duckduckgo/duckduckgo/blob/master/t/35-block.t) to get a nice base setup for making your own test.
 
 If you want to make a distribution directly, please use Dist::Zilla and so far just upload them to your Github (or other repository hosting whatever you have) and show it to us that we can discuss it. We want to provide easy ways for making those (which are already in the work, so this block of text will change soon ;) ).
+***
+
+***
