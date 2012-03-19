@@ -60,7 +60,7 @@ Let's take a closer look at the first line of the function.
 return length $_ if $_;
 ```
 
-In this case, the heart of the function is just this one line. The **remainder** is in the **$_** variable as discussed. If it is not blank (**if $_**), we return the number of chars using Perl's built-in [length function](https://duckduckgo.com/?q=perl+length).
+The heart of the function is just this one line. The **remainder** is in the **$_** variable as discussed. If it is not blank (**if $_**), we return the number of chars using Perl's built-in [length function](https://duckduckgo.com/?q=perl+length).
 
 Perl has a lot of built-in functions, as well as thousands and thousands of modules available [via CPAN](https://metacpan.org/). You can leverage these modules when making Goodies, like how the [Roman Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Roman.pm) uses the [Roman module](https://metacpan.org/module/Roman).
 
@@ -80,7 +80,7 @@ zci is_cached => 1;
 
 This line is optional. Goodies technically return a [ZeroClickInfo object](https://metacpan.org/module/WWW::DuckDuckGo::ZeroClickInfo) (abbreviated as **zci**). This effect happens transparently by default, but you can override this default behavior via the **zci** keyword.
 
-We set **is_cached** to true (0 is false, 1 is true) because this plugin will always return the same answer for the same query. This speeds up future answers by caching (saving previous answers). 
+We set **is_cached** to true (0 is false, 1 is true) because this plugin will always return the same answer for the same query. This speeds up future answers by caching them, i.e. saving previous answers. 
 
 Finally, all Perl packages that load correctly should [return a true value](http://stackoverflow.com/questions/5293246/why-the-1-at-the-end-of-each-perl-package) so add a 1 on the very last line.
 
@@ -88,7 +88,7 @@ Finally, all Perl packages that load correctly should [return a true value](http
 1;
 ```
 
-And that's it! A this point you have a working DuckDuckGo Goodie plugin that should look like this:
+And that's it! A this point you have a working DuckDuckGo Goodie plugin. It should look like this:
 
 ```perl
 package DDG::Goodie::Chars;
@@ -123,9 +123,9 @@ To review, the plugin system works like this at the highest level:
 
 We made the DuckDuckGo plugin system because we strongly believe that (relevant) instant answers provide a much better search experience than traditional (link) results. As such, we'd love to show them for as many search queries as possible.
 
-We're not experts in every subject, e.g. bioinformatics, nor do we have the resources to develop plugins for niche search areas, e.g. lego parts. Yet we know there could be great instant answers in those areas and thousands of others! 
+We're not knowledgeable about every subject, e.g. bioinformatics, nor do we have the resources to develop plugins for niche search areas, e.g. lego parts. Yet we know there could be great instant answers in those areas and thousands of others! 
 
-That's where you come in. You may be an expert or know an expert or know an expert site in a certain search areas. If so, you're in a great position to help develop plugins for those areas. We also have an ever-increasing list of [plugin suggestions](http://duckduckgo.uservoice.com) from DuckDuckGo users.
+That's where you come in. You may know enough about certain search areas to help develop plugins for those areas. We also have an ever-increasing list of [plugin suggestions](http://duckduckgo.uservoice.com) from DuckDuckGo users.
  
 In any case, we hope that you will consider helping to make some DuckDuckGo plugins. Here's why you might want to:
 
@@ -156,7 +156,7 @@ There are four types of DuckDuckGo plugins:
 
 **Step 3.** Get a [GitHub account](https://github.com/) if you don't have one already. We use GitHub [to host](https://github.com/duckduckgo) all of our open-source code.
 
-**Step 4.** If you haven't already, set-up git on your computer. GitHub provides instructions for [Linux](http://help.github.com/linux-set-up-git/), [OSX](http://help.github.com/mac-set-up-git/), and [Windows](http://help.github.com/win-set-up-git/) (though Linux is preferred since that is what we use for development). If you don't have Linux but want to try it, you set up a virtual machine using [VirtualBox](https://www.virtualbox.org/) or [VMWare](http://www.vmware.com/products/player/) or use a free micro-instance on [Amazon Web Services](http://aws.amazon.com/free/).
+**Step 4.** If you haven't already, set-up git on your computer. GitHub provides instructions for [Linux](http://help.github.com/linux-set-up-git/), [OSX](http://help.github.com/mac-set-up-git/), and [Windows](http://help.github.com/win-set-up-git/). We use Linux for development, so we strongly encourage development of DuckDuckGo plugins in a Linux environment. We can't guarantee the following steps will work on other platforms. If you don't have Linux, some easy solutions that allow you to keep your current environment are to set up a virtual machine using [VirtualBox](https://www.virtualbox.org/) or [VMWare](http://www.vmware.com/products/player/), or use a free micro-instance on [Amazon Web Services](http://aws.amazon.com/free/).
 
 **Step 5.** Fork the right repository (depending on your plugin type). If you've never forked a repository before, follow the [GitHub instructions](http://help.github.com/fork-a-repo/). Here are the links to the repositories:
 
