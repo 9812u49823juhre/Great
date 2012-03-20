@@ -2,7 +2,7 @@ DuckDuckGo plugins react to search queries and provide [useful](https://duckduck
 
 ### A plugin line-by-line
 
-In this tutorial, we'll be making a plugin that checks the number of characters in a given search query. Then end result will look [like this](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Length.pm) and works [like this](https://duckduckgo.com/?q=chars+How+many+characters+is+this+sentence%3F). It's in Perl though the meat of some plugin types can be written in other languages (see Plugin types).
+In this tutorial, we'll be making a plugin that checks the number of characters in a given search query. Then end result will look [like this](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Length.pm) and works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F). It's in Perl though the meat of some plugin types can be written in other languages (see Plugin types).
 
 Let's begin. Open a text editor like [gedit](http://projects.gnome.org/gedit/), notepad or [emacs](http://www.gnu.org/software/emacs/) and type the following.
 
@@ -52,7 +52,7 @@ handle remainder => sub {
 
 This function (the part within the **{}** after **sub**) is the meat of the Goodie. It generates the instant answer that is displayed at the top of the [search results page](https://duckduckgo.com/?q=chars+this+is+a+test). 
 
-Whatever you are handling is passed to the function in the **$_** variable (**$_** is a special default variable in Perl that is used commonly to store temporary values). For example, if you searched DuckDuckGo for "_chars this is a test_", the value of **$_** will be "_this is a test_", i.e. the remainder.
+Whatever you are handling is passed to the function in the **$_** variable (**$_** is a special default variable in Perl that is commonly used to store temporary values). For example, if you searched DuckDuckGo for "_chars this is a test_", the value of **$_** will be "_this is a test_", i.e. the remainder.
 
 Let's take a closer look at the first line of the function.
 
