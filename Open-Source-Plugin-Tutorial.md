@@ -2,7 +2,7 @@ DuckDuckGo plugins react to search queries and provide [useful](https://duckduck
 
 ### A plugin line-by-line
 
-In this tutorial, we'll be making a plugin that checks the number of characters in a given search query. Then end result will look [like this](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Length.pm) and works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F). It's in Perl though the meat of some plugin types can be written in other languages (see Plugin types).
+In this tutorial, we'll be making a plugin that checks the number of characters in a given search query. Then end result will look [like this](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Chars.pm) and works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F). It's in Perl though the meat of some plugin types can be written in other languages (see Plugin types).
 
 Let's begin. Open a text editor like [gedit](http://projects.gnome.org/gedit/), notepad or [emacs](http://www.gnu.org/software/emacs/) and type the following.
 
