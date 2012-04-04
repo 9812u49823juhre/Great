@@ -2,9 +2,9 @@ DuckDuckGo plugins react to search queries and provide [useful](https://duckduck
 
 ### A plugin line-by-line
 
-In this tutorial, we'll be making a plugin that checks the number of characters in a given search query. Then end result will look [like this](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Chars.pm) and works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F). It's in Perl though the meat of some plugin types can be written in other languages (see Plugin types).
+In this tutorial, we'll be making a plugin that checks the number of characters in a given search query. The end result will look [like this](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Chars.pm) and works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F). It's written in Perl, but the meat of some plugin types can be written in other languages (see Plugin types).
 
-Let's begin. Open a text editor like [gedit](http://projects.gnome.org/gedit/), notepad or [emacs](http://www.gnu.org/software/emacs/) and type the following.
+Let's begin. Open a text editor like [gedit](http://projects.gnome.org/gedit/), notepad or [emacs](http://www.gnu.org/software/emacs/) and type the following:
 
 ```perl
 package DDG::Goodie::Chars;
@@ -41,7 +41,7 @@ Once triggers are specified, we define how to _handle_ the query. **handle** is 
 
 You can _handle_ different aspects of the search query, but the most common is the **remainder**, which refers to the rest of the query (everything but the triggers). For example, if the query was "_chars this is a test_", the trigger would be _chars_ and the remainder would be _this is a test_. 
 
-Now add another couple of lines to complete the handle function.
+Now let's add a few more lines to complete the handle function.
 
 ```perl
 handle remainder => sub {
@@ -50,7 +50,7 @@ handle remainder => sub {
 };
 ```
 
-This function (the part within the **{}** after **sub**) is the meat of the Goodie. It generates the instant answer that is displayed at the top of the [search results page](https://duckduckgo.com/?q=chars+this+is+a+test). 
+This function (the part within the **{}** after **sub**) is the meat of the Goodie. It generates the instant answer that is displayed at the top of the [search results page](https://duckduckgo.com/?q=chars+this+is+a+test).
 
 Whatever you are handling is passed to the function in the **$_** variable (**$_** is a special default variable in Perl that is commonly used to store temporary values). For example, if you searched DuckDuckGo for "_chars this is a test_", the value of **$_** will be "_this is a test_", i.e. the remainder.
 
@@ -62,7 +62,7 @@ return length $_ if $_;
 
 The heart of the function is just this one line. The **remainder** is in the **$_** variable as discussed. If it is not blank (**if $_**), we return the number of chars using Perl's built-in [length function](https://duckduckgo.com/?q=perl+length).
 
-Perl has a lot of built-in functions, as well as thousands and thousands of modules available [via CPAN](https://metacpan.org/). You can leverage these modules when making Goodies, like how the [Roman Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Roman.pm) uses the [Roman module](https://metacpan.org/module/Roman).
+Perl has a lot of built-in functions, as well as thousands and thousands of modules available [via CPAN](https://metacpan.org/). You can leverage these modules when making Goodies, similar to how the [Roman Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Roman.pm) uses the [Roman module](https://metacpan.org/module/Roman).
 
 If we are unable to provide a good instant answer, we simply **return** nothing. And that's exactly what the second line in the function does.
 
@@ -72,7 +72,7 @@ return;
 
 This line is only run if **$_** contained nothing, because otherwise the line before it would return something and end the function.
 
-Now, below your function type the following line.
+Now, below your function type the following line:
 
 ```perl
 zci is_cached => 1;
@@ -80,7 +80,7 @@ zci is_cached => 1;
 
 This line is optional. Goodies technically return a [ZeroClickInfo object](https://metacpan.org/module/WWW::DuckDuckGo::ZeroClickInfo) (abbreviated as **zci**). This effect happens transparently by default, but you can override this default behavior via the **zci** keyword.
 
-We set **is_cached** to true (0 is false, 1 is true) because this plugin will always return the same answer for the same query. This speeds up future answers by caching them, i.e. saving previous answers. 
+We set **is_cached** to true (0 is false, 1 is true) because this plugin will always return the same answer for the same query. This speeds up future answers by caching them (saving previous answers). 
 
 Finally, all Perl packages that load correctly should [return a true value](http://stackoverflow.com/questions/5293246/why-the-1-at-the-end-of-each-perl-package) so add a 1 on the very last line.
 
@@ -88,7 +88,7 @@ Finally, all Perl packages that load correctly should [return a true value](http
 1;
 ```
 
-And that's it! A this point you have a working DuckDuckGo Goodie plugin. It should look like this:
+And that's it! At this point you have a working DuckDuckGo Goodie plugin. It should look like this:
 
 ```perl
 package DDG::Goodie::Chars;
@@ -123,11 +123,11 @@ To review, the plugin system works like this at the highest level:
 
 We made the DuckDuckGo plugin system because we strongly believe that (relevant) instant answers provide a much better search experience than traditional (link) results. As such, we'd love to show them for as many search queries as possible.
 
-We're not knowledgeable about every subject, e.g. bioinformatics, nor do we have the resources to develop plugins for niche search areas, e.g. lego parts. Yet we know there could be great instant answers in those areas and thousands of others! 
+We're not knowledgeable about every subject, e.g. bioinformatics, nor do we have the resources to develop plugins for niche search areas, e.g. lego parts. However, we know there could be great instant answers in those areas and thousands of others! 
 
-That's where you come in. You may know enough about certain search areas to help develop plugins for those areas. We also have an ever-increasing list of [plugin suggestions](http://duckduckgo.uservoice.com) from DuckDuckGo users.
+That's where you come in. You may know enough about certain search areas to help develop plugins for those areas. We also have an ever-increasing list of [plugin suggestions](http://duckduckgo.uservoice.com) from active DuckDuckGo users.
  
-In any case, we hope that you will consider helping to make some DuckDuckGo plugins. Here's why you might want to:
+In any case, we hope that you will consider helping us write DuckDuckGo plugins. Here's why you might want to:
 
 * Improve results in areas you personally search and care about, e.g. [programming documentation](https://duckduckgo.com/?q=perl+split), [gaming](https://duckduckgo.com/?q=roll+3d12+%2B+4) or [entertainment](https://duckduckgo.com/?q=xkcd).
 * Increase usage of your own projects, e.g. [APIs](https://duckduckgo.com/?q=cost+of+living+nyc+philadelphia).
@@ -140,7 +140,7 @@ DuckDuckGo plugins are defined in [Perl](https://duckduckgo.com/Perl), though we
 
 There are four types of DuckDuckGo plugins:
 
-1. **Goodies**. Example: [reverse test](https://duckduckgo.com/?q=reverse+test). The core of these plugins are self-contained Perl functions that generate instant answers (server-side). [Goodie repository](https://github.com/duckduckgo/zeroclickinfo-goodies). [Goodie suggestions](https://duckduckgo.uservoice.com/forums/5168-plugins/category/41841-goodies).
+1. **Goodies**. Example: [reverse test](https://duckduckgo.com/?q=reverse+test). The core of these plugins are self-contained Perl functions that generate instant answers (server-side). Note that no external HTTP requests should be made by Goodies -- those are for Spice! [Goodie repository](https://github.com/duckduckgo/zeroclickinfo-goodies). [Goodie suggestions](https://duckduckgo.uservoice.com/forums/5168-plugins/category/41841-goodies).
 
 2. **Spice**. Example: [xkcd](https://duckduckgo.com/?q=xkcd). The core of these plugins are self-contained JavaScript functions that generate instant answers based on objects returned from external [JSONP](https://duckduckgo.com/?q=jsonp) API calls (client-side). [Spice repository](https://github.com/duckduckgo/zeroclickinfo-spice). [Spice suggestions](https://duckduckgo.uservoice.com/forums/5168-plugins/category/41838-spice).
 
@@ -156,7 +156,7 @@ There are four types of DuckDuckGo plugins:
 
 **Step 3.** Get a [GitHub account](https://github.com/) if you don't have one already. We use GitHub [to host](https://github.com/duckduckgo) all of our open-source code.
 
-**Step 4.** If you haven't already, set-up git on your computer. GitHub provides instructions for [Linux](http://help.github.com/linux-set-up-git/), [OSX](http://help.github.com/mac-set-up-git/), and [Windows](http://help.github.com/win-set-up-git/). We use Linux for development, so we strongly encourage development of DuckDuckGo plugins in a Linux environment. We can't guarantee the following steps will work on other platforms. If you don't have Linux, some easy solutions that allow you to keep your current environment are to set up a virtual machine using [VirtualBox](https://www.virtualbox.org/) or [VMWare](http://www.vmware.com/products/player/), or use a free micro-instance on [Amazon Web Services](http://aws.amazon.com/free/).
+**Step 4.** If you haven't already, set up git on your computer. GitHub provides instructions for [Linux](http://help.github.com/linux-set-up-git/), [OSX](http://help.github.com/mac-set-up-git/), and [Windows](http://help.github.com/win-set-up-git/). We use Linux for development, so we strongly encourage development of DuckDuckGo plugins in a Linux environment. We can't guarantee the following steps will work on other platforms. If you don't have Linux, some easy solutions that allow you to keep your current environment are to set up a virtual machine using [VirtualBox](https://www.virtualbox.org/) or [VMWare](http://www.vmware.com/products/player/), or use a free micro-instance on [Amazon Web Services](http://aws.amazon.com/free/).
 
 **Step 5.** Fork the right repository (depending on your plugin type). If you've never forked a repository before, follow the [GitHub instructions](http://help.github.com/fork-a-repo/). Here are the links to the repositories:
 
@@ -224,7 +224,7 @@ Type this command at the command line.
 duckpan goodie test
 ```
 
-This command will first output all of the plugins available in your local plugin repository.
+First, this command will output all of the plugins available in your local plugin repository.
 
 ```md
 Using the following DDG::Goodie plugins:
@@ -238,7 +238,7 @@ Using the following DDG::Goodie plugins:
  ...
 ```
 
-You should see your plugin in there as well. When that output is finished it gives you an interactive prompt.
+You should see your plugin in there as well. When the output is finished you'll see an interactive prompt.
 
 ```
 (Empty query for ending test)
@@ -420,7 +420,7 @@ The instant answers returned by plugins appear at the top of search results page
 
 **No false positives.** A false positive is an irrelevant instant answer. For example, suppose there was a plugin that triggered on the word amazon and showed information from Amazon.com. If someone typed in Amazon River, they likely would not want information from that plugin. We have systems in place to automatically weed out cases like this one, but you should be careful to only return an instant answer when you know it is good, and otherwise return nothing.
 
-**Minimize vertical space.** We try to keep the instant answer box as small as possible, which generally means leaving out extraneous information. We try to put the most important information in the box, and then offer the user to click through to another page for more detailed information.
+**Minimize vertical space.** We try to keep the instant answer box as small as possible, which generally means leaving out extraneous information. We try to put the most important information in the box, and then offer the user a link to click through to another page for more detailed information.
 
 **Readable answers.** The instant answer area is supposed to make inherent sense, as opposed to the snippets in traditional links, which may or may not be actually readable. Generally the way we achieve this is create sentences or short statements that users can actually read. A good technique is to read your answers out loud and see if they make sense to someone else.
 
