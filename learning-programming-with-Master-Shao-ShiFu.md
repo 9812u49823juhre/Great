@@ -1,0 +1,1 @@
+# Mr Shao from sichuan is decided to learn how to programming
