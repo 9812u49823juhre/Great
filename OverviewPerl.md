@@ -26,7 +26,7 @@ This documentation listing covers the language itself, the syntax, data structur
 
 * [Perl functions A-Z](http://perldoc.perl.org/index-functions.html)
 
-This listing covers all functions that are available by default in Perl. Most of them you should already know from other languages, so it's probably a good idea to browse through them :). Dont feel sad if something you need is not covered , we will son discuss the power of CPAN which reveals much more options.
+This listing covers all functions that are available by default in Perl. Most of them you should already know from other languages, so it's probably a good idea to browse through them :). Dont feel sad if something you need is not covered , we will soon discuss the power of CPAN which reveals much more options.
 
 * [Pragmas](http://perldoc.perl.org/index-pragmas.html)
 
@@ -42,7 +42,7 @@ This documentation list covers the internal handling of Perl at the lower level,
 
 * [Platform specific](http://perldoc.perl.org/index-platforms.html)
 
-Here you can get extra documentation about specific differences on specific platforms. As we dont cover these, you don't need to go here anyway. All documentations are definitly correct as is for linux systems and there are no differences that are important here.
+Here you can get extra documentation about specific differences on specific platforms. As we don't cover these, you don't need to go here anyway. All documentations are definitely correct as is for Linux systems and there are no differences that are important here.
 
 ## use strict; use warnings;
 
@@ -66,13 +66,13 @@ Always... Really, always...
 
 As a Perl developer, you are likely to make significant use of the Perl distributions available on [CPAN](http://cpan.org/). CPAN covers anything you need for development. Normally you'll find a distribution/module for any task you need to do. Some are good, some are bad, but the most important point is, you can easily help produce more CPAN distributions if you can't find something. We will give some more information about how to do this later.
 
-When you start a task which requires you to fulfill some specific requirements, you should normally start by doing a quick search on [MetaCPAN](https://metacpan.org/), which is at the moment the "state-of-the art" CPAN search and documentation reading platform. Important here is: dont think like you need todo much. If you for example want to use an API of a specific webservice, and think like "oh it needs a MD5 hash, so i need a MD5 module", better start thinking like "Hey I wanna do something with Flickr, so i need a Flickr module", cause MANY stuff is directly covered up, and there is no need to recode something that is already there. If its not there, as said, make your own one and let others help you extend it, thats the beauty of Open Source :).
+When you start a task which requires you to fulfill some specific requirements, you should normally start by doing a quick search on [MetaCPAN](https://metacpan.org/), which is at the moment the "state-of-the art" CPAN search and documentation reading platform. Important here is: don't think like you need todo much. If you for example want to use an API of a specific webservice, and think like "oh it needs a MD5 hash, so i need a MD5 module", better start thinking like "Hey I wanna do something with Flickr, so i need a Flickr module", cause MANY stuff is directly covered up, and there is no need to recode something that is already there. If its not there, as said, make your own one and let others help you extend it, that's the beauty of Open Source :).
 
 We at DuckDuckGo also have our own "CPAN" style server: we call it [DuckPAN](http://duckpan.org). It will be the upload station for your contributions to DuckDuckGo - we have a wiki page about it here: "[What is the DuckPAN?](https://github.com/duckduckgo/duckduckgo/wiki/DuckPAN)".
 
 ## The Community
 
-When developing stuff using Perl, and especially with Open Source teamwork, its very important to stay in contact with all other developers, and also the developers of the modules which you use. The quickest way to contact members of the Perl community is via IRC, but you can usually reach most developers via the email given on CPAN. It is paramanount to stay in contact with the community about general topics, don't waste hours of your day, ask the community. If you are aware of IRC, you can just join the big community of Perl on irc.perl.org, where you also will find...
+When developing stuff using Perl, and especially with Open Source teamwork, its very important to stay in contact with all other developers, and also the developers of the modules which you use. The quickest way to contact members of the Perl community is via IRC, but you can usually reach most developers via the email given on CPAN. It is paramount to stay in contact with the community about general topics, don't waste hours of your day, ask the community. If you are aware of IRC, you can just join the big community of Perl on irc.perl.org, where you also will find...
 
 ## DuckDuckGo and Perl
 
