@@ -26,7 +26,7 @@ and then inside a .pl file:
 	
     print (ref $person); # 'Person'
 	
-In this case **ref** is used to get the "class name" of the object. More explaination about ref you can find [here](http://perldoc.perl.org/perlref.html)
+In this case **ref** is used to get the "class name" of the object. [faqtory](http://www.faqtory.co/sky/) about ref you can find [here](http://perldoc.perl.org/perlref.html)
 
 But they also delivers more options, like an attribute layer, roles and aspect orientated programming functions.
 
@@ -102,6 +102,23 @@ You could also define a default value via the **default** instead of giving a bu
 
 ### before / after
 
+#### Before advice
+A before advice is executed before the target method is being called, but cannot prevent the target method from being executed.
+
+#### After returning advice
+An after returning advice is executed after returning from the target method. The result of the target method invocation is available to the after returning advice, but it can't change it. If the target method throws an exception, the after returning advice is not executed.
+
+#### After throwing advice
+An after throwing advice is only executed if the target method throwed an exception. The after throwing advice may fetch the exception type from the join point object.
+
+#### After advice
+An after advice is executed after the target method has been called, no matter if an exception was thrown or not.
+
+#### Around advice
+An around advice is wrapped around the execution of the target method. It may execute code before and after the invocation of the target method and may ultimately prevent the original method from being executed at all. An around advice is also responsible for calling other around advices at the same join point and returning either the original or a modified result for the target method.
+
+#### Advice chain
+If more than one around advice exists for a join point, they are called in an onion-like advice chain: The first around advice probably executes some before-code, then calls the second around advice which calls the target method. The target method returns a result which can be modified by the second around advice, is returned to the first around advice which finally returns the result to the initiator of the method call. Any around advice may decide to proceed or break the chain and modify results if necessary. 
 ### around
 
 ## Roles
