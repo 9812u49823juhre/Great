@@ -5,7 +5,7 @@ Legend:
 * **t**: In testing
 * **d**: In development
 
-Name | Cheat sheet | Reference | Package/library lookup | Q&A / tutorials
+Name | Cheat sheet | Commands/functions | Package/library lookup | Q&A / tutorials
 ----|:----:|:----:|:----:|:----:
 .net |   |   |   |  
 Android |   |   |   | y
