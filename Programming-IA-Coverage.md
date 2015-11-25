@@ -6,7 +6,7 @@ Legend:
 * **d**: In development
 * **x**: No IA
 
- | Cheat sheet | Reference | Package/library lookup | Q&A / tutorials
+Name | Cheat sheet | Reference | Package/library lookup | Q&A / tutorials
 ----|----|----|----|----
 .net | x | x | x | x
 Android | x | x | x | y
