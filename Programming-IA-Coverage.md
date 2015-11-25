@@ -43,7 +43,7 @@ NodeJS | y |   | y |
 Objective-C |   |   |   |  
 Octave | y |   |   |  
 OpenGL |   |   |   |  
-Perl |   | y |   |  
+Perl |   | y | y |  
 PHP | d | y |   |  
 PostgreSQL |   |   |   |  
 Powershell |   |   |   |  
