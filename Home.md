@@ -9,4 +9,4 @@ We hope you'll join us in making [DuckDuckGo](https://duckduckgo.com/) the best 
 
 ## Where is everybody?
 
-You can email us at open@duckduckgo.com or find us on IRC at [#duckduckgo on Freenode](http://webchat.freenode.net/?channels=duckduckgo).
+You can email us at open@duckduckgo.com or find us on Slack. Request an invite by sending a mail to quackslack@duckduckgo.com
