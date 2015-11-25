@@ -7,7 +7,7 @@ Legend:
 * **x**: No IA
 
 Name | Cheat sheet | Reference | Package/library lookup | Q&A / tutorials
-----|----|----|----|----
+----|:----:|:----:|:----:|:----:
 .net | x | x | x | x
 Android | x | x | x | y
 AngularJS | y | x | x | x
