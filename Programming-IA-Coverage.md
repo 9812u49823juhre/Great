@@ -8,17 +8,17 @@ Legend:
 Name | Cheat sheet | Command/function lookup | Package/library lookup | Q&A / tutorials
 ----|:----:|:----:|:----:|:----:
 .net |   |   |   |  
-Android |   |   |   | y
-AngularJS | y |   |   |  
+Android |   |   |   | [y](https://duck.co/ia/view/android_enthusiasts)
+AngularJS | [y](https://duck.co/ia/view/angular_js_cheat_sheet) |   |   |  
 AppleScript |   |   |   |  
 Arduino |   |   |   |  
 ASP.net |   |   |   |  
-C | t |   |   |  
+C | [t](https://duck.co/ia/view/c_cheat_sheet) |   |   |  
 C# |   |   |   |  
-C++ | y |   |   |  
-Clojure | y | y | y |  
-CoffeeScript | y |   |   |  
-CSS | y |   |   |  
+C++ | [t](https://duck.co/ia/view/cpp_cheat_sheet) |   |   |  
+Clojure |   | [y](https://duck.co/ia/view/clojure) | [y](https://duck.co/ia/view/clojars) |  
+CoffeeScript | [y](https://duck.co/ia/view/coffeescript_cheat_sheet) |   |   |  
+CSS | [y](https://duck.co/ia/view/css_cheat_sheet) |   |   |  
 Django |   |   |   |  
 GLSL |   |   |   |  
 Go | y |   |   |  
