@@ -56,13 +56,13 @@ Ruby |   |   | [y](https://duck.co/ia/view/ruby_gems) |
 Ruby-on-Rails |   |   |   |  
 Rust | [y](https://duck.co/ia/view/rust_types_cheat_sheet) |   | [y](https://duck.co/ia/view/rust_cargo) |  
 Scala |   |   |   |  
-Shell | y |   |   |  
-SQL | y |   |   |  
+Shell | [y](https://duck.co/ia/view/shell_cheat_sheet) |   |   |  
+SQL | [y](https://duck.co/ia/view/sql_cheat_sheet) |   |   |  
 Swift |   |   |   |  
-Tex |   |   |   | y
+Tex |   |   |   | [y](https://duck.co/ia/view/tex)
 VB.net |   |   |   |  
 VIML |   |   |   |  
 WebGL |   |   |   |  
 XAML |   |   |   |  
-Xcode | y |   |   |  
+Xcode | [y](https://duck.co/ia/view/xcode_cheat_sheet) |   |   |  
 XSLT |   |   |   |  
