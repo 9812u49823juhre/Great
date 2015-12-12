@@ -51,6 +51,7 @@ Processing | [y](https://duck.co/ia/view/processing_lang_cheat_sheet) |   |   |
 Python | [y](https://duck.co/ia/view/python_cheat_sheet) | [y](https://duck.co/ia/view/python) | [y](https://duck.co/ia/view/py_pi) |  
 R |   |   |   |  
 Raspberry Pi | [y](https://duck.co/ia/view/vcgencmd_cheat_sheet) |   |   |  
+Redis |  [y](https://duck.co/ia/view/redis_cheat_sheet) |   |   |  
 Regex | [y](https://duck.co/ia/view/regex_cheat_sheet) |   |   |  
 Ruby |   |   | [y](https://duck.co/ia/view/ruby_gems) |  
 Ruby-on-Rails |   |   |   |  
