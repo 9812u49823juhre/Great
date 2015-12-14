@@ -53,7 +53,7 @@ R |   |   |   |
 Raspberry Pi | [y](https://duck.co/ia/view/vcgencmd_cheat_sheet) |   |   |  
 Redis |  [y](https://duck.co/ia/view/redis_cheat_sheet) |   |   |  
 Regex | [y](https://duck.co/ia/view/regex_cheat_sheet) |   |   |  
-Ruby |   |   | [y](https://duck.co/ia/view/ruby_gems) |  
+Ruby | [t](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1891) |   | [y](https://duck.co/ia/view/ruby_gems) |  
 Ruby-on-Rails |   |   |   |  
 Rust | [y](https://duck.co/ia/view/rust_types_cheat_sheet) |   | [y](https://duck.co/ia/view/rust_cargo) |  
 Scala |   |   |   |  
