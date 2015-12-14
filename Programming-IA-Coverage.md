@@ -15,7 +15,7 @@ Arduino |   |   |   |
 ASP.net |   |   |   |  
 C | [t](https://duck.co/ia/view/c_cheat_sheet) |   |   |  
 C# |   |   |   |  
-C++ | [t](https://duck.co/ia/view/cpp_cheat_sheet) |   |   |  
+C++ | [t](https://duck.co/ia/view/cpp_cheat_sheet)[y](https://duck.co/ia/view/cpp_strings_cheat_sheet)[y](https://duck.co/ia/view/cpp_algorithms_cheat_sheet) |   |   |  
 Clojure |   | [y](https://duck.co/ia/view/clojure) | [y](https://duck.co/ia/view/clojars) |  
 CoffeeScript | [y](https://duck.co/ia/view/coffeescript_cheat_sheet) |   |   |  
 CSS | [y](https://duck.co/ia/view/css_cheat_sheet) |   |   |  
