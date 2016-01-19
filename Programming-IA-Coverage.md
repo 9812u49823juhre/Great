@@ -58,7 +58,7 @@ Ruby | [t](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1891) |   | 
 Ruby-on-Rails |   |   |   |  
 Rust | [y](https://duck.co/ia/view/rust_types_cheat_sheet) |   | [t](https://duck.co/ia/view/rust_cargo) |  
 Scala | [y](https://duck.co/ia/view/scala_cheat_sheet) |   |   |  
-Shell | [y](https://duck.co/ia/view/shell_cheat_sheet)[t](https://duck.co/ia/view/hdfs_shell_cheat_sheet) |   |   |  
+Shell | [y](https://duck.co/ia/view/shell_cheat_sheet),[t](https://duck.co/ia/view/hdfs_shell_cheat_sheet) |   |   |  
 SQL | [y](https://duck.co/ia/view/sql_cheat_sheet) |   |   |  
 Swift |   |   |   |  
 Tex |   |   |   | [y](https://duck.co/ia/view/tex)
