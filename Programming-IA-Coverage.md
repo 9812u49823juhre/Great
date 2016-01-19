@@ -68,3 +68,5 @@ WebGL |   |   |   |
 XAML |   |   |   |  
 Xcode | [y](https://duck.co/ia/view/xcode_cheat_sheet) |   |   |  
 XSLT |   |   |   |  
+
+*Note:* A great reference for programming language docs is [devdocs.io](http://devdocs.io/). The source code also has many [scripts for scraping the docs](https://github.com/Thibaut/devdocs/tree/master/lib/docs/scrapers).
