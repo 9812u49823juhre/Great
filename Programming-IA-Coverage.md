@@ -3,7 +3,9 @@ Instant Answers (IAs) for programming that we currently do and don't have.
 Legend:
 * **y**: Complete
 * **t**: In testing
-* **d**: In development
+* **d**: In development  
+
+*Note:* A great reference for programming language docs is [devdocs.io](http://devdocs.io/). The source code also has many [scripts for scraping the docs](https://github.com/Thibaut/devdocs/tree/master/lib/docs/scrapers).  
 
 Name | Cheat sheet | Command/function lookup | Package/library lookup | Q&A / tutorials
 ----|:----:|:----:|:----:|:----:
@@ -58,7 +60,7 @@ Ruby | [t](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1891) |   | 
 Ruby-on-Rails |   |   |   |  
 Rust | [y](https://duck.co/ia/view/rust_types_cheat_sheet) |   | [t](https://duck.co/ia/view/rust_cargo) |  
 Scala | [y](https://duck.co/ia/view/scala_cheat_sheet) |   |   |  
-Shell | [y](https://duck.co/ia/view/shell_cheat_sheet),[t](https://duck.co/ia/view/hdfs_shell_cheat_sheet) |   |   |  
+Shell | [y](https://duck.co/ia/view/shell_cheat_sheet),[y](https://duck.co/ia/view/hdfs_shell_cheat_sheet) |   |   |  
 SQL | [y](https://duck.co/ia/view/sql_cheat_sheet) |   |   |  
 Swift |   |   |   |  
 Tex |   |   |   | [y](https://duck.co/ia/view/tex)
@@ -68,5 +70,3 @@ WebGL |   |   |   |
 XAML |   |   |   |  
 Xcode | [y](https://duck.co/ia/view/xcode_cheat_sheet) |   |   |  
 XSLT |   |   |   |  
-
-*Note:* A great reference for programming language docs is [devdocs.io](http://devdocs.io/). The source code also has many [scripts for scraping the docs](https://github.com/Thibaut/devdocs/tree/master/lib/docs/scrapers).
