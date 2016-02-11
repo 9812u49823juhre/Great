@@ -19,7 +19,7 @@ C++ | [y](https://duck.co/ia/view/cpp_cheat_sheet),[y](https://duck.co/ia/view/c
 Clojure |   | [y](https://duck.co/ia/view/clojure) | [y](https://duck.co/ia/view/clojars) |  
 CoffeeScript | [y](https://duck.co/ia/view/coffeescript_cheat_sheet) |   |   |  
 CSS | [y](https://duck.co/ia/view/css_cheat_sheet) |   |   | 
-D3.js | [t](https://duck.co/ia/view/d3js_cheat_sheet) |   |   | 
+D3.js | [y](https://duck.co/ia/view/d3js_cheat_sheet) |   |   | 
 Django |   |   |   |  
 GLSL |   |   |   |  
 Go | [y](https://duck.co/ia/view/golang_cheat_sheet) |   |   |  
