@@ -62,7 +62,7 @@ Rust | [y](https://duck.co/ia/view/rust_types_cheat_sheet) |   | [t](https://duc
 Scala | [y](https://duck.co/ia/view/scala_cheat_sheet) |   |   |  
 Shell | [y](https://duck.co/ia/view/shell_cheat_sheet),[y](https://duck.co/ia/view/hdfs_shell_cheat_sheet) |   |   |  
 SQL | [y](https://duck.co/ia/view/sql_cheat_sheet) |   |   |  
-Swift |   |   |   |  
+Swift | [y](https://duck.co/ia/view/swift_cheat_sheet) |   |   |  
 Tex |   |   |   | [y](https://duck.co/ia/view/tex)
 VB.net |   |   |   |  
 VIML |   |   |   |  
