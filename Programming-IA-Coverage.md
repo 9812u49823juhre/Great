@@ -51,7 +51,7 @@ OpenGL |   |   |   |
 Perl | [y](https://duck.co/ia/view/perl_cheat_sheet) | [y](https://duck.co/ia/view/perl_doc)[y](https://duck.co/ia/view/perl6doc) |   |  
 PHP | [y](https://duck.co/ia/view/php_cheat_sheet) | [y](https://duck.co/ia/view/php) |   |  
 PostgreSQL |   |   |   |  
-Powershell |   |   |   |  
+Powershell | [t](https://duck.co/ia/view/powershell_cheat_sheet) |   |   |  
 Processing | [y](https://duck.co/ia/view/processing_lang_cheat_sheet) |   |   |  
 Python | [y](https://duck.co/ia/view/python_cheat_sheet) | [y](https://duck.co/ia/view/python) | [y](https://duck.co/ia/view/py_pi) |  
 R |   |   |   |  
