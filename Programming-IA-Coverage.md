@@ -1,5 +1,7 @@
 Instant Answers (IAs) for programming that we currently do and don't have.
 
+Refer [here](http://docs.duckduckhack.com/welcome/determining-ia-type.html) for determining how best to utilize your data source.
+
 Legend:
 * **y**: Complete
 * **t**: In testing
