@@ -1,4 +1,4 @@
-Instant Answers (IAs) for programming that we currently do and don't have. If you'd like to help complete this table please checkout http://duckduckhack.com/
+Instant Answers (IAs) for programming that we currently do and don't have. If you'd like to help complete this table please checkout http://duckduckhack.com
 
 Refer [here](http://docs.duckduckhack.com/welcome/determining-ia-type.html) for determining how best to utilize your data source.
 
