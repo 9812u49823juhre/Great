@@ -48,7 +48,7 @@ NodeJS | [y](https://duck.co/ia/view/nodejs_cheat_sheet) | [y](https://duck.co/i
 Objective-C |   |   |   |  
 Octave | [y](https://duck.co/ia/view/octave_cheat_sheet) |   |   |  
 OpenGL |   |   |   |  
-Perl | [y](https://duck.co/ia/view/perl_cheat_sheet) | [y](https://duck.co/ia/view/perl_doc)[y](https://duck.co/ia/view/perl6doc) |   |  
+Perl | [y](https://duck.co/ia/view/perl_cheat_sheet) | [y](https://duck.co/ia/view/perl_doc),[y](https://duck.co/ia/view/perl6doc) |   |  
 PHP | [y](https://duck.co/ia/view/php_cheat_sheet) | [y](https://duck.co/ia/view/php) |   |  
 PostgreSQL | [y](https://duck.co/ia/view/postgresql_cheat_sheet) |   |   |  
 Powershell | [t](https://duck.co/ia/view/powershell_cheat_sheet) |   |   |  
