@@ -57,7 +57,7 @@ Python | [y](https://duck.co/ia/view/python_cheat_sheet) | [y](https://duck.co/i
 R |   |   |   |  
 Raspberry Pi | [y](https://duck.co/ia/view/vcgencmd_cheat_sheet) |   |   |  
 Redis |  [y](https://duck.co/ia/view/redis_cheat_sheet) |   |   |  
-Regex | [y](https://duck.co/ia/view/regex_cheat_sheet) |   |   |  
+Regex | [y](https://duck.co/ia/view/regex_cheat_sheet) | [y](https://duck.co/ia/view/regexp) |   |  
 Ruby | [y](https://duck.co/ia/view/ruby_globals_cheat_sheet) |   | [y](https://duck.co/ia/view/ruby_gems) |  
 Ruby-on-Rails |   |   |   |  
 Rust | [y](https://duck.co/ia/view/rust_types_cheat_sheet) |   | [t](https://duck.co/ia/view/rust_cargo) |  
