@@ -18,7 +18,7 @@ AppleScript |   |   |   |
 Arduino |   |   |   |  
 ASP.net |   |   |   |  
 C | [y](https://duck.co/ia/view/c_cheat_sheet) |   |   |  
-C# |   |   |   |  
+C# | [y](https://duck.co/ia/view/c_sharp_snippets_cheat_sheet) |   |   |  
 C++ | [y](https://duck.co/ia/view/cpp_cheat_sheet),[y](https://duck.co/ia/view/cpp_strings_cheat_sheet),[y](https://duck.co/ia/view/cpp_algorithms_cheat_sheet) |   |   |  
 Clojure |   | [y](https://duck.co/ia/view/clojure) | [y](https://duck.co/ia/view/clojars) |  
 CoffeeScript | [y](https://duck.co/ia/view/coffeescript_cheat_sheet) |   |   |  
