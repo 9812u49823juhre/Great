@@ -12,7 +12,7 @@ Legend:
 Name | Cheat sheet | Command/function lookup | Package/library lookup | Q&A / tutorials
 ----|:----:|:----:|:----:|:----:
 .net |   |   |   |  
-Android |   |   |   | [y](https://duck.co/ia/view/android_enthusiasts)
+Android | [d](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/2139), [d](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/2136)  |   |   | [y](https://duck.co/ia/view/android_enthusiasts)
 AngularJS | [y](https://duck.co/ia/view/angular_js_cheat_sheet) |   |   |  
 AppleScript |   |   |   |  
 Arduino |   |   |   |  
