@@ -25,6 +25,8 @@ CoffeeScript | [y](https://duck.co/ia/view/coffeescript_cheat_sheet) |   |   |
 CSS | [y](https://duck.co/ia/view/css_cheat_sheet) |   |   | 
 D3.js | [y](https://duck.co/ia/view/d3js_cheat_sheet) |   |   | 
 Django |   |   |   |  
+Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet)  |   |   | 
+Erlang | [y](https://duck.co/ia/view/6147 )  |   |   |  
 GLSL |   |   |   |  
 Go | [y](https://duck.co/ia/view/golang_cheat_sheet) |   |   |  
 Groovy | [y](https://duck.co/ia/view/groovy_cheat_sheet) |   |   |  
