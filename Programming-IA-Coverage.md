@@ -67,7 +67,7 @@ SQL | [y](https://duck.co/ia/view/sql_cheat_sheet) |   |   |
 Swift | [y](https://duck.co/ia/view/swift_cheat_sheet) |   |   |  
 Tex |   |   |   | [y](https://duck.co/ia/view/tex)
 VB.net |   |   |   |  
-VIML |   |   |   |  
+VIML | [y](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/2051)  |   |   |  
 WebGL |   |   |   |  
 XAML |   |   |   |  
 Xcode | [y](https://duck.co/ia/view/xcode_cheat_sheet) |   |   |  
