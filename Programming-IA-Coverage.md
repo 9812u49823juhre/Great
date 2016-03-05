@@ -15,7 +15,7 @@ Name | Cheat sheet | Command/function lookup | Package/library lookup | Q&A / tu
 Android | [d](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/2139), [d](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/2136)  |   |   | [y](https://duck.co/ia/view/android_enthusiasts)
 AngularJS | [y](https://duck.co/ia/view/angular_js_cheat_sheet) |   |   |  
 AppleScript |   |   |   |  
-Arduino |   |   |   |  
+Arduino |[d](https://duck.co/ia/view/arduino_cheat_sheet)   |   |   |  
 ASP.net |   |   |   |  
 C | [y](https://duck.co/ia/view/c_cheat_sheet) |   |   |  
 C# | [y](https://duck.co/ia/view/c_sharp_snippets_cheat_sheet) |   |   |  
