@@ -61,7 +61,7 @@ Raspberry Pi | [y](https://duck.co/ia/view/vcgencmd_cheat_sheet) |   |   |
 Redis |  [y](https://duck.co/ia/view/redis_cheat_sheet) |   |   |  
 Regex | [y](https://duck.co/ia/view/regex_cheat_sheet) | [y](https://duck.co/ia/view/regexp) |   |  
 Ruby | [y](https://duck.co/ia/view/ruby_globals_cheat_sheet) |   | [y](https://duck.co/ia/view/ruby_gems) |  
-Ruby-on-Rails |   |   |   |  
+Ruby-on-Rails |[t](https://duck.co/ia/view/rails_cheat_sheet)   |   |   |  
 Rust | [y](https://duck.co/ia/view/rust_types_cheat_sheet) |   | [y](https://duck.co/ia/view/rust_cargo) |  
 Scala | [y](https://duck.co/ia/view/scala_cheat_sheet) |   |   |  
 Shell | [y](https://duck.co/ia/view/shell_cheat_sheet),[y](https://duck.co/ia/view/hdfs_shell_cheat_sheet) |   |   |  
