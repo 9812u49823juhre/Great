@@ -65,6 +65,7 @@ Regex | [y](https://duck.co/ia/view/regex_cheat_sheet) | [y](https://duck.co/ia/
 Ruby | [y](https://duck.co/ia/view/ruby_globals_cheat_sheet) |   | [y](https://duck.co/ia/view/ruby_gems) |  
 Ruby-on-Rails |[t](https://duck.co/ia/view/rails_cheat_sheet)   |   |   |  
 Rust | [y](https://duck.co/ia/view/rust_types_cheat_sheet) |   | [y](https://duck.co/ia/view/rust_cargo) |  
+Sails.js | d  |   |   |   
 Scala | [y](https://duck.co/ia/view/scala_cheat_sheet) |   |   |  
 Shell | [y](https://duck.co/ia/view/shell_cheat_sheet),[y](https://duck.co/ia/view/hdfs_shell_cheat_sheet) |   |   |  
 SQL | [y](https://duck.co/ia/view/sql_cheat_sheet) |   |   |  
@@ -76,4 +77,3 @@ WebGL |   |   |   |
 XAML |   |   |   |  
 Xcode | [y](https://duck.co/ia/view/xcode_cheat_sheet) |   |   |  
 XSLT |   |   |   | 
-Sails.js | d  |   |   |   
