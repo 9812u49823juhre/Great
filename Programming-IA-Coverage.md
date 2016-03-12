@@ -29,6 +29,7 @@ Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet)  |   |   |
 Erlang | [y](https://duck.co/ia/view/6147 )  |   |   |
 Flask |   |   |   |  
 GLSL | d  |   |   |  
+GNU Make | [d](https://duck.co/ia/view/gnu_make_cheatsheet)  |   |   |  
 Go | [y](https://duck.co/ia/view/golang_cheat_sheet) |   |   |  
 Groovy | [y](https://duck.co/ia/view/groovy_cheat_sheet) |   |   |  
 Haskell |   | [y](https://duck.co/ia/view/hayoo) | [y](https://duck.co/ia/view/hackage) |  
@@ -44,7 +45,6 @@ Latex |   | [y](https://duck.co/ia/view/latex) |   |
 Linux | [y](https://duck.co/ia/view/linux_cheat_sheet) |   |   | [y](https://duck.co/ia/view/unix)
 Lisp |   |   |   |  
 Lua | [y](https://duck.co/ia/view/lua_cheat_sheet) |   |   |  
-Makefile |   |   |   |  
 MATLAB | [y](https://duck.co/ia/view/matlab_cheat_sheet) |   |   |  
 MongoDB | [y](https://duck.co/ia/view/mongodb_cheat_sheet) |   |   |  
 MySQL | [y](https://duck.co/ia/view/mysql_cheat_sheet) | [y](https://duck.co/ia/view/my_sql) |   |  
