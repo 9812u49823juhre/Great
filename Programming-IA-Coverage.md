@@ -29,7 +29,7 @@ Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet)  |   |   |
 Erlang | [y](https://duck.co/ia/view/6147 )  |   |   |
 Flask |   |   |   |  
 GLSL | d  |   |   |  
-GNU Make | [d](https://duck.co/ia/view/gnu_make_cheatsheet)  |   |   |  
+GNU Make | [t](https://duck.co/ia/view/gnu_make_cheatsheet)  |   |   |  
 Go | [y](https://duck.co/ia/view/golang_cheat_sheet) |   |   |  
 Groovy | [y](https://duck.co/ia/view/groovy_cheat_sheet) |   |   |  
 Haskell |   | [y](https://duck.co/ia/view/hayoo) | [y](https://duck.co/ia/view/hackage) |  
