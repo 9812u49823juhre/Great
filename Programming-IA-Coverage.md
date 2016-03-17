@@ -1,11 +1,12 @@
-Instant Answers (IAs) for programming that we currently do and don't have. If you'd like to help complete this table please checkout http://duckduckhack.com
+Help DuckDuckGo become better at searching **your** favorite languages and frameworks! 
 
-Refer [here](http://docs.duckduckhack.com/welcome/determining-ia-type.html) for determining how best to utilize your data source.
+Below is a table of Instant Answers (aka IAs) currently live or in progress. If you'd like to help fill in the blanks, please refer [here](http://docs.duckduckhack.com/welcome/determining-ia-type.html) for determining how best to utilize your data source.
 
 Legend:
 * **y**: Complete
-* **t**: In testing
-* **d**: In development  
+* **t**: In Testing
+* **d**: In Development  
+* **blank**: Needs a Developer
 
 *Note:* A great reference for programming language docs is [devdocs.io](http://devdocs.io/). The source code also has many [scripts for scraping the docs](https://github.com/Thibaut/devdocs/tree/master/lib/docs/scrapers).  
 
