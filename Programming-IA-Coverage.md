@@ -30,8 +30,8 @@ CoffeeScript | [y](https://duck.co/ia/view/coffeescript_cheat_sheet) |   |   |
 CSS | [y](https://duck.co/ia/view/css_cheat_sheet) |   |   | 
 D3.js | [y](https://duck.co/ia/view/d3js_cheat_sheet) |   |   | 
 Django |   |   |   |  
-Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet)  |   |   | 
-Erlang | [y](https://duck.co/ia/view/6147 )  |   |   |
+Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet)  | d  |   | 
+Erlang | [y](https://duck.co/ia/view/6147 )  | d  |   |
 Flask |   |   |   |  
 GLSL | d  |   |   |  
 GNU Make | [t](https://duck.co/ia/view/gnu_make_cheatsheet)  |   |   |  
