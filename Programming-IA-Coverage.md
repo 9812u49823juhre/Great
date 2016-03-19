@@ -55,6 +55,7 @@ MongoDB | [y](https://duck.co/ia/view/mongodb_cheat_sheet) |   |   |
 MySQL | [y](https://duck.co/ia/view/mysql_cheat_sheet) | [y](https://duck.co/ia/view/my_sql) |   |  
 NodeJS | [y](https://duck.co/ia/view/nodejs_cheat_sheet) | [y](https://duck.co/ia/view/node_js) | [y](https://duck.co/ia/view/npm) |  
 Objective-C |   |   |   |  
+OCaml | d  |   |   |  
 Octave | [y](https://duck.co/ia/view/octave_cheat_sheet) |   |   |  
 OpenGL |   |   |   |  
 Perl | [y](https://duck.co/ia/view/perl_cheat_sheet) | [y](https://duck.co/ia/view/perl_doc),[y](https://duck.co/ia/view/perl6doc) |   |  
