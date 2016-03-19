@@ -29,7 +29,7 @@ Clojure | [d](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/2647)  | 
 CoffeeScript | [y](https://duck.co/ia/view/coffeescript_cheat_sheet) |   |   |  
 CSS | [y](https://duck.co/ia/view/css_cheat_sheet) |   |   | 
 D3.js | [y](https://duck.co/ia/view/d3js_cheat_sheet) |   |   | 
-Django |   |   |   |  
+Django | [y](https://duck.co/ia/view/django_model_cheat_sheet)  |   |   |  
 Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet)  | d  |   | 
 Erlang | [y](https://duck.co/ia/view/6147 )  | d  |   |
 Flask |   |   |   |  
