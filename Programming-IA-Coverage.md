@@ -2,7 +2,7 @@ Help DuckDuckGo become better at searching **your** favorite languages and frame
 
 Below is a table of Instant Answers (aka IAs) currently live or in progress. If you'd like to help fill in the blanks: 
  
-1. Locate a quality data source that can answer searches for that language/framework.  
+1. Locate a quality data source (like [this](http://devdocs.io/)) that can answer searches for that language/framework.  
 2. Refer [here](http://docs.duckduckhack.com/welcome/determining-ia-type.html) for determining how best to utilize your data source.  
 3. Use the [developer docs](http://docs.duckduckhack.com/) and the [help](http://docs.duckduckhack.com/resources/get-in-touch.html) of community/staff to make a contribution!  
 
