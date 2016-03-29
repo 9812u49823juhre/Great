@@ -46,7 +46,7 @@ JavaScript | [y](https://duck.co/ia/view/javascript_cheat_sheet),[y](https://duc
 jQuery | [y](https://duck.co/ia/view/jquery_cheat_sheet) | [y](https://duck.co/ia/view/jquery) |   |  
 JSP |   |   |   |  
 Julia |   |   | [y](https://duck.co/ia/view/julia) |  
-Latex |   | [y](https://duck.co/ia/view/latex) |   |  
+Latex | d | [y](https://duck.co/ia/view/latex) |   |  
 Linux | [y](https://duck.co/ia/view/linux_cheat_sheet) |   |   | [y](https://duck.co/ia/view/unix)
 Lisp |   |   |   |  
 Lua | [y](https://duck.co/ia/view/lua_cheat_sheet) |   |   |  
