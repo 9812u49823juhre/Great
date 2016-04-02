@@ -31,6 +31,7 @@ CSS | [y](https://duck.co/ia/view/css_cheat_sheet) |   |   |
 D3.js | [y](https://duck.co/ia/view/d3js_cheat_sheet) |   |   | 
 Django | [y](https://duck.co/ia/view/django_cheat_sheet),[y](https://duck.co/ia/view/django_model_cheat_sheet)  |   |   |  
 Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet)  | d  |   | 
+Elm | | | | 
 Erlang | [y](https://duck.co/ia/view/6147 )  | d  |   |
 Flask | [d](https://duck.co/ia/view/flask_cheat_sheet)  |   |   |  
 GLSL | d  |   |   |  
