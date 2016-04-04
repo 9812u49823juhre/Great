@@ -63,7 +63,7 @@ OpenGL |   |   |   |
 Perl | [y](https://duck.co/ia/view/perl_cheat_sheet) | [y](https://duck.co/ia/view/perl_doc),[y](https://duck.co/ia/view/perl6doc) |   |  
 PHP | [y](https://duck.co/ia/view/php_cheat_sheet) | [y](https://duck.co/ia/view/php) | [y](https://duck.co/ia/view/packagist)  |  
 PostgreSQL | [y](https://duck.co/ia/view/postgresql_cheat_sheet) |   |   |  
-Powershell | [t](https://duck.co/ia/view/powershell_cheat_sheet) |   |   |  
+Powershell | [y](https://duck.co/ia/view/powershell_cheat_sheet) |   |   |  
 Processing | [y](https://duck.co/ia/view/processing_lang_cheat_sheet) |   |   |  
 Python | [y](https://duck.co/ia/view/python_cheat_sheet) | [y](https://duck.co/ia/view/python) | [y](https://duck.co/ia/view/py_pi) |  
 R | [y](https://duck.co/ia/view/r_cheat_sheet) |   | [d](https://github.com/duckduckgo/zeroclickinfo-spice/pull/2644)  |  
