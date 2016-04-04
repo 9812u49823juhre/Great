@@ -27,11 +27,13 @@ C# | [y](https://duck.co/ia/view/c_sharp_snippets_cheat_sheet) |   |   |
 C++ | [y](https://duck.co/ia/view/cpp_cheat_sheet),[y](https://duck.co/ia/view/cpp_strings_cheat_sheet),[y](https://duck.co/ia/view/cpp_algorithms_cheat_sheet) |   |   |  
 Clojure | [d](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/2647)  | [y](https://duck.co/ia/view/clojure) | [y](https://duck.co/ia/view/clojars) |  
 CoffeeScript | [y](https://duck.co/ia/view/coffeescript_cheat_sheet) |   |   |  
+Common Lisp | | | |
 CSS | [y](https://duck.co/ia/view/css_cheat_sheet) |   |   | 
 D3.js | [y](https://duck.co/ia/view/d3js_cheat_sheet) |   |   | 
 Django | [y](https://duck.co/ia/view/django_cheat_sheet),[y](https://duck.co/ia/view/django_model_cheat_sheet)  |   |   |  
 Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet)  | d  |   | 
 Elm | | | | 
+Emacs Lisp | | | |
 Erlang | [y](https://duck.co/ia/view/6147 )  | d  |   |
 Flask | [d](https://duck.co/ia/view/flask_cheat_sheet)  |   |   |  
 GLSL | d  |   |   |  
@@ -49,7 +51,6 @@ JSP |   |   |   |
 Julia |   |   | [y](https://duck.co/ia/view/julia) |  
 Latex | d | [y](https://duck.co/ia/view/latex) |   |  
 Linux | [y](https://duck.co/ia/view/linux_cheat_sheet) |   |   | [y](https://duck.co/ia/view/unix)
-Lisp |   |   |   |  
 Lua | [y](https://duck.co/ia/view/lua_cheat_sheet) |   |   |  
 MATLAB | [y](https://duck.co/ia/view/matlab_cheat_sheet) |   |   |  
 MongoDB | [y](https://duck.co/ia/view/mongodb_cheat_sheet) |   |   |  
