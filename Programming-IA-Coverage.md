@@ -22,7 +22,7 @@ AngularJS | [y](https://duck.co/ia/view/angular_js_cheat_sheet) |   |   |
 AppleScript |   |   |   |  
 Arduino |[d](https://duck.co/ia/view/arduino_cheat_sheet)   |   |   |  
 ASP.net |   |   |   |  
-C | [y](https://duck.co/ia/view/c_cheat_sheet) |   |   |  
+C | [y](https://duck.co/ia/view/c_cheat_sheet), [t](https://duck.co/ia/view/c_char_manipulation_cheat_sheet) |   |   |  
 C# | [y](https://duck.co/ia/view/c_sharp_snippets_cheat_sheet) |   |   |  
 C++ | [y](https://duck.co/ia/view/cpp_cheat_sheet),[y](https://duck.co/ia/view/cpp_strings_cheat_sheet),[y](https://duck.co/ia/view/cpp_algorithms_cheat_sheet) |   |   |  
 Clojure | [d](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/2647)  | [y](https://duck.co/ia/view/clojure) | [y](https://duck.co/ia/view/clojars) |  
