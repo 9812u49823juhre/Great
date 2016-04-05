@@ -31,10 +31,10 @@ Common Lisp | | | |
 CSS | [y](https://duck.co/ia/view/css_cheat_sheet) |   |   | 
 D3.js | [y](https://duck.co/ia/view/d3js_cheat_sheet) |   |   | 
 Django | [y](https://duck.co/ia/view/django_cheat_sheet),[y](https://duck.co/ia/view/django_model_cheat_sheet)  |   |   |  
-Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet)  | d  |   | 
+Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet)  | [d](https://duck.co/ia/view/elixir) |   | 
 Elm | | | | 
 Emacs Lisp | | | |
-Erlang | [y](https://duck.co/ia/view/6147 )  | d  |   |
+Erlang | [y](https://duck.co/ia/view/6147 )  | [d](https://duck.co/ia/view/erlang)  |   |
 Flask | [d](https://duck.co/ia/view/flask_cheat_sheet)  |   |   |  
 GLSL | d  |   |   |  
 GNU Make | [t](https://duck.co/ia/view/gnu_make_cheat_sheet)  |   |   |  
