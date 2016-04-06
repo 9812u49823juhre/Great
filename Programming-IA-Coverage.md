@@ -38,7 +38,7 @@ Erlang | [y](https://duck.co/ia/view/6147 )  | [d](https://duck.co/ia/view/erlan
 Flask | [d](https://duck.co/ia/view/flask_cheat_sheet)  |   |   |  
 GLSL | d  |   |   |  
 GNU Make | [t](https://duck.co/ia/view/gnu_make_cheat_sheet)  |   |   |  
-Go | [y](https://duck.co/ia/view/golang_cheat_sheet) |   |   |  
+Go | [y](https://duck.co/ia/view/golang_cheat_sheet)[d](https://duck.co/ia/view/golang_tools_cheat_sheet) |   |   |  
 Groovy | [y](https://duck.co/ia/view/groovy_cheat_sheet) |   |   |  
 Haskell |   | [y](https://duck.co/ia/view/hayoo) | [y](https://duck.co/ia/view/hackage) |  
 HTML | [y](https://duck.co/ia/view/html_cheat_sheet) | [y](https://duck.co/ia/view/htmlref) |   |  
