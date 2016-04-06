@@ -56,7 +56,7 @@ Lua | [y](https://duck.co/ia/view/lua_cheat_sheet) |   |   |
 MATLAB | [y](https://duck.co/ia/view/matlab_cheat_sheet) |   |   |  
 MongoDB | [y](https://duck.co/ia/view/mongodb_cheat_sheet) |   |   |  
 MySQL | [y](https://duck.co/ia/view/mysql_cheat_sheet) | [y](https://duck.co/ia/view/my_sql),[y](https://duck.co/ia/view/my_sqlerrors) |   |  
-NodeJS | [y](https://duck.co/ia/view/nodejs_cheat_sheet) | [y](https://duck.co/ia/view/node_js) | [y](https://duck.co/ia/view/npm) |  
+NodeJS | [y](https://duck.co/ia/view/nodejs_cheat_sheet),[y](https://duck.co/ia/view/nodejs_tutorials_cheat_sheet),[y](https://duck.co/ia/view/npm_cheat_sheet) | [y](https://duck.co/ia/view/node_js) | [y](https://duck.co/ia/view/npm) |  
 Objective-C |   |   |   |  
 OCaml | [d](https://duck.co/ia/view/ocaml_cheat_sheet) |   |   |  
 Octave | [y](https://duck.co/ia/view/octave_cheat_sheet) |   |   |  
