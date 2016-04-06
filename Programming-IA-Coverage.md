@@ -48,7 +48,7 @@ Java | [y](https://duck.co/ia/view/java_cheat_sheet),[d](https://duck.co/ia/view
 JavaScript | [y](https://duck.co/ia/view/javascript_cheat_sheet),[y](https://duck.co/ia/view/javascript_dom_cheat_sheet),[y](https://duck.co/ia/view/js_keycodes_cheat_sheet),[y](https://duck.co/ia/view/es6_cheat_sheet) | [y](https://duck.co/ia/view/mdnjs)  |   |  
 jQuery | [y](https://duck.co/ia/view/jquery_cheat_sheet) | [y](https://duck.co/ia/view/jquery) |   |  
 JSP |   |   |   |  
-Julia |   |   | [y](https://duck.co/ia/view/julia) |  
+Julia | [t](https://duck.co/ia/view/julia_cheat_sheet) |   | [y](https://duck.co/ia/view/julia) |  
 Latex | d | [y](https://duck.co/ia/view/latex) |   |  
 Linux | [y](https://duck.co/ia/view/linux_cheat_sheet) |   |   | [y](https://duck.co/ia/view/unix)
 Lua | [y](https://duck.co/ia/view/lua_cheat_sheet) |   |   |  
