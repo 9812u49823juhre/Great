@@ -68,7 +68,7 @@ Powershell | [y](https://duck.co/ia/view/powershell_cheat_sheet) |   |   |
 Processing | [y](https://duck.co/ia/view/processing_lang_cheat_sheet) |   |   |  
 Python | [y](https://duck.co/ia/view/python_cheat_sheet) | [y](https://duck.co/ia/view/python) | [y](https://duck.co/ia/view/py_pi) |  
 R | [y](https://duck.co/ia/view/r_cheat_sheet) |   | [d](https://github.com/duckduckgo/zeroclickinfo-spice/pull/2644)  |  
-Raspberry Pi | [y](https://duck.co/ia/view/vcgencmd_cheat_sheet) |   |   |  
+Raspberry Pi | [y](https://duck.co/ia/view/raspberrypi_cheat_sheet),[y](https://duck.co/ia/view/vcgencmd_cheat_sheet) |   |   |  
 Redis |  [y](https://duck.co/ia/view/redis_cheat_sheet) |   |   |  
 Regex | [y](https://duck.co/ia/view/regex_cheat_sheet) | [y](https://duck.co/ia/view/regexp) |   |  
 Ruby | [y](https://duck.co/ia/view/ruby_globals_cheat_sheet) |   | [y](https://duck.co/ia/view/ruby_gems) |  
