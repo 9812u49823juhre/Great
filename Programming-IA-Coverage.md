@@ -71,7 +71,7 @@ R | [y](https://duck.co/ia/view/r_cheat_sheet) |   | [d](https://github.com/duck
 Raspberry Pi | [y](https://duck.co/ia/view/raspberrypi_cheat_sheet),[y](https://duck.co/ia/view/vcgencmd_cheat_sheet) |   |   |  
 Redis |  [y](https://duck.co/ia/view/redis_cheat_sheet) |   |   |  
 Regex | [y](https://duck.co/ia/view/regex_cheat_sheet) | [y](https://duck.co/ia/view/regexp) |   |  
-Ruby | [y](https://duck.co/ia/view/ruby_globals_cheat_sheet) |   | [y](https://duck.co/ia/view/ruby_gems) |  
+Ruby | [y](https://duck.co/ia/view/ruby_globals_cheat_sheet),[y](https://duck.co/ia/view/ruby_globals_cheat_sheet) |   | [y](https://duck.co/ia/view/ruby_gems) |  
 Ruby-on-Rails |[t](https://duck.co/ia/view/rails_cheat_sheet)   |   |   |  
 Rust | [y](https://duck.co/ia/view/rust_types_cheat_sheet) |   | [y](https://duck.co/ia/view/rust_cargo) |  
 Sails.js | d  |   |   |   
