@@ -61,7 +61,7 @@ Objective-C |   |   |   |
 OCaml | [d](https://duck.co/ia/view/ocaml_cheat_sheet) |   |   |  
 Octave | [y](https://duck.co/ia/view/octave_cheat_sheet) |   |   |  
 OpenGL |   |   |   |  
-Perl | [y](https://duck.co/ia/view/perl_cheat_sheet) | [y](https://duck.co/ia/view/perl_doc),[y](https://duck.co/ia/view/perl6doc) |   |  
+Perl | [y](https://duck.co/ia/view/perl_cheat_sheet),[y](https://duck.co/ia/view/perldoc_cheat_sheet) | [y](https://duck.co/ia/view/perl_doc),[y](https://duck.co/ia/view/perl6doc) |   |  
 PHP | [y](https://duck.co/ia/view/php_cheat_sheet) | [y](https://duck.co/ia/view/php) | [y](https://duck.co/ia/view/packagist)  |  
 PostgreSQL | [y](https://duck.co/ia/view/postgresql_cheat_sheet) |   |   |  
 Powershell | [y](https://duck.co/ia/view/powershell_cheat_sheet) |   |   |  
