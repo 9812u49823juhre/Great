@@ -25,7 +25,7 @@ ASP.net |   |   |   |
 C | [y](https://duck.co/ia/view/c_cheat_sheet), [t](https://duck.co/ia/view/c_char_manipulation_cheat_sheet) |   |   |  
 C# | [y](https://duck.co/ia/view/c_sharp_snippets_cheat_sheet) |   |   |  
 C++ | [y](https://duck.co/ia/view/cpp_cheat_sheet),[y](https://duck.co/ia/view/cpp_strings_cheat_sheet),[y](https://duck.co/ia/view/cpp_algorithms_cheat_sheet) |   |   |  
-Clojure | [d](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/2647)  | [y](https://duck.co/ia/view/clojure) | [y](https://duck.co/ia/view/clojars) |  
+Clojure | [t](https://duck.co/ia/view/clojure_cheat_sheet)  | [y](https://duck.co/ia/view/clojure) | [y](https://duck.co/ia/view/clojars) |  
 CoffeeScript | [y](https://duck.co/ia/view/coffeescript_cheat_sheet) |   |   |  
 Common Lisp | | | |
 CSS | [y](https://duck.co/ia/view/css_cheat_sheet) |   |   | 
