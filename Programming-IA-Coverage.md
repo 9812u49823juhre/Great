@@ -51,7 +51,7 @@ jQuery | [y](https://duck.co/ia/view/jquery_cheat_sheet) | [y](https://duck.co/i
 JSP |   |   |   |  
 Julia | [t](https://duck.co/ia/view/julia_cheat_sheet) |   | [y](https://duck.co/ia/view/julia) |  
 Latex | d | [y](https://duck.co/ia/view/latex) |   |  
-Linux | [y](https://duck.co/ia/view/linux_cheat_sheet) |   |   | [y](https://duck.co/ia/view/unix)
+Linux | [y](https://duck.co/ia/view/linux_cheat_sheet) | [y](https://duck.co/ia/view/linux_error) |   | [y](https://duck.co/ia/view/unix)
 Lua | [y](https://duck.co/ia/view/lua_cheat_sheet) |   |   |  
 MATLAB | [y](https://duck.co/ia/view/matlab_cheat_sheet) |   |   |  
 MongoDB | [y](https://duck.co/ia/view/mongodb_cheat_sheet) |   |   |  
