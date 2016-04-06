@@ -18,7 +18,7 @@ Name | Cheat sheet | Command/function lookup | Package/library lookup | Q&A / tu
 ----|:----:|:----:|:----:|:----:
 .net |   |   |   |  
 Android | [d](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/2139), [d](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/2136)  |   |   | [y](https://duck.co/ia/view/android_enthusiasts)
-AngularJS | [y](https://duck.co/ia/view/angular_js_cheat_sheet) |   |   |  
+AngularJS | [y](https://duck.co/ia/view/angular_js_cheat_sheet),[t](https://duck.co/ia/view/angular2_cheat_sheet) |   |   |  
 AppleScript |   |   |   |  
 Arduino |[d](https://duck.co/ia/view/arduino_cheat_sheet)   |   |   |  
 ASP.net |   |   |   |  
