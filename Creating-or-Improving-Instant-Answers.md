@@ -1,3 +1,5 @@
+Help DuckDuckGo become better at searching your favorite topics! 
+
 #### Create a new IA.
  
 1. Locate a quality data source that can answer searches for your topic.  
