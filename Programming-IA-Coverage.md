@@ -62,7 +62,7 @@ Linux | [y](https://duck.co/ia/view/linux_cheat_sheet) | [y](https://duck.co/ia/
 Lua | [y](https://duck.co/ia/view/lua_cheat_sheet) |   |   |  
 MATLAB | [y](https://duck.co/ia/view/matlab_cheat_sheet) |   |   |  
 MongoDB | [y](https://duck.co/ia/view/mongodb_cheat_sheet) |   |   |  
-Mediawiki | [y](https://duck.co/ia/view/mediawiki) |   |   | 
+Mediawiki | [d](https://duck.co/ia/view/mediawiki) |   |   | 
 MySQL | [y](https://duck.co/ia/view/mysql_cheat_sheet) | [y](https://duck.co/ia/view/my_sql),[y](https://duck.co/ia/view/my_sqlerrors) |   |  
 Neko | [d](https://duck.co/ia/view/neko_vm),[d](https://duck.co/ia/view/neko_builtins),[d](https://duck.co/ia/view/neko_operators),[d](https://duck.co/ia/view/neko_std) |   | - |  
 NodeJS | [y](https://duck.co/ia/view/nodejs_cheat_sheet),[y](https://duck.co/ia/view/nodejs_tutorials_cheat_sheet),[y](https://duck.co/ia/view/npm_cheat_sheet) | [y](https://duck.co/ia/view/node_js) | [y](https://duck.co/ia/view/npm) |  
