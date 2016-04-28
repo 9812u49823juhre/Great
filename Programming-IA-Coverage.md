@@ -64,10 +64,10 @@ MATLAB | [y](https://duck.co/ia/view/matlab_cheat_sheet) |   |   |
 MongoDB | [y](https://duck.co/ia/view/mongodb_cheat_sheet) |   |   |  
 Mediawiki | [d](https://duck.co/ia/view/mediawiki) |   |   | 
 MySQL | [y](https://duck.co/ia/view/mysql_cheat_sheet) | [y](https://duck.co/ia/view/my_sql),[y](https://duck.co/ia/view/my_sqlerrors) |   |  
-Neko | [d](https://duck.co/ia/view/neko_vm),[d](https://duck.co/ia/view/neko_builtins),[d](https://duck.co/ia/view/neko_operators),[d](https://duck.co/ia/view/neko_std) |   | - |  
+Neko | [d](https://duck.co/ia/view/neko_vm),[y](https://duck.co/ia/view/neko_builtins),[d](https://duck.co/ia/view/neko_operators),[d](https://duck.co/ia/view/neko_std) |   | - |  
 NodeJS | [y](https://duck.co/ia/view/nodejs_cheat_sheet),[y](https://duck.co/ia/view/nodejs_tutorials_cheat_sheet),[y](https://duck.co/ia/view/npm_cheat_sheet) | [y](https://duck.co/ia/view/node_js) | [y](https://duck.co/ia/view/npm) |  
 Objective-C |   |   |   |  
-OCaml | [d](https://duck.co/ia/view/ocaml_cheat_sheet) |   |   |  
+OCaml | [y](https://duck.co/ia/view/ocaml_cheat_sheet) |   |   |  
 Octave | [y](https://duck.co/ia/view/octave_cheat_sheet) |   |   |  
 OpenGL |   |   |   |  
 Perl | [y](https://duck.co/ia/view/perl_cheat_sheet),[y](https://duck.co/ia/view/perldoc_cheat_sheet) | [y](https://duck.co/ia/view/perl_doc),[y](https://duck.co/ia/view/perl6doc) |   |  
@@ -76,7 +76,7 @@ PostgreSQL | [y](https://duck.co/ia/view/postgresql_cheat_sheet) |   |   |
 Powershell | [y](https://duck.co/ia/view/powershell_cheat_sheet) |   |   |  
 Processing | [y](https://duck.co/ia/view/processing_lang_cheat_sheet) |   |   |  
 Python | [y](https://duck.co/ia/view/python_cheat_sheet) | [y](https://duck.co/ia/view/python) | [y](https://duck.co/ia/view/py_pi) |  
-R | [y](https://duck.co/ia/view/r_cheat_sheet) |   | [d](https://github.com/duckduckgo/zeroclickinfo-spice/pull/2644)  |  
+R | [y](https://duck.co/ia/view/r_cheat_sheet) |   | [d](https://duck.co/ia/view/cran) |  
 Raspberry Pi | [y](https://duck.co/ia/view/raspberrypi_cheat_sheet),[y](https://duck.co/ia/view/vcgencmd_cheat_sheet) |   |   |  
 Redis |  [y](https://duck.co/ia/view/redis_cheat_sheet) |   |   |  
 Regex | [y](https://duck.co/ia/view/regex_cheat_sheet) | [y](https://duck.co/ia/view/regexp) |   |  
