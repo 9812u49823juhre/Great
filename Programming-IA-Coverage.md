@@ -45,7 +45,7 @@ Flask | [y](https://duck.co/ia/view/flask_cheat_sheet)  |   |   |
 FORTRAN | [y](https://duck.co/ia/view/fortran_cheat_sheet) |   |   |
 GLSL |  |   |   |  
 GNU Make | [y](https://duck.co/ia/view/gnu_make_cheat_sheet)  |   |   |  
-Go | [y](https://duck.co/ia/view/golang_cheat_sheet),[d](https://duck.co/ia/view/golang_tools_cheat_sheet) |   |   |  
+Go | [y](https://duck.co/ia/view/golang_cheat_sheet),[y](https://duck.co/ia/view/go_tools_cheat_sheet) |   |   |  
 Groovy | [y](https://duck.co/ia/view/groovy_cheat_sheet) |   |   |  
 Haskell |   | [y](https://duck.co/ia/view/hayoo) | [y](https://duck.co/ia/view/hackage) |  
 Haxe | [d](https://duck.co/ia/view/haxe_operators) |   | [y](https://duck.co/ia/view/haxelib) |  
