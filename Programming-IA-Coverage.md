@@ -40,7 +40,7 @@ Django | [y](https://duck.co/ia/view/django_cheat_sheet),[y](https://duck.co/ia/
 Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet),[y](https://duck.co/ia/view/iex_cheat_sheet) | [d](https://duck.co/ia/view/elixir) | [d](https://duck.co/ia/view/hex) | 
 Elm | | | | 
 Emacs Lisp | | | |
-Erlang | [y](https://duck.co/ia/view/6147 )  | [d](https://duck.co/ia/view/erlang)  | [d](https://duck.co/ia/view/hex)  |
+Erlang | [y](https://duck.co/ia/view/erlang_cheat_sheet)  | [d](https://duck.co/ia/view/erlang)  | [d](https://duck.co/ia/view/hex)  |
 Flask | [d](https://duck.co/ia/view/flask_cheat_sheet)  |   |   |  
 FORTRAN | [d](https://duck.co/ia/view/fortran_cheatsheet) |   |   |
 GLSL | d  |   |   |  
