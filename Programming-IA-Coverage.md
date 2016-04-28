@@ -52,12 +52,12 @@ Haxe | [d](https://duck.co/ia/view/haxe_operators) |   | [y](https://duck.co/ia/
 HTML | [y](https://duck.co/ia/view/html_cheat_sheet) | [y](https://duck.co/ia/view/htmlref) |   |  
 iOS |   | [y](https://duck.co/ia/view/ios) |   |  
 Interactive Java | [y](https://duck.co/ia/view/interactive_java_cheat_sheet) |  |   |  
-Java | [y](https://duck.co/ia/view/java_cheat_sheet),[d](https://duck.co/ia/view/java_file_handling_cheat_sheet) | [y](https://duck.co/ia/view/java) |   |  
+Java | [y](https://duck.co/ia/view/java_cheat_sheet),[y](https://duck.co/ia/view/java_file_handling_cheat_sheet) | [y](https://duck.co/ia/view/java) |   |  
 JavaScript | [y](https://duck.co/ia/view/javascript_cheat_sheet),[y](https://duck.co/ia/view/javascript_dom_cheat_sheet),[y](https://duck.co/ia/view/js_keycodes_cheat_sheet),[y](https://duck.co/ia/view/es6_cheat_sheet) | [y](https://duck.co/ia/view/mdnjs)  |   |  
 jQuery | [y](https://duck.co/ia/view/jquery_cheat_sheet) | [y](https://duck.co/ia/view/jquery) |   |  
 JSP | [d](https://duck.co/ia/view/javaserver_pages_cheat_sheet) |   |   |  
-Julia | [t](https://duck.co/ia/view/julia_cheat_sheet) |   | [y](https://duck.co/ia/view/julia) |  
-Latex | d | [y](https://duck.co/ia/view/latex) |   |  
+Julia | [y](https://duck.co/ia/view/julia_cheat_sheet) |   | [y](https://duck.co/ia/view/julia) |  
+Latex | | [y](https://duck.co/ia/view/latex) |   |  
 Linux | [y](https://duck.co/ia/view/linux_cheat_sheet) | [y](https://duck.co/ia/view/linux_error) |   | [y](https://duck.co/ia/view/unix)
 Lua | [y](https://duck.co/ia/view/lua_cheat_sheet) |   |   |  
 MATLAB | [y](https://duck.co/ia/view/matlab_cheat_sheet) |   |   |  
