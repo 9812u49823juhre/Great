@@ -23,7 +23,7 @@ Legend:
 Name | Cheat sheet | Command/function lookup | Package/library lookup | Q&A / tutorials
 ----|:----:|:----:|:----:|:----:
 .net |   |   |   |  
-Android | [d](https://duck.co/ia/view/adb_cheatsheet), [d](https://duck.co/ia/view/android_studio_cheat_sheet)  |   |   | [y](https://duck.co/ia/view/android_enthusiasts)
+Android | [d](https://duck.co/ia/view/adb_cheatsheet),[d](https://duck.co/ia/view/android_studio_cheat_sheet)  |   |   | [y](https://duck.co/ia/view/android_enthusiasts)
 AngularJS | [y](https://duck.co/ia/view/angularjs_cheat_sheet),[t](https://duck.co/ia/view/angular2_cheat_sheet) |   |   |  
 AppleScript |   |   |   |  
 Arduino |[d](https://duck.co/ia/view/arduino_cheat_sheet)   |   |   |  
@@ -41,10 +41,10 @@ Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet),[y](https://duck.co/ia/
 Elm | | | | 
 Emacs Lisp | | | |
 Erlang | [y](https://duck.co/ia/view/erlang_cheat_sheet)  | [d](https://duck.co/ia/view/erlang)  | [y](https://duck.co/ia/view/hex)  |
-Flask | [d](https://duck.co/ia/view/flask_cheat_sheet)  |   |   |  
-FORTRAN | [d](https://duck.co/ia/view/fortran_cheatsheet) |   |   |
-GLSL | d  |   |   |  
-GNU Make | [t](https://duck.co/ia/view/gnu_make_cheat_sheet)  |   |   |  
+Flask | [y](https://duck.co/ia/view/flask_cheat_sheet)  |   |   |  
+FORTRAN | [y](https://duck.co/ia/view/fortran_cheat_sheet) |   |   |
+GLSL |  |   |   |  
+GNU Make | [y](https://duck.co/ia/view/gnu_make_cheat_sheet)  |   |   |  
 Go | [y](https://duck.co/ia/view/golang_cheat_sheet),[d](https://duck.co/ia/view/golang_tools_cheat_sheet) |   |   |  
 Groovy | [y](https://duck.co/ia/view/groovy_cheat_sheet) |   |   |  
 Haskell |   | [y](https://duck.co/ia/view/hayoo) | [y](https://duck.co/ia/view/hackage) |  
