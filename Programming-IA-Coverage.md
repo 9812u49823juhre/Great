@@ -37,10 +37,10 @@ Common Lisp | | | |
 CSS | [y](https://duck.co/ia/view/css_cheat_sheet) |   |   | 
 D3.js | [y](https://duck.co/ia/view/d3js_cheat_sheet) |   |   | 
 Django | [y](https://duck.co/ia/view/django_cheat_sheet),[y](https://duck.co/ia/view/django_model_cheat_sheet)  |   |   |  
-Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet),[y](https://duck.co/ia/view/iex_cheat_sheet) | [d](https://duck.co/ia/view/elixir) | [d](https://duck.co/ia/view/hex) | 
+Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet),[y](https://duck.co/ia/view/iex_cheat_sheet) | [d](https://duck.co/ia/view/elixir) | [y](https://duck.co/ia/view/hex) | 
 Elm | | | | 
 Emacs Lisp | | | |
-Erlang | [y](https://duck.co/ia/view/erlang_cheat_sheet)  | [d](https://duck.co/ia/view/erlang)  | [d](https://duck.co/ia/view/hex)  |
+Erlang | [y](https://duck.co/ia/view/erlang_cheat_sheet)  | [d](https://duck.co/ia/view/erlang)  | [y](https://duck.co/ia/view/hex)  |
 Flask | [d](https://duck.co/ia/view/flask_cheat_sheet)  |   |   |  
 FORTRAN | [d](https://duck.co/ia/view/fortran_cheatsheet) |   |   |
 GLSL | d  |   |   |  
