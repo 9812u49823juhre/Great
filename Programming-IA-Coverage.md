@@ -28,9 +28,9 @@ AngularJS | [y](https://duck.co/ia/view/angularjs_cheat_sheet),[y](https://duck.
 AppleScript | [d](https://duck.co/ia/view/applescript_cheat_sheet)  |   |   |  
 Arduino |[y](https://duck.co/ia/view/arduino_cheat_sheet)   |   |   |  
 ASP.net |   |   |   |  
-C | [y](https://duck.co/ia/view/c_cheat_sheet),[y](https://duck.co/ia/view/c_char_manipulation_cheat_sheet) |   |   |  
-C# | [y](https://duck.co/ia/view/c_sharp_snippets_cheat_sheet) |   |   |  
-C++ | [y](https://duck.co/ia/view/cpp_cheat_sheet),[y](https://duck.co/ia/view/cpp_strings_cheat_sheet),[y](https://duck.co/ia/view/cpp_algorithms_cheat_sheet) | [y](https://duck.co/ia/view/cppreference_doc) |   |  
+C | [y](https://duck.co/ia/view/c_cheat_sheet),[y](https://duck.co/ia/view/c_char_manipulation_cheat_sheet) | [y](https://duck.co/ia/view/syntax)  |   |  
+C# | [y](https://duck.co/ia/view/c_sharp_snippets_cheat_sheet) | [y](https://duck.co/ia/view/syntax)  |   |  
+C++ | [y](https://duck.co/ia/view/cpp_cheat_sheet),[y](https://duck.co/ia/view/cpp_strings_cheat_sheet),[y](https://duck.co/ia/view/cpp_algorithms_cheat_sheet) | [y](https://duck.co/ia/view/cppreference_doc)  [y](https://duck.co/ia/view/syntax) |   |  
 Clojure | [y](https://duck.co/ia/view/clojure_cheat_sheet) | [y](https://duck.co/ia/view/clojure) | [y](https://duck.co/ia/view/clojars) |  
 CoffeeScript | [y](https://duck.co/ia/view/coffeescript_cheat_sheet) |   |   |  
 Common Lisp | | | |
@@ -45,15 +45,15 @@ Flask | [y](https://duck.co/ia/view/flask_cheat_sheet)  |   |   |
 FORTRAN | [y](https://duck.co/ia/view/fortran_cheat_sheet) |   |   |
 GLSL |  |   |   |  
 GNU Make | [y](https://duck.co/ia/view/gnu_make_cheat_sheet)  |   |   |  
-Go | [y](https://duck.co/ia/view/golang_cheat_sheet),[y](https://duck.co/ia/view/go_tools_cheat_sheet) |   |   |  
+Go | [y](https://duck.co/ia/view/golang_cheat_sheet),[y](https://duck.co/ia/view/go_tools_cheat_sheet) |[y](https://duck.co/ia/view/syntax)   |   |  
 Groovy | [y](https://duck.co/ia/view/groovy_cheat_sheet) |   |   |  
 Haskell |   | [y](https://duck.co/ia/view/hayoo) | [y](https://duck.co/ia/view/hackage) |  
 Haxe | [d](https://duck.co/ia/view/haxe_operators) |   | [y](https://duck.co/ia/view/haxelib) |  
 HTML | [y](https://duck.co/ia/view/html_cheat_sheet) | [y](https://duck.co/ia/view/htmlref) |   |  
 iOS |   | [y](https://duck.co/ia/view/ios) |   |  
 Interactive Java | [y](https://duck.co/ia/view/interactive_java_cheat_sheet) |  |   |  
-Java | [y](https://duck.co/ia/view/java_cheat_sheet),[y](https://duck.co/ia/view/java_file_handling_cheat_sheet) | [y](https://duck.co/ia/view/java) |   |  
-JavaScript | [y](https://duck.co/ia/view/javascript_cheat_sheet),[y](https://duck.co/ia/view/javascript_dom_cheat_sheet),[y](https://duck.co/ia/view/js_keycodes_cheat_sheet),[y](https://duck.co/ia/view/es6_cheat_sheet) | [y](https://duck.co/ia/view/mdnjs)  |   |  
+Java | [y](https://duck.co/ia/view/java_cheat_sheet),[y](https://duck.co/ia/view/java_file_handling_cheat_sheet) | [y](https://duck.co/ia/view/java) [y](https://duck.co/ia/view/syntax)|   |  
+JavaScript | [y](https://duck.co/ia/view/javascript_cheat_sheet),[y](https://duck.co/ia/view/javascript_dom_cheat_sheet),[y](https://duck.co/ia/view/js_keycodes_cheat_sheet),[y](https://duck.co/ia/view/es6_cheat_sheet) | [y](https://duck.co/ia/view/mdnjs) [y](https://duck.co/ia/view/syntax) |   |  
 jQuery | [y](https://duck.co/ia/view/jquery_cheat_sheet) | [y](https://duck.co/ia/view/jquery) |   |  
 JSP | [d](https://duck.co/ia/view/javaserver_pages_cheat_sheet) |   |   |  
 Julia | [y](https://duck.co/ia/view/julia_cheat_sheet) |   | [y](https://duck.co/ia/view/julia) |  
@@ -75,19 +75,19 @@ PHP | [y](https://duck.co/ia/view/php_cheat_sheet) | [y](https://duck.co/ia/view
 PostgreSQL | [y](https://duck.co/ia/view/postgresql_cheat_sheet) |   |   |  
 Powershell | [y](https://duck.co/ia/view/powershell_cheat_sheet) |   |   |  
 Processing | [y](https://duck.co/ia/view/processing_lang_cheat_sheet) |   |   |  
-Python | [y](https://duck.co/ia/view/python_cheat_sheet) | [y](https://duck.co/ia/view/python) | [y](https://duck.co/ia/view/py_pi) |  
+Python | [y](https://duck.co/ia/view/python_cheat_sheet) | [y](https://duck.co/ia/view/python) | [y](https://duck.co/ia/view/py_pi) [y](https://duck.co/ia/view/syntax)|  
 R | [y](https://duck.co/ia/view/r_cheat_sheet) |   | [d](https://duck.co/ia/view/cran) |  
 Raspberry Pi | [y](https://duck.co/ia/view/raspberrypi_cheat_sheet),[y](https://duck.co/ia/view/vcgencmd_cheat_sheet) |   |   |  
 Redis |  [y](https://duck.co/ia/view/redis_cheat_sheet) |   |   |  
 Regex | [y](https://duck.co/ia/view/regex_cheat_sheet) | [y](https://duck.co/ia/view/regexp) |   |  
-Ruby | [y](https://duck.co/ia/view/ruby_cheat_sheet),[y](https://duck.co/ia/view/ruby_globals_cheat_sheet) |   | [y](https://duck.co/ia/view/ruby_gems) |  
+Ruby | [y](https://duck.co/ia/view/ruby_cheat_sheet),[y](https://duck.co/ia/view/ruby_globals_cheat_sheet) |[y](https://duck.co/ia/view/syntax)   | [y](https://duck.co/ia/view/ruby_gems) |  
 Ruby-on-Rails |[y](https://duck.co/ia/view/rails_cheat_sheet)   |   |   |  
 Rust | [y](https://duck.co/ia/view/rust_types_cheat_sheet) |   | [y](https://duck.co/ia/view/rust_cargo) |  
 Sails.js | [d](https://duck.co/ia/view/sailsjs_install_cheat_sheet) |   |   |   
 Scala | [y](https://duck.co/ia/view/scala_cheat_sheet) |   |   |  
 Shell | [y](https://duck.co/ia/view/shell_cheat_sheet),[y](https://duck.co/ia/view/hdfs_shell_cheat_sheet),[y](https://duck.co/ia/view/shell_variables_cheat_sheet) |   |   |  
 SQL | [y](https://duck.co/ia/view/sql_cheat_sheet) |   |   |  
-Swift | [y](https://duck.co/ia/view/swift_cheat_sheet) |   |   |  
+Swift | [y](https://duck.co/ia/view/swift_cheat_sheet) |[y](https://duck.co/ia/view/syntax)   |   |  
 Tex |   |   |   | [y](https://duck.co/ia/view/tex)
 VB.net |   |   |   |  
 VIML | [y](https://duck.co/ia/view/viml_cheat_sheet) |   |   |  
