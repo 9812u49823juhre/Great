@@ -23,7 +23,7 @@ Legend:
 Name | Cheat sheet | Command/function lookup | Package/library lookup | Q&A / tutorials
 ----|:----:|:----:|:----:|:----:
 .net |   |   |   |  
-Android | [d](https://duck.co/ia/view/adb_cheatsheet),[d](https://duck.co/ia/view/android_studio_cheat_sheet)  |   |   | [y](https://duck.co/ia/view/android_enthusiasts)
+Android | [d](https://duck.co/ia/view/adb_cheatsheet),[y](https://duck.co/ia/view/intellij_cheat_sheet)  |   |   | [y](https://duck.co/ia/view/android_enthusiasts)
 AngularJS | [y](https://duck.co/ia/view/angularjs_cheat_sheet),[y](https://duck.co/ia/view/angular2_cheat_sheet) |   |   |  
 AppleScript | [d](https://duck.co/ia/view/applescript_cheat_sheet)  |   |   |  
 Arduino |[y](https://duck.co/ia/view/arduino_cheat_sheet)   |   |   |  
