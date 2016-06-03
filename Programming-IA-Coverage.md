@@ -79,7 +79,7 @@ Raspberry Pi | [y](https://duck.co/ia/view/raspberrypi_cheat_sheet),[y](https://
 Redis |  [y](https://duck.co/ia/view/redis_cheat_sheet) |   |   |  
 Regex | [y](https://duck.co/ia/view/regex_cheat_sheet) | [y](https://duck.co/ia/view/regexp) |   |  
 Ruby | [y](https://duck.co/ia/view/ruby_cheat_sheet),[y](https://duck.co/ia/view/ruby_globals_cheat_sheet) |[y](https://duck.co/ia/view/syntax)   | [y](https://duck.co/ia/view/ruby_gems) |  
-Ruby-on-Rails |[y](https://duck.co/ia/view/rails_cheat_sheet)   |   |   |  
+Ruby-on-Rails |[y](https://duck.co/ia/view/rails_cheat_sheet),[y](https://duck.co/ia/view/rails_devops_cheat_sheet)   |   |   |  
 Rust | [y](https://duck.co/ia/view/rust_types_cheat_sheet) |   | [y](https://duck.co/ia/view/rust_cargo) |  
 Sails.js | [d](https://duck.co/ia/view/sailsjs_install_cheat_sheet) |   |   |   
 Scala | [y](https://duck.co/ia/view/scala_cheat_sheet) |   |   |  
