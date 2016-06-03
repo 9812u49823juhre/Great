@@ -34,7 +34,7 @@ C++ | [y](https://duck.co/ia/view/cpp_cheat_sheet),[y](https://duck.co/ia/view/c
 Clojure | [y](https://duck.co/ia/view/clojure_cheat_sheet) | [y](https://duck.co/ia/view/clojure) | [y](https://duck.co/ia/view/clojars) |  
 CoffeeScript | [y](https://duck.co/ia/view/coffeescript_cheat_sheet) |   |   |  
 Common Lisp | | | |
-CSS | [y](https://duck.co/ia/view/css_cheat_sheet) |   |   | 
+CSS | [y](https://duck.co/ia/view/css_cheat_sheet),[y](https://duck.co/ia/view/sass_cheat_sheet) |   |   | 
 D3.js | [y](https://duck.co/ia/view/d3js_cheat_sheet) |   |   | 
 Django | [y](https://duck.co/ia/view/django_cheat_sheet),[y](https://duck.co/ia/view/django_model_cheat_sheet)  |   |   |  
 Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet),[y](https://duck.co/ia/view/iex_cheat_sheet) | [d](https://duck.co/ia/view/elixir) | [y](https://duck.co/ia/view/hex) | 
