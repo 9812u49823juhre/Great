@@ -47,7 +47,7 @@ GNU Make | [y](https://duck.co/ia/view/gnu_make_cheat_sheet)  |   |   |
 Go | [y](https://duck.co/ia/view/golang_cheat_sheet),[y](https://duck.co/ia/view/go_tools_cheat_sheet) |[y](https://duck.co/ia/view/syntax)   |   |  
 Groovy | [y](https://duck.co/ia/view/groovy_cheat_sheet) |   |   |  
 Haskell | [y](https://duck.co/ia/view/ghci_repl_cheat_sheet) | [y](https://duck.co/ia/view/hayoo) | [y](https://duck.co/ia/view/hackage) |  
-Haxe | [d](https://duck.co/ia/view/haxe_operators) |   | [y](https://duck.co/ia/view/haxelib) |  
+Haxe | [y](https://duck.co/ia/view/haxe_operators) |   | [y](https://duck.co/ia/view/haxelib) |  
 HTML | [y](https://duck.co/ia/view/html_cheat_sheet) | [y](https://duck.co/ia/view/htmlref) |   |  
 iOS |   | [y](https://duck.co/ia/view/ios) |   |  
 Interactive Java | [y](https://duck.co/ia/view/interactive_java_cheat_sheet) |  |   |  
