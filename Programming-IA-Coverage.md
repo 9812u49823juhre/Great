@@ -41,7 +41,7 @@ Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet),[y](https://duck.co/ia/
 Elm | [y](https://duck.co/ia/view/elm_cheat_sheet) | | | 
 Emacs Lisp | | | |
 Erlang | [y](https://duck.co/ia/view/erlang_cheat_sheet)  | [d](https://duck.co/ia/view/erlang)  | [y](https://duck.co/ia/view/hex)  |
-FORTRAN | [y](https://duck.co/ia/view/fortran_cheat_sheet) |   |   |
+Fortran | [y](https://duck.co/ia/view/fortran_cheat_sheet) |   |   |
 GLSL |  |   |   |  
 GNU Make | [y](https://duck.co/ia/view/gnu_make_cheat_sheet)  |   |   |  
 Go | [y](https://duck.co/ia/view/golang_cheat_sheet),[y](https://duck.co/ia/view/go_tools_cheat_sheet) |[y](https://duck.co/ia/view/syntax)   |   |  
