@@ -64,7 +64,7 @@ MongoDB | [y](https://duck.co/ia/view/mongodb_cheat_sheet) |   |   |
 MySQL | [y](https://duck.co/ia/view/mysql_cheat_sheet) | [y](https://duck.co/ia/view/my_sql),[y](https://duck.co/ia/view/my_sqlerrors) |   |  
 Neko | [d](https://duck.co/ia/view/neko_vm),[y](https://duck.co/ia/view/neko_builtins),[d](https://duck.co/ia/view/neko_operators),[y](https://duck.co/ia/view/neko_std) |   | - |  
 NodeJS | [y](https://duck.co/ia/view/nodejs_cheat_sheet),[y](https://duck.co/ia/view/nodejs_tutorials_cheat_sheet),[y](https://duck.co/ia/view/npm_cheat_sheet) | [y](https://duck.co/ia/view/node_js) | [y](https://duck.co/ia/view/npm) |  
-Objective-C | [d](https://duck.co/ia/view/objective_c_cheat_sheet)|   |   |  
+Objective-C | [y](https://duck.co/ia/view/objective_c_cheat_sheet)|   |   |  
 OCaml | [y](https://duck.co/ia/view/ocaml_cheat_sheet) |   |   |  
 Octave | [y](https://duck.co/ia/view/octave_cheat_sheet) |   |   |  
 OpenGL |   |   |   |  
