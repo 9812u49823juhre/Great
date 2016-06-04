@@ -41,6 +41,7 @@ Elixir | [y](https://duck.co/ia/view/elixir_cheat_sheet),[y](https://duck.co/ia/
 Elm | [y](https://duck.co/ia/view/elm_cheat_sheet) | | | 
 Emacs Lisp | | | |
 Erlang | [y](https://duck.co/ia/view/erlang_cheat_sheet)  | [d](https://duck.co/ia/view/erlang)  | [y](https://duck.co/ia/view/hex)  |
+Expect | | | |
 Fortran | [y](https://duck.co/ia/view/fortran_cheat_sheet) |   |   |
 GLSL |  |   |   |  
 GNU Make | [y](https://duck.co/ia/view/gnu_make_cheat_sheet)  |   |   |  
@@ -85,6 +86,7 @@ Scala | [y](https://duck.co/ia/view/scala_cheat_sheet) |   |   |
 Shell | [y](https://duck.co/ia/view/shell_cheat_sheet),[y](https://duck.co/ia/view/hdfs_shell_cheat_sheet),[y](https://duck.co/ia/view/shell_variables_cheat_sheet) |   |   |  
 SQL | [y](https://duck.co/ia/view/sql_cheat_sheet) |   |   |  
 Swift | [y](https://duck.co/ia/view/swift_cheat_sheet) |[y](https://duck.co/ia/view/syntax)   |   |  
+Tcl | | | |
 Tex |   |   |   | [y](https://duck.co/ia/view/tex)
 VB.net |   |   |   |  
 VIML | [y](https://duck.co/ia/view/viml_cheat_sheet) |   |   |  
