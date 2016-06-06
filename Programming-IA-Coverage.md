@@ -2,9 +2,10 @@ Help DuckDuckGo become better at searching **your** favorite languages and frame
 
 Legend:
 * **y**: Complete
-* **t**: In Testing
-* **d**: In Development  
-* **blank**: Needs a Developer
+* **t**: In testing
+* **d**: In development
+* **p**: IA is complete but only covers part of the language (e.g. C++ strings)
+* **blank**: Needs a developer
 
 #### Create a new IA (fill in a blank space): 
  
