@@ -23,14 +23,14 @@ Legend:
 Name | Cheat sheet | Command/function lookup | Package/library lookup | Q&A / tutorials
 ----|:----:|:----:|:----:|:----:
 .net |   |   |   |  
-Android | [d](https://duck.co/ia/view/adb_cheatsheet),[y](https://duck.co/ia/view/intellij_cheat_sheet)  |   |   | [y](https://duck.co/ia/view/android_enthusiasts)
+Android | [p](https://duck.co/ia/view/adb_cheatsheet),[p](https://duck.co/ia/view/intellij_cheat_sheet)  |   |   | [y](https://duck.co/ia/view/android_enthusiasts)
 AngularJS | [y](https://duck.co/ia/view/angularjs_cheat_sheet),[y](https://duck.co/ia/view/angular2_cheat_sheet) |   |   |  
 AppleScript | [d](https://duck.co/ia/view/applescript_cheat_sheet)  |   |   |  
 Arduino |[y](https://duck.co/ia/view/arduino_cheat_sheet)   |   |   |  
 ASP.net |   |   |   |  
-C | [y](https://duck.co/ia/view/c_cheat_sheet),[y](https://duck.co/ia/view/c_char_manipulation_cheat_sheet) | [y](https://duck.co/ia/view/syntax)  |   |  
-C# | [y](https://duck.co/ia/view/c_sharp_snippets_cheat_sheet) | [y](https://duck.co/ia/view/syntax)  |   |  
-C++ | [y](https://duck.co/ia/view/cpp_cheat_sheet),[y](https://duck.co/ia/view/cpp_strings_cheat_sheet),[y](https://duck.co/ia/view/cpp_algorithms_cheat_sheet) | [y](https://duck.co/ia/view/cppreference_doc)  [y](https://duck.co/ia/view/syntax) |   |  
+C | [y](https://duck.co/ia/view/c_cheat_sheet),[p](https://duck.co/ia/view/c_char_manipulation_cheat_sheet) | [p](https://duck.co/ia/view/syntax)  |   |  
+C# | [y](https://duck.co/ia/view/c_sharp_snippets_cheat_sheet) | [p](https://duck.co/ia/view/syntax)  |   |  
+C++ | [y](https://duck.co/ia/view/cpp_cheat_sheet),[p](https://duck.co/ia/view/cpp_strings_cheat_sheet),[p](https://duck.co/ia/view/cpp_algorithms_cheat_sheet) | [y](https://duck.co/ia/view/cppreference_doc) ,[p](https://duck.co/ia/view/syntax) |   |  
 Clojure | [y](https://duck.co/ia/view/clojure_cheat_sheet) | [y](https://duck.co/ia/view/clojure) | [y](https://duck.co/ia/view/clojars) |  
 CoffeeScript | [y](https://duck.co/ia/view/coffeescript_cheat_sheet) |   |   |  
 Common Lisp | | | |
@@ -45,7 +45,7 @@ Expect | | | |
 Fortran | [y](https://duck.co/ia/view/fortran_cheat_sheet) |   |   |
 GLSL |  |   |   |  
 GNU Make | [y](https://duck.co/ia/view/gnu_make_cheat_sheet)  |   |   |  
-Go | [y](https://duck.co/ia/view/golang_cheat_sheet),[y](https://duck.co/ia/view/go_tools_cheat_sheet) |[y](https://duck.co/ia/view/syntax)   |   |  
+Go | [y](https://duck.co/ia/view/golang_cheat_sheet),[y](https://duck.co/ia/view/go_tools_cheat_sheet) | [p](https://duck.co/ia/view/syntax) |   |  
 Groovy | [y](https://duck.co/ia/view/groovy_cheat_sheet) |   |   |  
 Haskell | [y](https://duck.co/ia/view/ghci_repl_cheat_sheet) | [y](https://duck.co/ia/view/hayoo) | [y](https://duck.co/ia/view/hackage) |  
 Haxe | [y](https://duck.co/ia/view/haxe_operators) |   | [y](https://duck.co/ia/view/haxelib) |  
@@ -53,8 +53,8 @@ HTML | [y](https://duck.co/ia/view/html_cheat_sheet) | [y](https://duck.co/ia/vi
 Idris | [y](https://duck.co/ia/view/emacs_idris_mode_cheat_sheet),[y](https://duck.co/ia/view/idris_repl_cheat_sheet) | | |
 iOS |   | [y](https://duck.co/ia/view/ios) |   |  
 Interactive Java | [y](https://duck.co/ia/view/interactive_java_cheat_sheet) |  |   |  
-Java | [y](https://duck.co/ia/view/java_cheat_sheet),[y](https://duck.co/ia/view/java_file_handling_cheat_sheet) | [y](https://duck.co/ia/view/java) [y](https://duck.co/ia/view/syntax)|   |  
-JavaScript | [y](https://duck.co/ia/view/javascript_cheat_sheet),[y](https://duck.co/ia/view/javascript_dom_cheat_sheet),[y](https://duck.co/ia/view/js_keycodes_cheat_sheet),[y](https://duck.co/ia/view/es6_cheat_sheet) | [y](https://duck.co/ia/view/mdnjs) [y](https://duck.co/ia/view/syntax) |   |  
+Java | [y](https://duck.co/ia/view/java_cheat_sheet),[y](https://duck.co/ia/view/java_file_handling_cheat_sheet) | [y](https://duck.co/ia/view/java),[p](https://duck.co/ia/view/syntax)|   |  
+JavaScript | [y](https://duck.co/ia/view/javascript_cheat_sheet),[p](https://duck.co/ia/view/javascript_dom_cheat_sheet),[p](https://duck.co/ia/view/js_keycodes_cheat_sheet),[y](https://duck.co/ia/view/es6_cheat_sheet) | [y](https://duck.co/ia/view/mdnjs),[p](https://duck.co/ia/view/syntax) |   |  
 jQuery | [y](https://duck.co/ia/view/jquery_cheat_sheet) | [y](https://duck.co/ia/view/jquery) |   |  
 JSP | [y](https://duck.co/ia/view/javaserver_pages_cheat_sheet) |   |   |  
 Julia | [y](https://duck.co/ia/view/julia_cheat_sheet) |   | [y](https://duck.co/ia/view/julia) |  
@@ -65,28 +65,28 @@ MATLAB | [y](https://duck.co/ia/view/matlab_cheat_sheet) |   |   |
 MongoDB | [y](https://duck.co/ia/view/mongodb_cheat_sheet) |   |   |  
 MySQL | [y](https://duck.co/ia/view/mysql_cheat_sheet) | [y](https://duck.co/ia/view/my_sql),[y](https://duck.co/ia/view/my_sqlerrors) |   |  
 Neko | [d](https://duck.co/ia/view/neko_vm),[y](https://duck.co/ia/view/neko_builtins),[d](https://duck.co/ia/view/neko_operators),[y](https://duck.co/ia/view/neko_std) |   | - |  
-NodeJS | [y](https://duck.co/ia/view/nodejs_cheat_sheet),[y](https://duck.co/ia/view/nodejs_tutorials_cheat_sheet),[y](https://duck.co/ia/view/npm_cheat_sheet) | [y](https://duck.co/ia/view/node_js) | [y](https://duck.co/ia/view/npm) |  
+NodeJS | [y](https://duck.co/ia/view/nodejs_cheat_sheet),[p](https://duck.co/ia/view/nodejs_tutorials_cheat_sheet),[y](https://duck.co/ia/view/npm_cheat_sheet) | [y](https://duck.co/ia/view/node_js) | [y](https://duck.co/ia/view/npm) |  
 Objective-C | [y](https://duck.co/ia/view/objective_c_cheat_sheet)|   |   |  
 OCaml | [y](https://duck.co/ia/view/ocaml_cheat_sheet) |   |   |  
 Octave | [y](https://duck.co/ia/view/octave_cheat_sheet) |   |   |  
 OpenGL |   |   |   |  
 Perl | [y](https://duck.co/ia/view/perl_cheat_sheet),[y](https://duck.co/ia/view/perldoc_cheat_sheet) | [y](https://duck.co/ia/view/perl_doc),[y](https://duck.co/ia/view/perl6doc) |   |  
-PHP | [y](https://duck.co/ia/view/php_cheat_sheet),[y](https://duck.co/ia/view/phpstorm_osx_cheat_sheet) | [y](https://duck.co/ia/view/php) | [y](https://duck.co/ia/view/packagist)  |  
+PHP | [y](https://duck.co/ia/view/php_cheat_sheet),[p](https://duck.co/ia/view/phpstorm_osx_cheat_sheet) | [y](https://duck.co/ia/view/php) | [y](https://duck.co/ia/view/packagist)  |  
 PostgreSQL | [y](https://duck.co/ia/view/postgresql_cheat_sheet) |   |   |  
 Powershell | [y](https://duck.co/ia/view/powershell_cheat_sheet) |   |   |  
 Processing | [y](https://duck.co/ia/view/processing_lang_cheat_sheet) |   |   |  
-Python | [y](https://duck.co/ia/view/python_cheat_sheet),[y](https://duck.co/ia/view/flask_cheat_sheet) | [y](https://duck.co/ia/view/python) | [y](https://duck.co/ia/view/py_pi) [y](https://duck.co/ia/view/syntax)|  
+Python | [y](https://duck.co/ia/view/python_cheat_sheet),[p](https://duck.co/ia/view/flask_cheat_sheet) | [y](https://duck.co/ia/view/python) | [y](https://duck.co/ia/view/py_pi),[p](https://duck.co/ia/view/syntax)|  
 R | [y](https://duck.co/ia/view/r_cheat_sheet) |   | [d](https://duck.co/ia/view/cran) |  
-Raspberry Pi | [y](https://duck.co/ia/view/raspberrypi_cheat_sheet),[y](https://duck.co/ia/view/vcgencmd_cheat_sheet) |   |   |  
+Raspberry Pi | [y](https://duck.co/ia/view/raspberrypi_cheat_sheet),[p](https://duck.co/ia/view/vcgencmd_cheat_sheet) |   |   |  
 Redis |  [y](https://duck.co/ia/view/redis_cheat_sheet) |   |   |  
 Regex | [y](https://duck.co/ia/view/regex_cheat_sheet) | [y](https://duck.co/ia/view/regexp) |   |  
-Ruby | [y](https://duck.co/ia/view/ruby_cheat_sheet),[y](https://duck.co/ia/view/ruby_globals_cheat_sheet) |[y](https://duck.co/ia/view/syntax)   | [y](https://duck.co/ia/view/ruby_gems) |  
+Ruby | [y](https://duck.co/ia/view/ruby_cheat_sheet),[p](https://duck.co/ia/view/ruby_globals_cheat_sheet) |[p](https://duck.co/ia/view/syntax)   | [y](https://duck.co/ia/view/ruby_gems) |  
 Ruby-on-Rails |[y](https://duck.co/ia/view/rails_cheat_sheet),[y](https://duck.co/ia/view/rails_devops_cheat_sheet)   |   |   |  
 Rust | [y](https://duck.co/ia/view/rust_types_cheat_sheet) |   | [y](https://duck.co/ia/view/rust_cargo) |
 Scala | [y](https://duck.co/ia/view/scala_cheat_sheet) |   |   |  
 Shell | [y](https://duck.co/ia/view/shell_cheat_sheet),[y](https://duck.co/ia/view/hdfs_shell_cheat_sheet),[y](https://duck.co/ia/view/shell_variables_cheat_sheet) |   |   |  
 SQL | [y](https://duck.co/ia/view/sql_cheat_sheet) |   |   |  
-Swift | [y](https://duck.co/ia/view/swift_cheat_sheet) |[y](https://duck.co/ia/view/syntax)   |   |  
+Swift | [y](https://duck.co/ia/view/swift_cheat_sheet) |[p](https://duck.co/ia/view/syntax)   |   |  
 Tcl | | | |
 Tex |   |   |   | [y](https://duck.co/ia/view/tex)
 VB.net |   |   |   |  
