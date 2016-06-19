@@ -6,4 +6,4 @@ We hope you'll join us in making [DuckDuckGo](https://duckduckgo.com/) the best 
 
 ## Where is everybody?
 
-You can email us at open@duckduckgo.com or find us on Slack. Request an invite by sending a mail to quackslack@duckduckgo.com
+You can email us at open@duckduckgo.com or find us on Slack &mdash; you can get an invite at [quackslack.herokuapp.com](https://quackslack.herokuapp.com/)
