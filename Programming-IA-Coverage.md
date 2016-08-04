@@ -51,7 +51,7 @@ Groovy | [y](https://duck.co/ia/view/groovy_cheat_sheet) |   |   |
 Haskell | [y](https://duck.co/ia/view/ghci_repl_cheat_sheet) | [y](https://duck.co/ia/view/hayoo) | [y](https://duck.co/ia/view/hackage) |  
 Haxe | [y](https://duck.co/ia/view/haxe_operators) |   | [y](https://duck.co/ia/view/haxelib) |  
 HTML | [y](https://duck.co/ia/view/html_cheat_sheet) | [y](https://duck.co/ia/view/htmlref) |   |  
-Idris | [y](https://duck.co/ia/view/emacs_idris_mode_cheat_sheet),[y](https://duck.co/ia/view/idris_repl_cheat_sheet) | | |
+Idris | [y](https://duck.co/ia/view/emacs_idris_mode_cheat_sheet),[y](https://duck.co/ia/view/idris_repl_cheat_sheet) | [d](https://duck.co/ia/view/idris_doc) | |
 iOS |   | [y](https://duck.co/ia/view/ios) |   |  
 Interactive Java | [y](https://duck.co/ia/view/interactive_java_cheat_sheet) |  |   |  
 Java | [y](https://duck.co/ia/view/java_cheat_sheet),[y](https://duck.co/ia/view/java_file_handling_cheat_sheet) | [y](https://duck.co/ia/view/java),[p](https://duck.co/ia/view/syntax)|   |  
