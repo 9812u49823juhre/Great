@@ -76,7 +76,7 @@ PHP | [y](https://duck.co/ia/view/php_cheat_sheet),[p](https://duck.co/ia/view/p
 PostgreSQL | [y](https://duck.co/ia/view/postgresql_cheat_sheet) |   |   |  
 Powershell | [y](https://duck.co/ia/view/powershell_cheat_sheet) |   |   |  
 Processing | [y](https://duck.co/ia/view/processing_lang_cheat_sheet) |   |   |  
-Python | [y](https://duck.co/ia/view/python_cheat_sheet),[p](https://duck.co/ia/view/flask_cheat_sheet) | [y](https://duck.co/ia/view/python) | [y](https://duck.co/ia/view/py_pi),[p](https://duck.co/ia/view/syntax)|  
+Python | [y](https://duck.co/ia/view/python_cheat_sheet),[p](https://duck.co/ia/view/flask_cheat_sheet) | [y](https://duck.co/ia/view/python) | [y](https://duck.co/ia/view/py_pi),[p](https://duck.co/ia/view/syntax)| [y](https://duck.co/ia/view/diveintopython)  
 R | [y](https://duck.co/ia/view/r_cheat_sheet) |   | [d](https://duck.co/ia/view/cran) |  
 Raspberry Pi | [y](https://duck.co/ia/view/raspberrypi_cheat_sheet),[p](https://duck.co/ia/view/vcgencmd_cheat_sheet) |   |   |  
 Redis |  [y](https://duck.co/ia/view/redis_cheat_sheet) |   |   |  
